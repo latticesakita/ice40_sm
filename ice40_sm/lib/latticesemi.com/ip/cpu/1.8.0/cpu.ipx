@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="ice40tp" date="2025 08 21 07:48:12" device="iCE40UP5K" device_int="itpa08" display_module="RISC-V SM" display_vendor="latticesemi.com" family="iCE40UP" gen_platform="Propel" gen_platform_version="2025.1.0.2506031608" generator="ipgen" library="ip" module="riscv_sm" name="cpu" operation="Industrial" package="SG48" package_int="SG48" partnumber="iCE40UP5K-SG48I" source_format="Verilog" speed="High-Performance_1.2V" speed_int="6" vendor="latticesemi.com" version="1.8.0">
+ <Package>
+  <File modified="2025 08 21 07:48:09" name="rtl/cpu_bb.v" type="black_box_verilog"/>
+  <File modified="2025 08 21 07:48:09" name="cpu.cfg" type="cfg"/>
+  <File modified="2025 08 21 07:48:09" name="misc/cpu_tmpl.v" type="template_verilog"/>
+  <File modified="2025 08 21 07:48:09" name="misc/cpu_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2025 08 21 07:48:12" name="rtl/cpu.v" type="top_level_verilog"/>
+  <File modified="2025 08 21 07:48:12" name="testbench/dut_params.v" type="dependency_file"/>
+  <File modified="2025 08 21 07:48:12" name="testbench/dut_inst.v" type="dependency_file"/>
+  <File modified="2025 08 21 07:48:12" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2025 08 21 07:48:12" name="design.xml" type="IP-XACT_design"/>
+  <File modified="2024 09 23 08:16:03" name="testbench/cpu0.yaml" type="testbench"/>
+  <File modified="2024 09 23 08:16:03" name="testbench/reginit.bin" type="testbench"/>
+  <File modified="2024 09 23 08:16:02" name="driver/crt0.S" type="driver"/>
+  <File modified="2024 09 23 08:16:02" name="driver/exit.c" type="driver_source"/>
+  <File modified="2025 03 05 05:49:23" name="driver/hal.h" type="driver_header"/>
+  <File modified="2025 02 05 08:39:31" name="driver/interrupt.c" type="driver_source"/>
+  <File modified="2025 02 05 08:39:38" name="driver/interrupt.h" type="driver_header"/>
+  <File modified="2025 02 05 08:39:49" name="driver/iob.c" type="driver_source"/>
+  <File modified="2024 09 23 08:16:02" name="driver/iob.h" type="driver_header"/>
+  <File modified="2024 09 23 08:16:02" name="driver/pic.c" type="driver_source"/>
+  <File modified="2024 09 23 08:16:02" name="driver/pic.h" type="driver_header"/>
+  <File modified="2024 09 23 08:16:02" name="driver/reg_access.c" type="driver_source"/>
+  <File modified="2024 09 23 08:16:02" name="driver/reg_access.h" type="driver_header"/>
+  <File modified="2025 03 25 08:37:29" name="driver/timer.c" type="driver_source"/>
+  <File modified="2024 09 23 08:16:02" name="driver/timer.h" type="driver_header"/>
+  <File modified="2024 09 23 08:16:02" name="driver/util.c" type="driver_source"/>
+  <File modified="2024 09 23 08:16:02" name="driver/util.h" type="driver_header"/>
+ </Package>
+</RadiantModule>

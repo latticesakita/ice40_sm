@@ -1,0 +1,29 @@
+/*
+ ============================================================================
+ Name        : main.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+$(include_files)
+
+$(init_variables)
+
+void system_init()
+{
+    $(ip_init_functions)
+}
+
+
+int main(void)
+{
+    system_init();
+$(demo_functions)
+	return EXIT_SUCCESS;
+}
+
