@@ -62,11 +62,12 @@
 #define CPU_INST_NAME "cpu_inst"
 #define CPU_INST_BASE_ADDR 0xffff0000
 
-#define GPIO_INST_GPIO_AHB_NAME "gpio_inst_gpio_ahb"
-#define GPIO_INST_GPIO_AHB_BASE_ADDR 0x20400
+#define GPIO_INST_NAME "gpio_inst_gpio_ahb"
+#define GPIO_INST_BASE_ADDR 0x20400
 
 #define ICE40_IP_IF_INST_ICE40_IP_IF_NAME "ice40_ip_if_inst_iCE40_IP_IF"
 #define ICE40_IP_IF_INST_ICE40_IP_IF_BASE_ADDR 0x20000
+#define I2C_SYS_CLK_FREQ 12000000
 
 #define SPRAM_IF_INST_AHB_SPSRAM_NAME "spram_if_inst_ahb_spsram"
 #define SPRAM_IF_INST_AHB_SPSRAM_BASE_ADDR 0x0
@@ -74,16 +75,16 @@
 #define TIMER_INST_TIMER_MEMMAP_NAME "timer_inst_timer_memmap"
 #define TIMER_INST_TIMER_MEMMAP_BASE_ADDR 0x20c00
 
-#define UART_INST_AHB_UART_NAME "uart_inst_ahb_uart"
-#define UART_INST_AHB_UART_BASE_ADDR 0x20800
+#define UART_INST_NAME "uart_inst_ahb_uart"
+#define UART_INST_BASE_ADDR 0x20800
 
 /* ip instance rename */
 #define RISCV_SM_INST_0 CPU_INST
-#define GPIO_AHB_INST_0 GPIO_INST
+#define GPIO_INST_0 GPIO_INST
 #define ICE40_IP_IF_AHB_INST_0 ICE40_IP_IF_INST
 #define SPSRAM_IF_AHB_INST_0 SPRAM_IF_INST
 #define TIMER_AHB_INST_0 TIMER_INST
-#define UART_AHB_INST_0 UART_INST
+#define UART_INST_0 UART_INST
 
 /* register test (reg_test.c) is to test the accessibility of the design by accessing the 
 testable register of each IP instance, it might affect the environment during test. 
@@ -113,8 +114,13 @@ and make sure to disable it when developing the application firmware. */
 #define GPIO_INST_DEVICE ICE40UP
 #define GPIO_INST_DIRECTION 0xFF
 #define GPIO_INST_INIT_OUTVAL 0x00
+#define GPIO_INST_GPIO_DIRS GPIO_INST_DIRECTION
+#define GPIO_INST_LINES_NUM GPIO_INST_BUS_WIDTH
 
 /* ice40_ip_if_inst parameters */
+#define I2CM_USE_HARD_IP
+//#define I2CM_USE_CUSTOM_IP
+#define I2CM_INST_BASE_ADDR ICE40_IP_IF_INST_ICE40_IP_IF_BASE_ADDR
 
 /* spram_if_inst parameters */
 
@@ -124,8 +130,10 @@ and make sure to disable it when developing the application firmware. */
 
 /* uart_inst parameters */
 #define UART_INST_BUFFER_SIZE 512
-#define UART_INST_CLOCK_FREQ 24000000
+#define UART_INST_CLOCK_FREQ 12000000
 #define UART_INST_UART_BAUDRATE 115200
+#define UART_INST_BAUD_RATE UART_INST_UART_BAUDRATE
+#define UART_INST_SYS_CLK (UART_INST_CLOCK_FREQ / 1000000)
 
 /* interrupt */
 

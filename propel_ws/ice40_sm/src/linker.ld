@@ -7,7 +7,8 @@ _STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x0A00;
 
 MEMORY
 {
-    sys_mem : org = 0, len = 0x10000
+    system0_inst (rx) : org = 0x0, len = 0xC000
+    system1_inst (rw) : org = 0xC000, len = 0x4000
 }
 
 SECTIONS
@@ -23,7 +24,7 @@ SECTIONS
     KEEP (*(.fini))
     . = ALIGN(4);
     _etext = .;
-  } >sys_mem
+  } >system0_inst
 
   .gprof : ALIGN(4)
   {
@@ -31,7 +32,7 @@ SECTIONS
     KEEP (*(.gprof))
     . = ALIGN(4);
     PROVIDE (_eprof = .);
-  } >sys_mem
+  } >system0_inst
 
   .ctors : ALIGN(4)
   {
@@ -41,7 +42,7 @@ SECTIONS
     KEEP (*(.ctors))
     . = ALIGN(4);
     _ctors_end = .;
-  } >sys_mem
+  } >system0_inst
 
   .dtors : ALIGN(4)
   {
@@ -49,7 +50,7 @@ SECTIONS
     KEEP (*(SORT(.dtors.*)))
     KEEP (*(.dtors))
     . = ALIGN(4);
-  } >sys_mem
+  } >system0_inst
 
   /* DATA */
   .rodata : ALIGN(4)
@@ -58,7 +59,7 @@ SECTIONS
     *(.rodata .rodata.*)
     *(.gnu.linkonce.r.*)
     . = ALIGN(4);
-  } >sys_mem
+  } >system0_inst
 
   .data : ALIGN(4)
   {
@@ -74,7 +75,7 @@ SECTIONS
     *(.srodata.cst2)
     *(.srodata .srodata.*)
     . = ALIGN(4);
-  } >sys_mem
+  } >system1_inst
 
   .bss (NOLOAD) : ALIGN(4)
   {
@@ -87,7 +88,7 @@ SECTIONS
     *(COMMON)
     . = ALIGN(4);
     _bss_end = .;
-  } >sys_mem
+  } >system1_inst
   
   .heap (NOLOAD) : ALIGN(8)
   {
@@ -97,7 +98,7 @@ SECTIONS
     . = ALIGN(8);
     PROVIDE ( _heap_end = .);
     PROVIDE ( __heap_end = .);
-  } >sys_mem
+  } >system1_inst
   
   .stack (NOLOAD) : ALIGN(16)
   {
@@ -107,6 +108,6 @@ SECTIONS
     PROVIDE (_stack_start = .);
     PROVIDE (_end = .);
     PROVIDE (end = .);
-  } >sys_mem
+  } >system1_inst
   /* END */
 }

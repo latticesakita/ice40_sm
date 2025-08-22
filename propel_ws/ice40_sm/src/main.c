@@ -67,6 +67,13 @@ struct gpio_instance led_gpio_inst;
 #define LED_COUNT 8
 #endif
 
+#include "timer.h"
+#include "pic.h"
+#include "lib_ov08x.h"
+
+#define GPIO_INTERVAL    500000 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
+//#define GPIO_INTERVAL    1500 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
+
 #if (defined TERM_UART_INST_BASE_ADDR)
 struct uart_instance term_uart_core_uart;
 #elif (defined TERM_LOCAL_UART_INST_BASE_ADDR)
@@ -79,8 +86,8 @@ static int lscc_uart_putc(char c, FILE *file)
 		int ret = EOF;
 #if (defined TERM_UART_INST_BASE_ADDR)
 		ret = uart_putc(&term_uart_core_uart, c);
-		if (c == '\n' && ret == 0)
-			ret = uart_putc(&term_uart_core_uart, '\r');
+		//if (c == '\n' && ret == 0)
+			//ret = uart_putc(&term_uart_core_uart, '\r');
 #elif (defined TERM_LOCAL_UART_INST_BASE_ADDR)
 		ret = local_uart_putc(&term_local_uart_core, c);
 		if (c == '\n' && ret == 0)
@@ -110,6 +117,7 @@ static int lscc_uart_flush(FILE *file)
 static int bsp_init(void)
 {
 	int ret = 0;
+	pic_init(CPU_INST_0_PICTIMER_START_ADDR);
 #if (defined TERM_UART_INST_BASE_ADDR)
 #ifndef _UART_NO_INTERRUPTS_
 	//setup uart IRQ
@@ -138,7 +146,7 @@ static int bsp_init(void)
 
 #ifdef LED_GPIO_INST_BASE_ADDR
 	//initialize LED GPIO
-	led_gpio_inst.instance_name = LED_GPIO_INST_NAME;
+	//led_gpio_inst.instance_name = LED_GPIO_INST_NAME;
 	gpio_init(&led_gpio_inst, LED_GPIO_INST_BASE_ADDR, LED_GPIO_INST_LINES_NUM, LED_GPIO_INST_GPIO_DIRS);
 #endif
 
@@ -151,33 +159,50 @@ static int bsp_init(void)
 	return ret;
 }
 
+static void every500ms(void)
+{
+	static uint16_t pin_state = 0;
+	static unsigned int s = 1;
+	uint16_t pin_val;
+
+	pin_state = ~pin_state;
+	s++;
+	pin_val = ((s & 0x7F)<<1) | (pin_state & 0x0001);
+
+	gpio_output_write(&led_gpio_inst, GPIO0|GPIO1|GPIO2|GPIO3|GPIO4|GPIO5, pin_val);
+
+#if 0
+	static uint8_t print_en = 0;
+	if(print_en ==0){
+		print_en=1;
+	}
+	else{
+		print_en=0;
+		log_printf(&uart_core_uart, 1, "%d sec\n", s++);
+	}
+#endif
+}
 
 int main(void) {
-	static uint8_t idx = 0;
-	static uint8_t pin_state = 0xFF;
+	static uint16_t idx = GPIO4;
+	static uint16_t pin_state;
 
 	bsp_init();
+	
+	pic_isr_register(S_INT_TIMER, timer2_isr, NULL);
+#ifdef TIMER_INST_BASE_ADDR
+	timer2_init(TIMER_INST_BASE_ADDR, TIMER_PRESCALE);
+	gpio_set_direction(&led_gpio_inst, GPIO0|GPIO1|GPIO2|GPIO3|GPIO4|GPIO5, GPIO_OUTPUT);
+	timer2_register(TIMER1_SRC, every500ms);
+	timer2_set(TIMER1_SRC, GPIO_INTERVAL, TIMER_REPEAT);
 
-	printf("Started!\nHello RISC-V world!\n"); 
-
-	while (true) {
-#ifdef LED_GPIO_INST_BASE_ADDR
-		gpio_output_write(&led_gpio_inst, idx, pin_state);
-#else
-		printf("0x%02X\n",(pin_state ^ (1<<idx)));
 #endif
+	log_puts(&term_uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+	//log_printf(&term_uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+	//printf("Started!\nHello RISC-V world!\n");
+	ov08x_start(&led_gpio_inst, I2C_SLAVE_OV08X);
 
-		if (++idx == LED_COUNT) {
-			idx = 0;
-			pin_state = ~pin_state;
-		}
-
-		if (RTL_SIM) {
-			delay(1);
-		} else {
-			delay(500);
-		}
-	}
+	while (true);
 
 	return 0;
 }

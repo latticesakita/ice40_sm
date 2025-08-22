@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RadiantProject version="4.2" radiant="2025.2.t.105.0" title="ice40_sm" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" family_int="ice40tp" device_int="itpa08" package_int="SG48" operation_int="IND" speed_int="6" default_implementation="impl_1">
+<RadiantProject version="4.2" radiant="2025.1.0.39.0" title="ice40_sm" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" family_int="ice40tp" device_int="itpa08" package_int="SG48" operation_int="IND" speed_int="6" default_implementation="impl_1">
     <Options/>
     <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="synplify" default_strategy="Strategy1">
         <Options hdl_sort="off">
             <Option name="include path" value="."/>
-            <Option name="top" value="ice40_sm"/>
+            <Option name="top" value="ice40_sm_top"/>
         </Options>
+        <Source name="ice40_sm/i2c_slave_tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm/ice40_common/spi_flash_tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm/tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm/ice40_sm_top.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="ice40_sm/ice40_sm.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm/ice40_common/spram16384x32.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm/ice40_common/spi_fifo.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm/hard_ip.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="ice40_sm/lib/personal/ip/spram_if/1.0.0/spram_if.ipx" type="IPX_Module" type_short="IPX">
@@ -28,6 +49,24 @@
             <Options/>
         </Source>
         <Source name="ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/ice40_ip_if.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="dpram512x8/dpram512x8.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="dpram1024x8/dpram1024x8.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="dpram2048x2_512x8/dpram2048x2_512x8.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="dpram2048x8/dpram2048x8.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="dpram4096x8/dpram4096x8.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm.sdc" type="Pre-Synthesis Constraints File" type_short="SDC">
             <Options/>
         </Source>
     </Implementation>
