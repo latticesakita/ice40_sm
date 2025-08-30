@@ -8,11 +8,15 @@ module spi_flash
 	inout mosi
 );
 
-localparam FW_ADDR = 24'h03_0000;
+localparam MEM0_NAME = "ice40_sm_Code.mem";
+localparam MEM0_ADDR = 24'h03_0000;
+localparam MEM1_NAME = "ice40_sm_Data.mem";
+localparam MEM1_ADDR = 24'h05_0000;
 localparam FLASH_SIZE = 8*1024*1024;
 
 reg [7:0] opcode;
 reg [23:0] addr;
+reg [23:0] addrf;
 reg [2:0] r_bcnt;
 reg [3:0] r_byte_cnt;
 reg [7:0] mem [0:FLASH_SIZE-1];
@@ -31,11 +35,12 @@ assign {rf_miso,rf_mosi} =
 		(rf_bcnt[2:1] == 2'b10) ? r_dout[3:2] :
 				 r_dout[1:0] ;
 
-reg [31:0] mem_fw [0:FLASH_SIZE/4-1];
+reg [31:0] mem0 [0:FLASH_SIZE/4-1];
+reg [31:0] mem1 [0:FLASH_SIZE/4-1];
 integer size_fw;
 integer i;
 initial begin
-	$readmemh("ice40_nano_Code.mem",mem_fw);
+	$readmemh(MEM0_NAME,mem0);
 	size_fw = 0;
 
 	for (i = 0; i < FLASH_SIZE-1; i = i + 1) begin
@@ -43,13 +48,26 @@ initial begin
 	end
 	for (i = 0; i < FLASH_SIZE/4-1; i = i + 1) begin
         	// Assuming unused entries are left as X
-        	if (mem_fw[i] !== 32'bx) size_fw = size_fw + 1;
+        	if (mem0[i] !== 32'bx) size_fw = size_fw + 1;
 	end
 	for (i = 0; i < size_fw; i = i + 1) begin
-		mem[FW_ADDR +i*4  ] = mem_fw[i][31:24];
-		mem[FW_ADDR +i*4+1] = mem_fw[i][23:16];
-		mem[FW_ADDR +i*4+2] = mem_fw[i][15: 8];
-		mem[FW_ADDR +i*4+3] = mem_fw[i][ 7: 0];
+		mem[MEM0_ADDR +i*4  ] = mem0[i][31:24];
+		mem[MEM0_ADDR +i*4+1] = mem0[i][23:16];
+		mem[MEM0_ADDR +i*4+2] = mem0[i][15: 8];
+		mem[MEM0_ADDR +i*4+3] = mem0[i][ 7: 0];
+	end
+	$readmemh(MEM1_NAME,mem1);
+	size_fw = 0;
+
+	for (i = 0; i < FLASH_SIZE/4-1; i = i + 1) begin
+        	// Assuming unused entries are left as X
+        	if (mem1[i] !== 32'bx) size_fw = size_fw + 1;
+	end
+	for (i = 0; i < size_fw; i = i + 1) begin
+		mem[MEM1_ADDR +i*4  ] = mem1[i][31:24];
+		mem[MEM1_ADDR +i*4+1] = mem1[i][23:16];
+		mem[MEM1_ADDR +i*4+2] = mem1[i][15: 8];
+		mem[MEM1_ADDR +i*4+3] = mem1[i][ 7: 0];
 	end
 end
 
@@ -102,6 +120,14 @@ always @(posedge clk or posedge cs) begin
 		addr <= addr + 1;
 	end
 end
+always @(negedge clk or posedge cs) begin
+	if(cs) begin
+		addrf <= 0;
+	end
+	else begin
+		addrf <= #3000 addr;
+	end
+end
 
 // always @(posedge clk or posedge cs) begin
 // 	if(cs) begin
@@ -111,7 +137,7 @@ end
 // 		r_dout <= mem[addr];
 // 	end
 // end
-assign r_dout = mem[addr];
+assign r_dout = mem[addrf];
 
 
 // falling edge data sent
@@ -121,11 +147,11 @@ always @(negedge clk or posedge cs) begin
 		rf_bcnt <= 0;
 	end
 	else if( rf_byte_cnt < 5) begin
-		rf_bcnt <= rf_bcnt + 1;
+		rf_bcnt <= #3000 rf_bcnt + 1;
 	end
 	else begin
-		rf_bcnt[2:1] <= rf_bcnt[2:1] + 1;
-		rf_bcnt[0]   <= 1'b1;
+		rf_bcnt[2:1] <= #3000 rf_bcnt[2:1] + 1;
+		rf_bcnt[0]   <= #3000 1'b1;
 	end
 end
 always @(negedge clk or posedge cs) begin

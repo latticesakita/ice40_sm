@@ -1,4 +1,7 @@
-copy /y ice40_sm_Code.mem ..\..\..\tb 
-python mem2bin.py ice40_sm_Code.mem ice40_sm_Code.bin -be
-python mem2bin.py ice40_sm_Data.mem ice40_sm_Data.bin -be
+copy /y ice40_sm*.mem ..\..\..\tb 
+
+for %%f in (*.mem) do (
+	python mem2bin.py %%f %%~nf_BE.bin -be
+	python mem2bin.py %%f %%~nf_LE.bin -le
+)
 

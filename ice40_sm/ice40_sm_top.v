@@ -1,12 +1,6 @@
 
-//`define DEBUG_STARTUP
 
 module ice40_sm_top (
-`ifdef DEBUG_STARTUP
-	input  reset_riscv,
-	output reset_riscv_o,
-	input  reset_spi,
-`endif
 	input clk_i, // 12MHz
 	input rxd_i,
 	output txd_o,
@@ -18,6 +12,11 @@ module ice40_sm_top (
 	inout  spi_miso,
 	inout  spi_mosi
 );
+
+localparam STATE_LOAD_SYSTEM0 = 0;
+localparam STATE_LOAD_WAIT = 1;
+localparam STATE_LOAD_SYSTEM1 = 14;
+localparam STATE_LOAD_DONE = 15;
 
 reg [7:0] r_rst_cnt = 0;
 wire oclk; // 24MHz
@@ -32,11 +31,14 @@ assign clk_spi = clk_soc;
 assign clk2x_spi = oclk;
 assign resetn = r_rst_cnt[7];
 
+// system0
+reg 		r_fill;
+reg [3:0]	load_state;
+wire 		load_done;
+wire [23:0]     flash_addr;
 reg [13:0]	r_spi_sram_addr;
 wire 		spi_sram_we;
 wire [31:0]	spi_sram_din;
-reg		r_fill;
-wire		load_done;
 wire [31:0]	soc_sram_addr;
 wire [31:0]	soc_sram_din;
 wire [31:0]	soc_sram_dout;
@@ -50,6 +52,25 @@ wire [31:0]	sram_din;
 wire [31:0]	sram_dout;
 wire		sram_we;
 wire [3:0]	sram_maskwe;
+
+// system1
+reg [13:0]	r_spi_dram_addr;
+wire 		spi_dram_we;
+wire [31:0]	spi_dram_din;
+wire [31:0]	soc_dram_addr;
+wire [31:0]	soc_dram_din;
+wire [31:0]	soc_dram_dout;
+wire		soc_dram_we;
+wire [3:0]	soc_dram_maskwe;
+wire		soc_dram_re;
+wire		soc_dram_write_done;
+reg		soc_dram_read_valid;
+wire [13:0]	dram_addr;
+wire [31:0]	dram_din;
+wire [31:0]	dram_dout;
+wire		dram_we;
+wire [3:0]	dram_maskwe;
+
 // hard IP I/F
 wire		ip_done;
 wire [7:0]	ip_addr;
@@ -62,28 +83,32 @@ wire		ip_ack;
 
 
 
-assign sram_addr = load_done ? soc_sram_addr[13:0] : r_spi_sram_addr ;
-assign sram_din  = load_done ? soc_sram_din  : spi_sram_din    ;
-assign sram_we   = load_done ? soc_sram_we   : spi_sram_we     ;
-assign sram_maskwe = load_done ? soc_sram_maskwe : 4'b1111;
+assign sram_addr   = (load_state==STATE_LOAD_SYSTEM0) ? r_spi_sram_addr : 
+			soc_sram_addr[13:0]  ;
+assign sram_din    = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_din : 
+			soc_sram_din;
+assign sram_we     = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_we :
+			(load_state==STATE_LOAD_SYSTEM0) ? soc_sram_we   : 1'b0  ;
+assign sram_maskwe     = (load_state==STATE_LOAD_SYSTEM0) ? 4'b1111 :
+			(load_state==STATE_LOAD_SYSTEM0) ? soc_sram_maskwe   : 4'b0  ;
 assign soc_sram_dout = sram_dout;
-assign load_done = (~r_fill) & ip_done;
 assign soc_sram_write_done = 1'b1;
-`ifdef DEBUG_STARTUP
-	reg [1:0] rstn_soc;
-	assign reset_riscv_o = resetn_soc;
-	assign resetn_soc = rstn_soc[1];
-	always @(posedge clk_soc or negedge resetn) begin
-		if(!resetn) begin
-			rstn_soc <= 0;
-		end
-		else begin
-			rstn_soc <= {rstn_soc[0],load_done & reset_riscv};
-		end
-	end
-`else
-	assign resetn_soc = load_done;
-`endif
+
+assign dram_addr   = (load_state==STATE_LOAD_SYSTEM1) ? r_spi_sram_addr : 
+			soc_dram_addr[13:0]  ;
+assign dram_din    = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_din : 
+			soc_dram_din;
+assign dram_we     = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_we :
+			(load_state==STATE_LOAD_SYSTEM1) ? soc_dram_we   : 1'b0  ;
+assign dram_maskwe     = (load_state==STATE_LOAD_SYSTEM1) ? 4'b1111 :
+			(load_state==STATE_LOAD_SYSTEM1) ? soc_dram_maskwe   : 4'b0  ;
+assign soc_dram_dout = dram_dout;
+assign soc_dram_write_done = 1'b1;
+
+
+assign load_done = (load_state == STATE_LOAD_DONE) & ip_done;
+assign flash_addr = (load_state == STATE_LOAD_SYSTEM0) ? 24'h030000 : 24'h050000;
+assign resetn_soc = load_done;
 
 always @(posedge oclk) begin
 	if(!resetn) begin
@@ -116,7 +141,15 @@ ice40_sm ice40_sm_inst (
 	.sram_we  	(soc_sram_we  ),
 	.sram_maskwe	(soc_sram_maskwe),
 	.sram_write_done(soc_sram_write_done),
-	.sram_read_valid(soc_sram_read_valid)
+	.sram_read_valid(soc_sram_read_valid),
+	.dram_addr	(soc_dram_addr),
+	.dram_din 	(soc_dram_din ),
+	.dram_dout	(soc_dram_dout),
+	.dram_re  	(soc_dram_re  ),
+	.dram_we  	(soc_dram_we  ),
+	.dram_maskwe	(soc_dram_maskwe),
+	.dram_write_done(soc_dram_write_done),
+	.dram_read_valid(soc_dram_read_valid)
 	);
 
 
@@ -128,45 +161,24 @@ spram16384x32 system0 (
 	.mask_we	(sram_maskwe),
 	.wr_en_i	(sram_we)
 );
+spram16384x32 system1 (
+	.clk_i		(clk_soc),
+	.addr_i		(dram_addr[13:0]),
+	.wr_data_i	(dram_din ),
+	.rd_data_o	(dram_dout),
+	.mask_we	(dram_maskwe),
+	.wr_en_i	(dram_we)
+);
 always @(posedge clk_soc or negedge resetn) begin
 	if(!resetn) begin
 		soc_sram_read_valid <= 1'b0;
+		soc_dram_read_valid <= 1'b0;
 	end
 	else begin
 		soc_sram_read_valid <= soc_sram_re;
+		soc_dram_read_valid <= soc_dram_re;
 	end
 end
-always @(posedge clk_soc or negedge resetn) begin
-	if(!resetn) begin
-		r_spi_sram_addr <= 0;
-	end
-	else if(spi_sram_we) begin
-		r_spi_sram_addr <= r_spi_sram_addr + 1;
-	end
-end
-always @(posedge clk_soc or negedge resetn) begin
-	if(!resetn) begin
-		r_fill <= 1'b1;
-	end
-	// else if(r_spi_sram_addr ==0 ) begin
-	// 	r_fill <= 1'b1;
-	// end
-	else if(spi_sram_we && r_fill) begin
-		r_fill <= (spi_sram_din == 32'hFFFF_FFFF) ? 1'b0: 1'b1;
-	end
-end
-
-`ifdef DEBUG_STARTUP
-reg [7:0] rst_spi;
-always @(posedge clk_soc or negedge resetn) begin
-	if(!resetn) begin
-		rst_spi <= 0;
-	end
-	else if(reset_spi && (rst_spi[7] == 0)) begin
-		rst_spi <= rst_spi + 1;
-	end
-end
-`endif
 
 hard_ip hard_ip_i (
 	.ipload_i	(resetn),
@@ -187,19 +199,16 @@ hard_ip hard_ip_i (
 	.sb_dat_o	(ip_rdata[7:0])	// 8bits
 );
 
-
+wire spi_fifo_rstn;
+assign spi_fifo_rstn = (load_state==STATE_LOAD_WAIT) ? 1'b0 : resetn;
 
 spi_fifo spi_fifo_i (
 	.clk2x	(clk2x_spi), //48MHz was failed on board test, use 24MHz
 	.clk	(clk_spi) ,
 	
-	.i_flash_addr	(24'h030000),
+	.i_flash_addr	(flash_addr),
 	
-`ifdef DEBUG_STARTUP
-	.i_fill	(r_fill & rst_spi[7]),
-`else
 	.i_fill	(r_fill),
-`endif
 	.o_fifo_empty	(),
 	.o_spram_en	(spi_sram_we),
 	.o_spram_dout	(spi_sram_din),
@@ -210,7 +219,52 @@ spi_fifo spi_fifo_i (
 	.SPI_MISO    (spi_miso), // 
 	.SPI_MOSI    (spi_mosi), // 
 	
-	.resetn      (resetn)
+	//.resetn      (resetn)
+	.resetn      (spi_fifo_rstn)
 );
 
+always @(posedge clk_spi or negedge resetn) begin
+	if(!resetn) begin
+		load_state <= STATE_LOAD_SYSTEM0;
+	end
+	else if(load_state==STATE_LOAD_DONE) begin
+	end
+	else if(load_state==STATE_LOAD_SYSTEM0) begin
+		load_state <= (spi_sram_we&&(spi_sram_din == 32'hFFFF_FFFF)) ? STATE_LOAD_WAIT : STATE_LOAD_SYSTEM0;
+	end
+	else if(load_state==STATE_LOAD_SYSTEM1) begin
+		//TODO: it won't work if data are initialized as FFFF_FFFF or -1 in software side
+		load_state <= (spi_sram_we&&(spi_sram_din == 32'hFFFF_FFFF)) ? STATE_LOAD_DONE : STATE_LOAD_SYSTEM1;
+	end
+	else begin
+		load_state <= load_state + 1;
+	end
+end
+always @(posedge clk_spi or negedge resetn) begin
+	if(!resetn) begin
+		r_fill <= 0;
+	end
+	else if(load_state == STATE_LOAD_SYSTEM0) begin
+		r_fill <= 1;
+	end
+	else if(load_state == STATE_LOAD_SYSTEM1) begin
+		r_fill <= 1;
+	end
+	else begin
+		r_fill <= 0;
+	end
+end
+always @(posedge clk_soc or negedge resetn) begin
+	if(!resetn) begin
+		r_spi_sram_addr <= 0;
+	end
+	else if((load_state==STATE_LOAD_SYSTEM0)||(load_state==STATE_LOAD_SYSTEM1)) begin
+		if(spi_sram_we) begin
+			r_spi_sram_addr <= r_spi_sram_addr + 1;
+		end
+	end
+	else begin
+		r_spi_sram_addr <= 0;
+	end
+end
 endmodule

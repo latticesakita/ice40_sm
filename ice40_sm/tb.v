@@ -57,10 +57,10 @@ pullup(led[15]);
 pullup(spi_miso);
 pullup(spi_mosi);
 
-ice40_nano_Top dut (
+ice40_sm_top dut (
 	//.rstn_i	(rstn),
-	.rxd_i	(uart_rx),
 	.clk_i	(clk),
+	.rxd_i	(uart_rx),
 	.txd_o	(uart_tx),
 	.led_o	(led[7:0]),
 	.scl_io	({scl2_io,scl1_io}),
@@ -95,60 +95,55 @@ initial begin
 end
 reg r_htransm0_d = 0;
 reg r_htransm1_d = 0;
-reg r_m0_access = 0;
-reg r_m1_access = 0;
+reg [31:0] r_haddr0;
+reg [31:0] r_haddr1;
 always @(posedge dut.clk_soc) begin
-	r_htransm0_d    <= dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HTRANS[1];
-	r_htransm1_d    <= dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS[1];
+	r_htransm0_d    <= dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HTRANS[1];
+	r_htransm1_d    <= dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HTRANS[1];
+	r_haddr0 <= dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HADDR;
+	r_haddr1 <= dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HADDR;
 end
 always @(posedge dut.clk_soc) begin
-	if(~r_htransm0_d &dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HTRANS[1]) begin
-		r_m0_access <= 1'b1;
-	end
-	else if(r_m0_access && dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HREADYOUT) begin
-		r_m0_access <= 1'b0;
-	end
-end
-always @(posedge dut.clk_soc) begin
-	if(r_m0_access && dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HREADYOUT) begin
-		if(dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HWRITE) begin
+	if( dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HTRANS[1]
+		&& dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWRITE) begin
 			$display(code_log, "%0t: %08x, %08x", $time, 
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR,
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HWDATA);
+				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HADDR,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWDATA);
 			$fwrite(code_log, "%0t: %08x, %08x, write\n", $time, 
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR,
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HWDATA);
-		end else begin
+				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HADDR,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWDATA);
+	end
+	else if(r_htransm0_d 
+		&& dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HREADYOUT
+		&& ~dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWRITE) begin
 			$display(code_log, "%0t: %08x, %08x", $time, 
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR,
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HRDATA);
+				r_haddr0,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA);
 			$fwrite(code_log, "%0t: %08x, %08x\n", $time, 
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR,
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M0_INSTR_interconnect_HRDATA);
-		end
+				r_haddr0,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA);
 	end
 end
 always @(posedge dut.clk_soc) begin
-	if(~r_htransm1_d &dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS[1]) begin
-		r_m1_access <= 1'b1;
-	end
-	else if(r_m1_access && dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HREADYOUT) begin
-		r_m1_access <= 1'b0;
-	end
-end
-always @(posedge dut.clk_soc) begin
-	if(r_m1_access && dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HREADYOUT) begin
-		if(dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HWRITE) begin
+	if( dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HTRANS[1]
+		&& dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWRITE) begin
+			$display(data_log, "%0t: %08x, %08x write", $time, 
+				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HADDR,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWDATA);
 			$fwrite(data_log, "%0t: %08x, %08x, write\n", $time, 
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HADDR,
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HWDATA);
-		end else begin
-			$fwrite(data_log, "%0t: %08x, %08x, read\n", $time, 
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HADDR,
-				dut.ice40_nano_inst.cpu0_inst_AHBL_M1_DATA_interconnect_HRDATA);
-		end
+				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HADDR,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWDATA);
+	end
+	else if(r_htransm0_d 
+		&& dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT
+		&& ~dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWRITE) begin
+			$display(data_log, "%0t: %08x, %08x read", $time, 
+				r_haddr0,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HRDATA);
+			$fwrite(data_log, "%0t: %08x, %08x read\n", $time, 
+				r_haddr0,
+				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HRDATA);
 	end
 end
-
 
 endmodule

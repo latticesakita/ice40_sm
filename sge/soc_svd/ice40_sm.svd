@@ -209,9 +209,26 @@
           </registers>
     </peripheral>
     <peripheral>
+          <name>dram_if_inst</name>
+          <version>1.0.0</version>
+          <baseAddress>0x00020000</baseAddress>
+          <groupName>spsram_if_ahb</groupName>
+          <description></description>
+
+          <addressBlock>
+            <offset>0x0</offset>
+            <size>0x00020000</size>
+            <usage>registers</usage>
+          </addressBlock>
+
+          <registers>
+          
+          </registers>
+    </peripheral>
+    <peripheral>
           <name>gpio_inst</name>
           <version>1.0.0</version>
-          <baseAddress>0x00020400</baseAddress>
+          <baseAddress>0x00040000</baseAddress>
           <groupName>gpio_ahb</groupName>
           <description></description>
 
@@ -228,7 +245,7 @@
     <peripheral>
           <name>ice40_ip_if_inst</name>
           <version>1.0.0</version>
-          <baseAddress>0x00020000</baseAddress>
+          <baseAddress>0x00050000</baseAddress>
           <groupName>ice40_ip_if_ahb</groupName>
           <description></description>
 
@@ -262,7 +279,7 @@
     <peripheral>
           <name>timer_inst</name>
           <version>1.0.0</version>
-          <baseAddress>0x00020C00</baseAddress>
+          <baseAddress>0x00060000</baseAddress>
           <groupName>timer_ahb</groupName>
           <description></description>
 
@@ -279,7 +296,7 @@
     <peripheral>
           <name>uart_inst</name>
           <version>1.0.0</version>
-          <baseAddress>0x00020800</baseAddress>
+          <baseAddress>0x00070000</baseAddress>
           <groupName>uart_ahb</groupName>
           <description></description>
 

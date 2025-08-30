@@ -1,0 +1,1607 @@
+07:30:43 **** Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+../src/bsp/driver/uart/uart.c: In function 'uart_set_rate':
+../src/bsp/driver/uart/uart.c:466:12: error: 'UART_INST_SYS_CLK' undeclared (first use in this function)
+  466 |  divisor = UART_INST_SYS_CLK / baudrate;
+      |            ^~~~~~~~~~~~~~~~~
+../src/bsp/driver/uart/uart.c:466:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/bsp/driver/uart/subdir.mk:20: src/bsp/driver/uart/uart.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+07:31:22 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/driver/timer/timer.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/timer/timer.d" -MT"src/bsp/driver/timer/timer.o" -c -o "src/bsp/driver/timer/timer.o" "../src/bsp/driver/timer/timer.c"
+Finished building: ../src/bsp/driver/timer/timer.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/crt0.S
+Invoking: GNU RISC-V Cross Assembler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -x assembler-with-cpp -MMD -MP -MF"src/bsp/driver/riscv_sm/crt0.d" -MT"src/bsp/driver/riscv_sm/crt0.o" -c -o "src/bsp/driver/riscv_sm/crt0.o" "../src/bsp/driver/riscv_sm/crt0.S"
+Finished building: ../src/bsp/driver/riscv_sm/crt0.S
+ 
+Building file: ../src/bsp/driver/riscv_sm/exit.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/exit.d" -MT"src/bsp/driver/riscv_sm/exit.o" -c -o "src/bsp/driver/riscv_sm/exit.o" "../src/bsp/driver/riscv_sm/exit.c"
+Finished building: ../src/bsp/driver/riscv_sm/exit.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/interrupt.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/interrupt.d" -MT"src/bsp/driver/riscv_sm/interrupt.o" -c -o "src/bsp/driver/riscv_sm/interrupt.o" "../src/bsp/driver/riscv_sm/interrupt.c"
+Finished building: ../src/bsp/driver/riscv_sm/interrupt.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/iob.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/iob.d" -MT"src/bsp/driver/riscv_sm/iob.o" -c -o "src/bsp/driver/riscv_sm/iob.o" "../src/bsp/driver/riscv_sm/iob.c"
+Finished building: ../src/bsp/driver/riscv_sm/iob.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/pic.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/pic.d" -MT"src/bsp/driver/riscv_sm/pic.o" -c -o "src/bsp/driver/riscv_sm/pic.o" "../src/bsp/driver/riscv_sm/pic.c"
+Finished building: ../src/bsp/driver/riscv_sm/pic.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/reg_access.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/reg_access.d" -MT"src/bsp/driver/riscv_sm/reg_access.o" -c -o "src/bsp/driver/riscv_sm/reg_access.o" "../src/bsp/driver/riscv_sm/reg_access.c"
+Finished building: ../src/bsp/driver/riscv_sm/reg_access.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/timer.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/timer.d" -MT"src/bsp/driver/riscv_sm/timer.o" -c -o "src/bsp/driver/riscv_sm/timer.o" "../src/bsp/driver/riscv_sm/timer.c"
+Finished building: ../src/bsp/driver/riscv_sm/timer.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/util.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/util.d" -MT"src/bsp/driver/riscv_sm/util.o" -c -o "src/bsp/driver/riscv_sm/util.o" "../src/bsp/driver/riscv_sm/util.c"
+Finished building: ../src/bsp/driver/riscv_sm/util.c
+ 
+Building file: ../src/bsp/driver/gpio/gpio.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/gpio/gpio.d" -MT"src/bsp/driver/gpio/gpio.o" -c -o "src/bsp/driver/gpio/gpio.o" "../src/bsp/driver/gpio/gpio.c"
+Finished building: ../src/bsp/driver/gpio/gpio.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+../src/i2c_controller.c:207:3: error: expected declaration specifiers or '...' before 'return'
+  207 |   return 0;
+      |   ^~~~~~
+../src/i2c_controller.c:205:5: error: 'i2c_init' declared as function returning a function
+  205 | int i2c_init(uint32_t sys_clock_freq)
+      |     ^~~~~~~~
+make: *** [src/subdir.mk:29: src/i2c_controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+07:31:57 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+../src/i2c_controller.c:207:3: error: expected declaration specifiers or '...' before 'return'
+  207 |   return 0;
+      |   ^~~~~~
+../src/i2c_controller.c:205:5: error: 'i2c_init' declared as function returning a function
+  205 | int i2c_init(uint32_t sys_clock_freq)
+      |     ^~~~~~~~
+../src/i2c_controller.c: In function 'i2c_init':
+../src/i2c_controller.c:210:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  210 | static void i2c_write_bit(int bit) {
+      |                                    ^
+../src/i2c_controller.c:223:27: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  223 | static int i2c_read_bit() {
+      |                           ^
+../src/i2c_controller.c:235:41: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  235 | static int i2c_write_byte(uint8_t byte) {
+      |                                         ^
+../src/i2c_controller.c:242:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  242 | static uint8_t i2c_read_byte(int ack) {
+      |                                       ^
+../src/i2c_controller.c:251:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  251 | {
+      | ^
+../src/i2c_controller.c:263:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  263 | static void i2c_stop() {
+      |                        ^
+../src/i2c_controller.c:273:99: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  273 | int i2c_write(unsigned char slave, unsigned short offset, unsigned int count, unsigned char *val) {
+      |                                                                                                   ^
+../src/i2c_controller.c:305:98: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  305 | int i2c_read(unsigned char slave, unsigned short offset, unsigned int count, unsigned char *val) {
+      |                                                                                                  ^
+../src/i2c_controller.c:342:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  342 | {
+      | ^
+../src/i2c_controller.c:346:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  346 | {
+      | ^
+../src/i2c_controller.c:349: error: expected '{' at end of input
+  349 | 
+      | 
+make: *** [src/subdir.mk:29: src/i2c_controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+07:32:40 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+../src/lib_ov08x.c: In function 'ov08x_start':
+../src/lib_ov08x.c:658:11: error: 'I2C_SYS_CLK_FREQ' undeclared (first use in this function)
+  658 |  i2c_init(I2C_SYS_CLK_FREQ);
+      |           ^~~~~~~~~~~~~~~~
+../src/lib_ov08x.c:658:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib_ov08x.c: In function 'ov08x_stop':
+../src/lib_ov08x.c:681:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  681 |  usleep(100); // wait 512 clock cycles, 100us is dummy
+      |  ^~~~~~
+make: *** [src/subdir.mk:29: src/lib_ov08x.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+07:50:56 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/driver/timer2/timer2.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/timer2/timer2.d" -MT"src/bsp/driver/timer2/timer2.o" -c -o "src/bsp/driver/timer2/timer2.o" "../src/bsp/driver/timer2/timer2.c"
+Finished building: ../src/bsp/driver/timer2/timer2.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+../src/lib_ov08x.c:3:10: fatal error: timer2.h: No such file or directory
+    3 | #include "timer2.h"
+      |          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/lib_ov08x.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+07:52:02 **** Clean-only build of configuration Debug for project ice40_sm ****
+make clean 
+rm -rf  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o  ice40_sm.lst  ice40_sm.siz  ./src/bsp/driver/riscv_sm/crt0.d  ./src/bsp/driver/uart/uart.d  ./src/bsp/driver/timer2/timer2.d  ./src/bsp/driver/riscv_sm/exit.d ./src/bsp/driver/riscv_sm/interrupt.d ./src/bsp/driver/riscv_sm/iob.d ./src/bsp/driver/riscv_sm/pic.d ./src/bsp/driver/riscv_sm/reg_access.d ./src/bsp/driver/riscv_sm/timer.d ./src/bsp/driver/riscv_sm/util.d  ./src/bsp/driver/gpio/gpio.d  ./src/bsp/reg_test.d  ./src/i2c_controller.d ./src/lib_ov08x.d ./src/main.d ./src/utils.d  ice40_sm.elf
+ 
+07:52:03 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/driver/timer2/timer2.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/timer2/timer2.d" -MT"src/bsp/driver/timer2/timer2.o" -c -o "src/bsp/driver/timer2/timer2.o" "../src/bsp/driver/timer2/timer2.c"
+Finished building: ../src/bsp/driver/timer2/timer2.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/crt0.S
+Invoking: GNU RISC-V Cross Assembler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -x assembler-with-cpp -MMD -MP -MF"src/bsp/driver/riscv_sm/crt0.d" -MT"src/bsp/driver/riscv_sm/crt0.o" -c -o "src/bsp/driver/riscv_sm/crt0.o" "../src/bsp/driver/riscv_sm/crt0.S"
+Finished building: ../src/bsp/driver/riscv_sm/crt0.S
+ 
+Building file: ../src/bsp/driver/riscv_sm/exit.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/exit.d" -MT"src/bsp/driver/riscv_sm/exit.o" -c -o "src/bsp/driver/riscv_sm/exit.o" "../src/bsp/driver/riscv_sm/exit.c"
+Finished building: ../src/bsp/driver/riscv_sm/exit.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/interrupt.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/interrupt.d" -MT"src/bsp/driver/riscv_sm/interrupt.o" -c -o "src/bsp/driver/riscv_sm/interrupt.o" "../src/bsp/driver/riscv_sm/interrupt.c"
+Finished building: ../src/bsp/driver/riscv_sm/interrupt.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/iob.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/iob.d" -MT"src/bsp/driver/riscv_sm/iob.o" -c -o "src/bsp/driver/riscv_sm/iob.o" "../src/bsp/driver/riscv_sm/iob.c"
+Finished building: ../src/bsp/driver/riscv_sm/iob.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/pic.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/pic.d" -MT"src/bsp/driver/riscv_sm/pic.o" -c -o "src/bsp/driver/riscv_sm/pic.o" "../src/bsp/driver/riscv_sm/pic.c"
+Finished building: ../src/bsp/driver/riscv_sm/pic.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/reg_access.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/reg_access.d" -MT"src/bsp/driver/riscv_sm/reg_access.o" -c -o "src/bsp/driver/riscv_sm/reg_access.o" "../src/bsp/driver/riscv_sm/reg_access.c"
+Finished building: ../src/bsp/driver/riscv_sm/reg_access.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/timer.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/timer.d" -MT"src/bsp/driver/riscv_sm/timer.o" -c -o "src/bsp/driver/riscv_sm/timer.o" "../src/bsp/driver/riscv_sm/timer.c"
+Finished building: ../src/bsp/driver/riscv_sm/timer.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/util.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/util.d" -MT"src/bsp/driver/riscv_sm/util.o" -c -o "src/bsp/driver/riscv_sm/util.o" "../src/bsp/driver/riscv_sm/util.c"
+Finished building: ../src/bsp/driver/riscv_sm/util.c
+ 
+Building file: ../src/bsp/driver/gpio/gpio.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/gpio/gpio.d" -MT"src/bsp/driver/gpio/gpio.o" -c -o "src/bsp/driver/gpio/gpio.o" "../src/bsp/driver/gpio/gpio.c"
+Finished building: ../src/bsp/driver/gpio/gpio.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: No such device, LED display disabled!
+Terminal: No such device, terminal disabled!
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'every500ms':
+../src/main.c:154:21: error: 'gpio_inst' undeclared (first use in this function); did you mean 'gpio_init'?
+  154 |  gpio_output_write(&gpio_inst, GPIO0|GPIO1|GPIO2|GPIO3|GPIO4|GPIO5, pin_val);
+      |                     ^~~~~~~~~
+      |                     gpio_init
+../src/main.c:154:21: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:174:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'TIMER_INST_USE_DSP'?
+  174 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            TIMER_INST_USE_DSP
+../src/main.c:174:2: error: too many arguments to function 'pic_isr_register'
+  174 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:182:12: error: 'uart_core_uart' undeclared (first use in this function)
+  182 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:16:30 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'bsp_init':
+../src/main.c:116:83: warning: integer overflow in expression of type 'int' results in '-138625024' [-Woverflow]
+  116 |  uart_init(&term_uart_core_uart, TERM_UART_INST_BASE_ADDR, TERM_UART_INST_SYS_CLK * 1000000, TERM_UART_INST_BAUD_RATE, 1, 8);
+      |                                                                                   ^
+../src/main.c:134:2: error: 'led_gpio_inst' undeclared (first use in this function); did you mean 'gpio_inst'?
+  134 |  led_gpio_inst.instance_name = LED_GPIO_INST_NAME;
+      |  ^~~~~~~~~~~~~
+      |  gpio_inst
+../src/main.c:134:2: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/utils.h:47,
+                 from ../src/main.c:43:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:84:21: error: 'GPIO_INST_GPIO_DIRS' undeclared (first use in this function); did you mean 'GPIO_INST_0_GPIO_DIRS'?
+   84 | #define GPIO_INST_0 GPIO_INST
+      |                     ^~~~~~~~~
+../src/platform_init.h:53:33: note: in definition of macro '_CONFIG_DEF'
+   53 | #define _CONFIG_DEF(Head, Tail) Head##_##Tail
+      |                                 ^~~~
+../src/platform_init.h:113:44: note: in expansion of macro 'CONFIG_DEF'
+  113 | #define GPIO_INST_0_GPIO_DIRS              CONFIG_DEF(GPIO_INST_0, GPIO_DIRS)
+      |                                            ^~~~~~~~~~
+../src/platform_init.h:113:55: note: in expansion of macro 'GPIO_INST_0'
+  113 | #define GPIO_INST_0_GPIO_DIRS              CONFIG_DEF(GPIO_INST_0, GPIO_DIRS)
+      |                                                       ^~~~~~~~~~~
+../src/platform_init.h:154:44: note: in expansion of macro 'GPIO_INST_0_GPIO_DIRS'
+  154 | #define LED_GPIO_INST_GPIO_DIRS            GPIO_INST_0_GPIO_DIRS
+      |                                            ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:135:78: note: in expansion of macro 'LED_GPIO_INST_GPIO_DIRS'
+  135 |  gpio_init(&led_gpio_inst, LED_GPIO_INST_BASE_ADDR, LED_GPIO_INST_LINES_NUM, LED_GPIO_INST_GPIO_DIRS);
+      |                                                                              ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:177:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'UART_INST_BASE_ADDR'?
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            UART_INST_BASE_ADDR
+../src/main.c:177:2: error: too many arguments to function 'pic_isr_register'
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:185:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  185 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:20:23 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'bsp_init':
+../src/main.c:116:83: warning: integer overflow in expression of type 'int' results in '-138625024' [-Woverflow]
+  116 |  uart_init(&term_uart_core_uart, TERM_UART_INST_BASE_ADDR, TERM_UART_INST_SYS_CLK * 1000000, TERM_UART_INST_BAUD_RATE, 1, 8);
+      |                                                                                   ^
+../src/main.c:134:2: error: 'led_gpio_inst' undeclared (first use in this function); did you mean 'gpio_inst'?
+  134 |  led_gpio_inst.instance_name = LED_GPIO_INST_NAME;
+      |  ^~~~~~~~~~~~~
+      |  gpio_inst
+../src/main.c:134:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:177:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'UART_INST_BASE_ADDR'?
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            UART_INST_BASE_ADDR
+../src/main.c:177:2: error: too many arguments to function 'pic_isr_register'
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:185:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  185 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:22:24 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+In file included from ../src/bsp/driver/uart/uart.c:53:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:134: warning: "UART_INST_SYS_CLK" redefined
+  134 | #define UART_INST_SYS_CLK (UART_INST_CLOCK_FREQ / 1000000)
+      | 
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:80: note: this is the location of the previous definition
+   80 | #define UART_INST_SYS_CLK 12000000
+      | 
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+In file included from ../src/bsp/reg_test.c:6:
+../src/bsp/sys_platform.h:134: warning: "UART_INST_SYS_CLK" redefined
+  134 | #define UART_INST_SYS_CLK (UART_INST_CLOCK_FREQ / 1000000)
+      | 
+../src/bsp/sys_platform.h:80: note: this is the location of the previous definition
+   80 | #define UART_INST_SYS_CLK 12000000
+      | 
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+In file included from ../src/i2c_controller.c:4:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:134: warning: "UART_INST_SYS_CLK" redefined
+  134 | #define UART_INST_SYS_CLK (UART_INST_CLOCK_FREQ / 1000000)
+      | 
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:80: note: this is the location of the previous definition
+   80 | #define UART_INST_SYS_CLK 12000000
+      | 
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+In file included from ../src/i2c_controller.h:4,
+                 from ../src/lib_ov08x.c:1:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:134: warning: "UART_INST_SYS_CLK" redefined
+  134 | #define UART_INST_SYS_CLK (UART_INST_CLOCK_FREQ / 1000000)
+      | 
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:80: note: this is the location of the previous definition
+   80 | #define UART_INST_SYS_CLK 12000000
+      | 
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/utils.h:46,
+                 from ../src/main.c:43:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:134: warning: "UART_INST_SYS_CLK" redefined
+  134 | #define UART_INST_SYS_CLK (UART_INST_CLOCK_FREQ / 1000000)
+      | 
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/sys_platform.h:80: note: this is the location of the previous definition
+   80 | #define UART_INST_SYS_CLK 12000000
+      | 
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'bsp_init':
+../src/main.c:134:2: error: 'led_gpio_inst' undeclared (first use in this function); did you mean 'gpio_inst'?
+  134 |  led_gpio_inst.instance_name = LED_GPIO_INST_NAME;
+      |  ^~~~~~~~~~~~~
+      |  gpio_inst
+../src/main.c:134:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:177:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'UART_INST_BASE_ADDR'?
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            UART_INST_BASE_ADDR
+../src/main.c:177:2: error: too many arguments to function 'pic_isr_register'
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:185:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  185 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:24:35 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'bsp_init':
+../src/main.c:134:2: error: 'led_gpio_inst' undeclared (first use in this function); did you mean 'gpio_inst'?
+  134 |  led_gpio_inst.instance_name = LED_GPIO_INST_NAME;
+      |  ^~~~~~~~~~~~~
+      |  gpio_inst
+../src/main.c:134:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:177:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'UART_INST_BASE_ADDR'?
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            UART_INST_BASE_ADDR
+../src/main.c:177:2: error: too many arguments to function 'pic_isr_register'
+  177 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:185:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  185 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:30:27 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'bsp_init':
+../src/main.c:141:15: error: 'struct gpio_instance' has no member named 'instance_name'
+  141 |  led_gpio_inst.instance_name = LED_GPIO_INST_NAME;
+      |               ^
+../src/main.c: In function 'main':
+../src/main.c:184:35: error: 'timer2_isr' undeclared (first use in this function)
+  184 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                   ^~~~~~~~~~
+../src/main.c:184:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:184:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'UART_INST_BASE_ADDR'?
+  184 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            UART_INST_BASE_ADDR
+../src/main.c:184:2: error: too many arguments to function 'pic_isr_register'
+  184 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:192:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  192 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+../src/main.c:195:2: warning: implicit declaration of function 'ov08x_start'; did you mean 'va_start'? [-Wimplicit-function-declaration]
+  195 |  ov08x_start(I2C_SLAVE_OV08X);
+      |  ^~~~~~~~~~~
+      |  va_start
+../src/main.c:195:14: error: 'I2C_SLAVE_OV08X' undeclared (first use in this function)
+  195 |  ov08x_start(I2C_SLAVE_OV08X);
+      |              ^~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:51:24 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:191:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'UART_INST_BASE_ADDR'?
+  191 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            UART_INST_BASE_ADDR
+../src/main.c:191:60: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:191:2: error: too many arguments to function 'pic_isr_register'
+  191 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:199:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  199 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:57:08 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:192:60: error: 'TIMER_INST_BASE_ADDR' undeclared (first use in this function); did you mean 'UART_INST_BASE_ADDR'?
+  192 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~
+      |                                                            UART_INST_BASE_ADDR
+../src/main.c:192:60: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:192:2: error: too many arguments to function 'pic_isr_register'
+  192 |  pic_isr_register(TIMER_INST_IRQ, timer2_isr, (uint32_t *)(TIMER_INST_BASE_ADDR+0), NULL);
+      |  ^~~~~~~~~~~~~~~~
+In file included from O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/hal.h:56,
+                 from ../src/main.c:42:
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm/pic.h:115:15: note: declared here
+  115 | unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
+      |               ^~~~~~~~~~~~~~~~
+../src/main.c:200:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  200 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:05:19 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:200:12: error: 'uart_core_uart' undeclared (first use in this function); did you mean 'term_uart_core_uart'?
+  200 |  log_puts(&uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
+      |            ^~~~~~~~~~~~~~
+      |            term_uart_core_uart
+../src/main.c:200:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:22:09 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/utils.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/utils.d" -MT"src/utils.o" -c -o "src/utils.o" "../src/utils.c"
+Finished building: ../src/utils.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: ./src/i2c_controller.o: in function `i2c_write_bit':
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:212: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:212: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:215: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:215: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:218: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: ./src/i2c_controller.o:O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:218: more undefined references to `gpio_inst' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:63: ice40_sm.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:07:01 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+../src/lib_ov08x.c: In function 'ov08x_start':
+../src/lib_ov08x.c:657:18: error: 'NULL' undeclared (first use in this function)
+  657 |  if(gpio_inst == NULL)
+      |                  ^~~~
+../src/lib_ov08x.c:5:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    4 | #include "lib_ov08x.h"
+  +++ |+#include <stddef.h>
+    5 | 
+../src/lib_ov08x.c:657:18: note: each undeclared identifier is reported only once for each function it appears in
+  657 |  if(gpio_inst == NULL)
+      |                  ^~~~
+make: *** [src/subdir.mk:29: src/lib_ov08x.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:07:26 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: ./src/i2c_controller.o: in function `i2c_write_bit':
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:212: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:212: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:215: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:215: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:218: undefined reference to `gpio_inst'
+c:/lscc/propel/2025.1/sdk/riscv-none-embed-gcc/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/bin/ld.exe: ./src/i2c_controller.o:O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug/../src/i2c_controller.c:218: more undefined references to `gpio_inst' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:63: ice40_sm.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:08:31 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+../src/i2c_controller.c: In function 'i2c_write_bit':
+../src/i2c_controller.c:189:49: error: 'gpio_inst' undeclared (first use in this function); did you mean 'gpio_init'?
+  189 | #define gpio_set_input(pin) gpio_set_direction(&gpio_inst, pin, GPIO_INPUT)
+      |                                                 ^~~~~~~~~
+../src/i2c_controller.c:212:9: note: in expansion of macro 'gpio_set_input'
+  212 |         gpio_set_input(SDA_PIN);
+      |         ^~~~~~~~~~~~~~
+../src/i2c_controller.c:189:49: note: each undeclared identifier is reported only once for each function it appears in
+  189 | #define gpio_set_input(pin) gpio_set_direction(&gpio_inst, pin, GPIO_INPUT)
+      |                                                 ^~~~~~~~~
+../src/i2c_controller.c:212:9: note: in expansion of macro 'gpio_set_input'
+  212 |         gpio_set_input(SDA_PIN);
+      |         ^~~~~~~~~~~~~~
+../src/i2c_controller.c: In function 'i2c_read_bit':
+../src/i2c_controller.c:189:49: error: 'gpio_inst' undeclared (first use in this function); did you mean 'gpio_init'?
+  189 | #define gpio_set_input(pin) gpio_set_direction(&gpio_inst, pin, GPIO_INPUT)
+      |                                                 ^~~~~~~~~
+../src/i2c_controller.c:225:5: note: in expansion of macro 'gpio_set_input'
+  225 |     gpio_set_input(SDA_PIN);
+      |     ^~~~~~~~~~~~~~
+../src/i2c_controller.c: In function 'i2c_start':
+../src/i2c_controller.c:189:49: error: 'gpio_inst' undeclared (first use in this function); did you mean 'gpio_init'?
+  189 | #define gpio_set_input(pin) gpio_set_direction(&gpio_inst, pin, GPIO_INPUT)
+      |                                                 ^~~~~~~~~
+../src/i2c_controller.c:252:5: note: in expansion of macro 'gpio_set_input'
+  252 |     gpio_set_input(SCL_PIN);
+      |     ^~~~~~~~~~~~~~
+../src/i2c_controller.c: In function 'i2c_stop':
+../src/i2c_controller.c:188:50: error: 'gpio_inst' undeclared (first use in this function); did you mean 'gpio_init'?
+  188 | #define gpio_set_output(pin) gpio_set_direction(&gpio_inst, pin, GPIO_OUTPUT)
+      |                                                  ^~~~~~~~~
+../src/i2c_controller.c:264:5: note: in expansion of macro 'gpio_set_output'
+  264 |     gpio_set_output(SDA_PIN);
+      |     ^~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/i2c_controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:11:00 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+../src/i2c_controller.c:206:5: error: conflicting types for 'i2c_init'
+  206 | int i2c_init(struct gpio_instance *gpio, uint32_t sys_clock_freq)
+      |     ^~~~~~~~
+In file included from ../src/i2c_controller.c:5:
+../src/i2c_controller.h:12:5: note: previous declaration of 'i2c_init' was here
+   12 | int i2c_init(uint32_t sys_clock_freq);
+      |     ^~~~~~~~
+make: *** [src/subdir.mk:29: src/i2c_controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:12:48 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6800	      0	   3004	   9804	   264c	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+12:17:25 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+../src/i2c_controller.c:152:3: error: expected declaration specifiers or '...' before 'return'
+  152 |   return 0;
+      |   ^~~~~~
+../src/i2c_controller.c:150:5: error: 'i2c_init' declared as function returning a function
+  150 | int i2c_init(struct gpio_instance *gpio, uint32_t sys_clock_freq)
+      |     ^~~~~~~~
+make: *** [src/subdir.mk:29: src/i2c_controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:17:50 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/utils.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/utils.d" -MT"src/utils.o" -c -o "src/utils.o" "../src/utils.c"
+Finished building: ../src/utils.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6332	      4	   3000	   9336	   2478	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+12:19:14 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/utils.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/utils.d" -MT"src/utils.o" -c -o "src/utils.o" "../src/utils.c"
+Finished building: ../src/utils.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6620	      4	   3000	   9624	   2598	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+12:29:11 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6620	      4	   3000	   9624	   2598	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_nano_Code.mem ..\..\..\tb  
+The system cannot find the file specified.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>python mem2bin.py ice40_nano_Code.mem ice40_nano_Code.bin -be 
+Traceback (most recent call last):
+  File "mem2bin.py", line 38, in <module>
+    main()
+  File "mem2bin.py", line 35, in main
+    convert_to_binary(args.input_file, args.output_file, endian)
+  File "mem2bin.py", line 5, in convert_to_binary
+    with open(input_file, 'r') as infile:
+FileNotFoundError: [Errno 2] No such file or directory: 'ice40_nano_Code.mem'
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>python mem2bin.py ice40_nano_Data.mem ice40_nano_Data.bin -be 
+Traceback (most recent call last):
+  File "mem2bin.py", line 38, in <module>
+    main()
+  File "mem2bin.py", line 35, in main
+    convert_to_binary(args.input_file, args.output_file, endian)
+  File "mem2bin.py", line 5, in convert_to_binary
+    with open(input_file, 'r') as infile:
+FileNotFoundError: [Errno 2] No such file or directory: 'ice40_nano_Data.mem'
+make[1]: [makefile:87: post-build] Error 1 (ignored)
+ 
+12:30:43 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6620	      4	   3000	   9624	   2598	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm_Code.mem ..\..\..\tb  
+The system cannot find the file specified.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>python mem2bin.py ice40_sm_Code.mem ice40_sm_Code.bin -be 
+Traceback (most recent call last):
+  File "mem2bin.py", line 38, in <module>
+    main()
+  File "mem2bin.py", line 35, in main
+    convert_to_binary(args.input_file, args.output_file, endian)
+  File "mem2bin.py", line 5, in convert_to_binary
+    with open(input_file, 'r') as infile:
+FileNotFoundError: [Errno 2] No such file or directory: 'ice40_sm_Code.mem'
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>python mem2bin.py ice40_sm_Data.mem ice40_sm_Data.bin -be 
+Traceback (most recent call last):
+  File "mem2bin.py", line 38, in <module>
+    main()
+  File "mem2bin.py", line 35, in main
+    convert_to_binary(args.input_file, args.output_file, endian)
+  File "mem2bin.py", line 5, in convert_to_binary
+    with open(input_file, 'r') as infile:
+FileNotFoundError: [Errno 2] No such file or directory: 'ice40_sm_Data.mem'
+make[1]: [makefile:87: post-build] Error 1 (ignored)
+ 
+13:08:20 **** Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/driver/timer2/timer2.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/timer2/timer2.d" -MT"src/bsp/driver/timer2/timer2.o" -c -o "src/bsp/driver/timer2/timer2.o" "../src/bsp/driver/timer2/timer2.c"
+Finished building: ../src/bsp/driver/timer2/timer2.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/crt0.S
+Invoking: GNU RISC-V Cross Assembler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -x assembler-with-cpp -MMD -MP -MF"src/bsp/driver/riscv_sm/crt0.d" -MT"src/bsp/driver/riscv_sm/crt0.o" -c -o "src/bsp/driver/riscv_sm/crt0.o" "../src/bsp/driver/riscv_sm/crt0.S"
+Finished building: ../src/bsp/driver/riscv_sm/crt0.S
+ 
+Building file: ../src/bsp/driver/riscv_sm/exit.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/exit.d" -MT"src/bsp/driver/riscv_sm/exit.o" -c -o "src/bsp/driver/riscv_sm/exit.o" "../src/bsp/driver/riscv_sm/exit.c"
+Finished building: ../src/bsp/driver/riscv_sm/exit.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/interrupt.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/interrupt.d" -MT"src/bsp/driver/riscv_sm/interrupt.o" -c -o "src/bsp/driver/riscv_sm/interrupt.o" "../src/bsp/driver/riscv_sm/interrupt.c"
+Finished building: ../src/bsp/driver/riscv_sm/interrupt.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/iob.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/iob.d" -MT"src/bsp/driver/riscv_sm/iob.o" -c -o "src/bsp/driver/riscv_sm/iob.o" "../src/bsp/driver/riscv_sm/iob.c"
+Finished building: ../src/bsp/driver/riscv_sm/iob.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/pic.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/pic.d" -MT"src/bsp/driver/riscv_sm/pic.o" -c -o "src/bsp/driver/riscv_sm/pic.o" "../src/bsp/driver/riscv_sm/pic.c"
+Finished building: ../src/bsp/driver/riscv_sm/pic.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/reg_access.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/reg_access.d" -MT"src/bsp/driver/riscv_sm/reg_access.o" -c -o "src/bsp/driver/riscv_sm/reg_access.o" "../src/bsp/driver/riscv_sm/reg_access.c"
+Finished building: ../src/bsp/driver/riscv_sm/reg_access.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/timer.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/timer.d" -MT"src/bsp/driver/riscv_sm/timer.o" -c -o "src/bsp/driver/riscv_sm/timer.o" "../src/bsp/driver/riscv_sm/timer.c"
+Finished building: ../src/bsp/driver/riscv_sm/timer.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/util.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/util.d" -MT"src/bsp/driver/riscv_sm/util.o" -c -o "src/bsp/driver/riscv_sm/util.o" "../src/bsp/driver/riscv_sm/util.c"
+Finished building: ../src/bsp/driver/riscv_sm/util.c
+ 
+Building file: ../src/bsp/driver/gpio/gpio.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/gpio/gpio.d" -MT"src/bsp/driver/gpio/gpio.o" -c -o "src/bsp/driver/gpio/gpio.o" "../src/bsp/driver/gpio/gpio.c"
+Finished building: ../src/bsp/driver/gpio/gpio.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+../src/i2c_controller.c:2:10: fatal error: gpio.h: No such file or directory
+    2 | #include "gpio.h"
+      |          ^~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/i2c_controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:14:27 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/driver/timer2/timer2.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/timer2/timer2.d" -MT"src/bsp/driver/timer2/timer2.o" -c -o "src/bsp/driver/timer2/timer2.o" "../src/bsp/driver/timer2/timer2.c"
+Finished building: ../src/bsp/driver/timer2/timer2.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/crt0.S
+Invoking: GNU RISC-V Cross Assembler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -x assembler-with-cpp -MMD -MP -MF"src/bsp/driver/riscv_sm/crt0.d" -MT"src/bsp/driver/riscv_sm/crt0.o" -c -o "src/bsp/driver/riscv_sm/crt0.o" "../src/bsp/driver/riscv_sm/crt0.S"
+Finished building: ../src/bsp/driver/riscv_sm/crt0.S
+ 
+Building file: ../src/bsp/driver/riscv_sm/exit.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/exit.d" -MT"src/bsp/driver/riscv_sm/exit.o" -c -o "src/bsp/driver/riscv_sm/exit.o" "../src/bsp/driver/riscv_sm/exit.c"
+Finished building: ../src/bsp/driver/riscv_sm/exit.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/interrupt.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/interrupt.d" -MT"src/bsp/driver/riscv_sm/interrupt.o" -c -o "src/bsp/driver/riscv_sm/interrupt.o" "../src/bsp/driver/riscv_sm/interrupt.c"
+Finished building: ../src/bsp/driver/riscv_sm/interrupt.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/iob.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/iob.d" -MT"src/bsp/driver/riscv_sm/iob.o" -c -o "src/bsp/driver/riscv_sm/iob.o" "../src/bsp/driver/riscv_sm/iob.c"
+Finished building: ../src/bsp/driver/riscv_sm/iob.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/pic.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/pic.d" -MT"src/bsp/driver/riscv_sm/pic.o" -c -o "src/bsp/driver/riscv_sm/pic.o" "../src/bsp/driver/riscv_sm/pic.c"
+Finished building: ../src/bsp/driver/riscv_sm/pic.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/reg_access.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/reg_access.d" -MT"src/bsp/driver/riscv_sm/reg_access.o" -c -o "src/bsp/driver/riscv_sm/reg_access.o" "../src/bsp/driver/riscv_sm/reg_access.c"
+Finished building: ../src/bsp/driver/riscv_sm/reg_access.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/timer.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/timer.d" -MT"src/bsp/driver/riscv_sm/timer.o" -c -o "src/bsp/driver/riscv_sm/timer.o" "../src/bsp/driver/riscv_sm/timer.c"
+Finished building: ../src/bsp/driver/riscv_sm/timer.c
+ 
+Building file: ../src/bsp/driver/riscv_sm/util.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/riscv_sm/util.d" -MT"src/bsp/driver/riscv_sm/util.o" -c -o "src/bsp/driver/riscv_sm/util.o" "../src/bsp/driver/riscv_sm/util.c"
+Finished building: ../src/bsp/driver/riscv_sm/util.c
+ 
+Building file: ../src/bsp/driver/gpio/gpio.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/gpio/gpio.d" -MT"src/bsp/driver/gpio/gpio.o" -c -o "src/bsp/driver/gpio/gpio.o" "../src/bsp/driver/gpio/gpio.c"
+Finished building: ../src/bsp/driver/gpio/gpio.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/utils.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/utils.d" -MT"src/utils.o" -c -o "src/utils.o" "../src/utils.c"
+Finished building: ../src/utils.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6620	      4	   3000	   9624	   2598	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+07:00:29 **** Build of configuration Debug for project ice40_sm ****
+make all 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6620	      4	   3000	   9624	   2598	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Create Memory Deployment
+riscv-none-embed-objcopy -O binary --gap-fill 0 "ice40_sm.elf" "ice40_sm.bin"; srec_cat "ice40_sm.bin" -Binary -byte-swap 4 -DISable Header -Output "ice40_sm.mem" -MEM 32
+Finished building: ice40_sm.mem
+ 
+12:49:00 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/utils.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/utils.d" -MT"src/utils.o" -c -o "src/utils.o" "../src/utils.c"
+Finished building: ../src/utils.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7448	      8	   3004	  10460	   28dc	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Create Memory Deployment
+riscv-none-embed-objcopy -O binary --gap-fill 0 "ice40_sm.elf" "ice40_sm.bin"; srec_cat "ice40_sm.bin" -Binary -byte-swap 4 -DISable Header -Output "ice40_sm.mem" -MEM 32
+Finished building: ice40_sm.mem
+ 
+13:01:31 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x20400
+Terminal: "uart_inst_ahb_uart", base address: 0x20800
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7444	      8	   3004	  10456	   28d8	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Create Memory Deployment
+riscv-none-embed-objcopy -O binary --gap-fill 0 "ice40_sm.elf" "ice40_sm.bin"; srec_cat "ice40_sm.bin" -Binary -byte-swap 4 -DISable Header -Output "ice40_sm.mem" -MEM 32
+Finished building: ice40_sm.mem
+ 
+13:11:24 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7444	      8	   3004	  10456	   28d8	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Create Memory Deployment
+riscv-none-embed-objcopy -O binary --gap-fill 0 "ice40_sm.elf" "ice40_sm.bin"; srec_cat "ice40_sm.bin" -Binary -byte-swap 4 -DISable Header -Output "ice40_sm.mem" -MEM 32
+Finished building: ice40_sm.mem
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm.mem ..\..\..\tb  
+        1 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>python mem2bin.py ice40_sm.mem ice40_sm_BE.bin -be 
+ 
+10:30:09 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7444	      8	   3004	  10456	   28d8	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .text -j .ctors -j .dtors "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Code.mem" -MEM 32
+Finished building: ice40_sm_Code.mem
+ 
+Invoking: Lattice Multi Memory Deployment (DATA SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .rodata -j .data -j .bss "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Data.mem" -MEM 32
+Finished building: ice40_sm_Data.mem
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm.mem ..\..\..\tb  
+        1 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>python mem2bin.py ice40_sm.mem ice40_sm_BE.bin -be 
+ 
+11:01:04 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/bsp/driver/uart/uart.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/driver/uart/uart.d" -MT"src/bsp/driver/uart/uart.o" -c -o "src/bsp/driver/uart/uart.o" "../src/bsp/driver/uart/uart.c"
+Finished building: ../src/bsp/driver/uart/uart.c
+ 
+Building file: ../src/bsp/reg_test.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/bsp/reg_test.d" -MT"src/bsp/reg_test.o" -c -o "src/bsp/reg_test.o" "../src/bsp/reg_test.c"
+Finished building: ../src/bsp/reg_test.c
+ 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+Finished building: ../src/lib_ov08x.c
+ 
+Building file: ../src/main.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:48:
+../src/device_info.h:144:9: note: '#pragma message: 
+=====================================================================
+Processor: "cpu_inst", type: RISC-V SM
+    PIC enabled, Base Address: 0xFFFF0000
+    MTIMER disabled
+LED: "gpio_inst_gpio_ahb", base address: 0x40000
+Terminal: "uart_inst_ahb_uart", base address: 0x70000
+=====================================================================
+   '
+  144 | #pragma message (DEVICE_INFO)
+      |         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/utils.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/utils.d" -MT"src/utils.o" -c -o "src/utils.o" "../src/utils.c"
+Finished building: ../src/utils.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7436	      8	   4796	  12240	   2fd0	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .text -j .ctors -j .dtors "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Code.mem" -MEM 32
+Finished building: ice40_sm_Code.mem
+ 
+Invoking: Lattice Multi Memory Deployment (DATA SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .rodata -j .data -j .bss "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Data.mem" -MEM 32
+Finished building: ice40_sm_Data.mem
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm*.mem ..\..\..\tb  
+ice40_sm.mem
+ice40_sm_Code.mem
+ice40_sm_Data.mem
+        3 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>for %f in (*.mem) do (
+python mem2bin.py %f %~nf_BE.bin -be  
+ python mem2bin.py %f %~nf_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm.mem ice40_sm_BE.bin -be  
+ python mem2bin.py ice40_sm.mem ice40_sm_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_BE.bin -be  
+ python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be  
+ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>pause
+Press any key to continue . . . 
+ 

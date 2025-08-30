@@ -67,12 +67,14 @@ struct gpio_instance led_gpio_inst;
 #define LED_COUNT 8
 #endif
 
-#include "timer.h"
+//#include "timer.h"
+#include "timer2.h"
 #include "pic.h"
 #include "lib_ov08x.h"
 
-#define GPIO_INTERVAL    500000 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
-//#define GPIO_INTERVAL    1500 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
+//#define GPIO_INTERVAL    500000 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
+#define GPIO_INTERVAL    1500 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
+#define TIMER_PRESCALE 23
 
 #if (defined TERM_UART_INST_BASE_ADDR)
 struct uart_instance term_uart_core_uart;

@@ -42,47 +42,63 @@
 --VHDL instantiation template
 
 component ice40_sm is
-    port (sram_dout: in std_logic_vector(31 downto 0);
+    port (gpio_io: inout std_logic_vector(7 downto 0);
+        ip_addr_o: out std_logic_vector(7 downto 0);
         ip_int_i: in std_logic_vector(1 downto 0);
         ip_rdata_i: in std_logic_vector(7 downto 0);
+        ip_wdata_o: out std_logic_vector(7 downto 0);
         sram_addr: out std_logic_vector(31 downto 0);
         sram_din: out std_logic_vector(31 downto 0);
+        sram_dout: in std_logic_vector(31 downto 0);
         sram_maskwe: out std_logic_vector(3 downto 0);
-        ip_addr_o: out std_logic_vector(7 downto 0);
-        ip_wdata_o: out std_logic_vector(7 downto 0);
-        gpio_io: inout std_logic_vector(7 downto 0);
+        dram_addr: out std_logic_vector(31 downto 0);
+        dram_din: out std_logic_vector(31 downto 0);
+        dram_maskwe: out std_logic_vector(3 downto 0);
+        dram_dout: in std_logic_vector(31 downto 0);
         clk_i: in std_logic;
-        rstn_i: in std_logic;
-        sram_read_valid: in std_logic;
-        sram_write_done: in std_logic;
-        rxd: in std_logic;
-        sram_re: out std_logic;
-        sram_we: out std_logic;
+        ip_ack_i: in std_logic;
         ip_stb_o: out std_logic;
         ip_we_o: out std_logic;
+        rstn_i: in std_logic;
+        rxd: in std_logic;
+        sram_re: out std_logic;
+        sram_read_valid: in std_logic;
+        sram_we: out std_logic;
+        sram_write_done: in std_logic;
         txd: out std_logic;
-        ip_ack_i: in std_logic
+        dram_re: out std_logic;
+        dram_we: out std_logic;
+        dram_read_valid: in std_logic;
+        dram_write_done: in std_logic
     );
     
 end component ice40_sm;
-_inst: ice40_sm port map (gpio_io => __,
-                          ip_int_i => __,
-                          ip_rdata_i => __,
-                          ip_addr_o => __,
-                          ip_wdata_o => __,
-                          ip_stb_o => __,
-                          ip_we_o => __,
-                          ip_ack_i => __,
-                          sram_dout => __,
-                          sram_addr => __,
-                          sram_din => __,
-                          sram_maskwe => __,
-                          sram_read_valid => __,
-                          sram_write_done => __,
-                          sram_re => __,
-                          sram_we => __,
+_inst: ice40_sm port map (rstn_i => __,
                           rxd => __,
                           txd => __,
-                          clk_i => __,
-                          rstn_i => __);
+                          sram_addr => __,
+                          sram_din => __,
+                          sram_dout => __,
+                          sram_maskwe => __,
+                          sram_re => __,
+                          sram_read_valid => __,
+                          sram_we => __,
+                          sram_write_done => __,
+                          dram_addr => __,
+                          dram_din => __,
+                          dram_maskwe => __,
+                          dram_dout => __,
+                          dram_re => __,
+                          dram_we => __,
+                          dram_read_valid => __,
+                          dram_write_done => __,
+                          gpio_io => __,
+                          ip_addr_o => __,
+                          ip_int_i => __,
+                          ip_rdata_i => __,
+                          ip_wdata_o => __,
+                          ip_ack_i => __,
+                          ip_stb_o => __,
+                          ip_we_o => __,
+                          clk_i => __);
                           

@@ -2,7 +2,22 @@
 <HEAD>
 <TITLE>Lattice TCL Log</TITLE>
 </HEAD>
-<BODY><DIV id="content" ><PRE><A name="250821083208" href="#250821083208"></A><B><U><big>250821083208</big></U></B>
+<BODY><DIV id="content" ><PRE><A name="250828153636" href="#250828153636"></A><B><U><big>250828153636</big></U></B>
+#Start recording tcl command: 8/28/2025 13:01:47
+sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design pge dge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -radiant
+sbp_config_ip -vlnv {latticesemi.com:module:ahb_brg:1.4.0} -meta_vlnv {latticesemi.com:module:ahb_lite_interconnect:1.4.0} -cfg_value {S0_ARBITER_SCHEME:3'd0,S0_MAX_BURST_SIZE:32,S1_MAX_BURST_SIZE:32,TOTAL_SLAVE_CNT:5,m0_s1_conn_en:false,m0_s2_conn_en:false,m0_s3_conn_en:false,m0_s4_conn_en:false}
+sbp_replace -vlnv {latticesemi.com:module:ahb_brg:1.4.0} -name {ahb_brg_inst} -component {ice40_sm/ahb_brg_inst}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design close
+#Stop recording: 8/28/2025 15:36:36
+
+<A name="250821083208" href="#250821083208"></A><B><U><big>250821083208</big></U></B>
 #Start recording tcl command: 8/21/2025 07:18:01
 sbp_create_project -name {ice40_sm} -path {O:/src/Propel/iCE40UP} -device {iCE40UP5K-SG48I} -speed {High-Performance_1.2V} -board {iCE40 UltraPlus Breakout Board(A)} -language Verilog -psc {C:/lscc/propel/2025.1/templates/MachXO3D_Template01/MachXO3D_Template01.psc}
 sbp_config_ip -vlnv {latticesemi.com:ip:cpu:1.8.0} -meta_vlnv {latticesemi.com:ip:riscv_sm:1.8.0} -cfg_value {IRQ_NUM:2,TIMER_ENABLE:true}

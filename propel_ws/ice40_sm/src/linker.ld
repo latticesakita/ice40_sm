@@ -2,13 +2,13 @@
 
 ENTRY (_start)
 
-_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x0100;
+_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x0800;
 _STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x0A00;
 
 MEMORY
 {
-    system0_inst (rx) : org = 0x0, len = 0xC000
-    system1_inst (rw) : org = 0xC000, len = 0x4000
+    system0_inst (rx) : org = 0x0, len = 0x10000
+    system1_inst (rw) : org = 0x20000, len = 0x10000
 }
 
 SECTIONS
@@ -59,7 +59,7 @@ SECTIONS
     *(.rodata .rodata.*)
     *(.gnu.linkonce.r.*)
     . = ALIGN(4);
-  } >system0_inst
+  } >system1_inst
 
   .data : ALIGN(4)
   {

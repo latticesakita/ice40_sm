@@ -64,8 +64,8 @@ module ahbl_int_top (
 input         ahbl_hclk_i        ,
 input         ahbl_hresetn_i     ,
 
-input  [1:0] ahbl_mstr_dummy_in ,
-output [1:0] ahbl_mstr_dummy_out,
+input  [0:0] ahbl_mstr_dummy_in ,
+output [0:0] ahbl_mstr_dummy_out,
 input  [4:0] ahbl_slv_dummy_in  ,
 output [4:0] ahbl_slv_dummy_out
 );
@@ -86,20 +86,6 @@ output [4:0] ahbl_slv_dummy_out
   wire                    ahbl_s00_hreadyout_slv_o;
   wire                    ahbl_s00_hresp_slv_o    ;
   wire [DATA_WIDTH-1:0]   ahbl_s00_hrdata_slv_o   ;
-
-  wire                    ahbl_s01_hsel_slv_i     ;
-  wire                    ahbl_s01_hready_slv_i   ;
-  wire [M_ADDR_WIDTH-1:0] ahbl_s01_haddr_slv_i    ;
-  wire [2:0]              ahbl_s01_hburst_slv_i   ;
-  wire [2:0]              ahbl_s01_hsize_slv_i    ;
-  wire                    ahbl_s01_hmastlock_slv_i;
-  wire [3:0]              ahbl_s01_hprot_slv_i    ;
-  wire [1:0]              ahbl_s01_htrans_slv_i   ;
-  wire [DATA_WIDTH-1:0]   ahbl_s01_hwdata_slv_i   ;
-  wire                    ahbl_s01_hwrite_slv_i   ;
-  wire                    ahbl_s01_hreadyout_slv_o;
-  wire                    ahbl_s01_hresp_slv_o    ;
-  wire [DATA_WIDTH-1:0]   ahbl_s01_hrdata_slv_o   ;
 
   wire                    ahbl_m00_hsel_mstr_o     ;
   wire                    ahbl_m00_hready_mstr_o   ;
@@ -192,27 +178,6 @@ output [4:0] ahbl_slv_dummy_out
     .ahbl_hrdata_i      (ahbl_s00_hrdata_slv_o   ),
     .ahbl_mstr_dummy_in (ahbl_mstr_dummy_in[0]   ),
     .ahbl_mstr_dummy_out(ahbl_mstr_dummy_out[0]  ));
-  lscc_ahbl_master_dummy #(
-    .DATA_WIDTH(DATA_WIDTH  ),
-    .ADDR_WIDTH(M_ADDR_WIDTH))
-  ahbl_mst_01 (
-    .ahbl_hclk_i        (ahbl_hclk_i             ),
-    .ahbl_hresetn_i     (ahbl_hresetn_i          ),
-    .ahbl_hsel_o        (ahbl_s01_hsel_slv_i     ),
-    .ahbl_hready_o      (ahbl_s01_hready_slv_i   ),
-    .ahbl_haddr_o       (ahbl_s01_haddr_slv_i    ),
-    .ahbl_hburst_o      (ahbl_s01_hburst_slv_i   ),
-    .ahbl_hsize_o       (ahbl_s01_hsize_slv_i    ),
-    .ahbl_hmastlock_o   (ahbl_s01_hmastlock_slv_i),
-    .ahbl_hprot_o       (ahbl_s01_hprot_slv_i    ),
-    .ahbl_htrans_o      (ahbl_s01_htrans_slv_i   ),
-    .ahbl_hwdata_o      (ahbl_s01_hwdata_slv_i   ),
-    .ahbl_hwrite_o      (ahbl_s01_hwrite_slv_i   ),
-    .ahbl_hreadyout_i   (ahbl_s01_hreadyout_slv_o),
-    .ahbl_hresp_i       (ahbl_s01_hresp_slv_o    ),
-    .ahbl_hrdata_i      (ahbl_s01_hrdata_slv_o   ),
-    .ahbl_mstr_dummy_in (ahbl_mstr_dummy_in[1]   ),
-    .ahbl_mstr_dummy_out(ahbl_mstr_dummy_out[1]  ));
 
 // Instantiating Dummy Slaves
   lscc_ahbl_slave_dummy #(

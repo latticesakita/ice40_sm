@@ -1,0 +1,28 @@
+<RadiantSimulationProject language="1" name="tb" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/i2c_slave_tb.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_common/spi_flash_tb.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/tb.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_sm_top.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_sm.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_common/spram16384x32.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_common/spi_fifo.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/hard_ip.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/personal/ip/spram_if/1.0.0/rtl/spram_if.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="dpram512x8/rtl/dpram512x8.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="dpram1024x8/rtl/dpram1024x8.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="dpram2048x2_512x8/rtl/dpram2048x2_512x8.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="dpram2048x8/rtl/dpram2048x8.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="dpram4096x8/rtl/dpram4096x8.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/lib/personal/ip/dram_if/1.0.0/rtl/dram_if.v" type="VERILOG" worklib="work"/>
+    <SimLib value="pmi_work ovi_ice40up"/>
+    <GlbInc value="&quot;.&quot;"/>
+    <Macro value=""/>
+    <Udo value=""/>
+    <TopModule instance="" language="VERILOG" name="tb"/>
+</RadiantSimulationProject>

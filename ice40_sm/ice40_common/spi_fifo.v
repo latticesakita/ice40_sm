@@ -207,7 +207,8 @@ always @(posedge clk2x or negedge resetn) begin
 		r_wen   <= 0;
 	end
 	else begin
-		r_wdata <= {w_di_i[0], w_do_i[0]};
+		//r_wdata <= {w_di_i[0], w_do_i[0]}; // capture in rising edge
+		r_wdata <= {w_di_i[1], w_do_i[1]}; // capture in falling edge in case clk2out delay in SPI flash is long.
 		r_wen   <= st_fill_d;
 	end
 end
