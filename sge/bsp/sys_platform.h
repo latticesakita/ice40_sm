@@ -62,17 +62,17 @@
 #define CPU_INST_NAME "cpu_inst"
 #define CPU_INST_BASE_ADDR 0xffff0000
 
-#define DRAM_IF_INST_NAME "dram_if_inst"
-#define DRAM_IF_INST_BASE_ADDR 0x20000
-
 #define GPIO_INST_NAME "gpio_inst"
 #define GPIO_INST_BASE_ADDR 0x40000
 
 #define ICE40_IP_IF_INST_NAME "ice40_ip_if_inst"
 #define ICE40_IP_IF_INST_BASE_ADDR 0x50000
 
-#define SPRAM_IF_INST_NAME "spram_if_inst"
-#define SPRAM_IF_INST_BASE_ADDR 0x0
+#define SYSTEM0_INST_NAME "system0_inst"
+#define SYSTEM0_INST_BASE_ADDR 0x20000
+
+#define SYSTEM1_INST_NAME "system1_inst"
+#define SYSTEM1_INST_BASE_ADDR 0x0
 
 #define TIMER_INST_NAME "timer_inst"
 #define TIMER_INST_BASE_ADDR 0x60000
@@ -82,10 +82,10 @@
 
 /* ip instance rename */
 #define RISCV_SM_INST_0 CPU_INST
-#define SPSRAM_IF_AHB_INST_0 DRAM_IF_INST
-#define SPSRAM_IF_AHB_INST_1 SPRAM_IF_INST
 #define GPIO_AHB_INST_0 GPIO_INST
 #define ICE40_IP_IF_AHB_INST_0 ICE40_IP_IF_INST
+#define SPSRAM_IF_AHB_SM_INST_0 SYSTEM0_INST
+#define SPSRAM_IF_AHB_SM_INST_1 SYSTEM1_INST
 #define TIMER_AHB_INST_0 TIMER_INST
 #define UART_AHB_INST_0 UART_INST
 
@@ -112,8 +112,6 @@ and make sure to disable it when developing the application firmware. */
 #define CPU_INST_SOFT_JTAG False
 #define CPU_INST_TIMER_ENABLE False
 
-/* dram_if_inst parameters */
-
 /* gpio_inst parameters */
 #define GPIO_INST_BUS_WIDTH 8
 #define GPIO_INST_DEVICE ICE40UP
@@ -122,7 +120,9 @@ and make sure to disable it when developing the application firmware. */
 
 /* ice40_ip_if_inst parameters */
 
-/* spram_if_inst parameters */
+/* system0_inst parameters */
+
+/* system1_inst parameters */
 
 /* timer_inst parameters */
 #define TIMER_INST_PRESCALE 23

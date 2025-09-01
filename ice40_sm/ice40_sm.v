@@ -51,26 +51,30 @@
 //
 // Verific Verilog Description of module ice40_sm
 //
-module ice40_sm (gpio_io, ip_addr_o, ip_int_i, ip_rdata_i, ip_wdata_o, 
-            sram_addr, sram_din, sram_dout, sram_maskwe, dram_addr, 
-            dram_din, dram_maskwe, dram_dout, clk_i, ip_ack_i, ip_stb_o, 
-            ip_we_o, rstn_i, rxd, sram_re, sram_read_valid, sram_we, 
-            sram_write_done, txd, dram_re, dram_we, dram_read_valid, 
-            dram_write_done);
+module ice40_sm (dram_din, dram_dout, dram_maskwe, gpio_io, ip_addr_o, 
+            ip_int_i, ip_rdata_i, ip_wdata_o, sram_din, sram_dout, 
+            sram_maskwe, sram_addr, dram_addr, clk_i, dram_re, dram_read_valid, 
+            dram_we, dram_write_done, ip_ack_i, ip_stb_o, ip_we_o, 
+            rstn_i, rxd, sram_re, sram_read_valid, sram_we, sram_write_done, 
+            txd);
+    output [31:0]dram_din;
+    input [31:0]dram_dout;
+    output [3:0]dram_maskwe;
     inout [7:0]gpio_io;
     output [7:0]ip_addr_o;
     input [1:0]ip_int_i;
     input [7:0]ip_rdata_i;
     output [7:0]ip_wdata_o;
-    output [31:0]sram_addr;
     output [31:0]sram_din;
     input [31:0]sram_dout;
     output [3:0]sram_maskwe;
-    output [31:0]dram_addr;
-    output [31:0]dram_din;
-    output [3:0]dram_maskwe;
-    input [31:0]dram_dout;
+    output [13:0]sram_addr;
+    output [13:0]dram_addr;
     input clk_i;
+    output dram_re;
+    input dram_read_valid;
+    output dram_we;
+    input dram_write_done;
     input ip_ack_i;
     output ip_stb_o;
     output ip_we_o;
@@ -81,64 +85,60 @@ module ice40_sm (gpio_io, ip_addr_o, ip_int_i, ip_rdata_i, ip_wdata_o,
     output sram_we;
     input sram_write_done;
     output txd;
-    output dram_re;
-    output dram_we;
-    input dram_read_valid;
-    input dram_write_done;
     
-    wire [31:0]ahb_brg_inst_AHBL_M04_interconnect_HRDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M04_interconnect_HADDR;
-    wire [2:0]ahb_brg_inst_AHBL_M04_interconnect_HBURST;
-    wire [2:0]ahb_brg_inst_AHBL_M04_interconnect_HSIZE;
-    wire [1:0]ahb_brg_inst_AHBL_M04_interconnect_HTRANS;
-    wire [31:0]ahb_brg_inst_AHBL_M04_interconnect_HWDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M03_interconnect_HRDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M03_interconnect_HADDR;
-    wire [2:0]ahb_brg_inst_AHBL_M03_interconnect_HBURST;
-    wire [2:0]ahb_brg_inst_AHBL_M03_interconnect_HSIZE;
-    wire [1:0]ahb_brg_inst_AHBL_M03_interconnect_HTRANS;
-    wire [31:0]ahb_brg_inst_AHBL_M03_interconnect_HWDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M02_interconnect_HRDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M02_interconnect_HADDR;
-    wire [2:0]ahb_brg_inst_AHBL_M02_interconnect_HBURST;
-    wire [2:0]ahb_brg_inst_AHBL_M02_interconnect_HSIZE;
-    wire [1:0]ahb_brg_inst_AHBL_M02_interconnect_HTRANS;
-    wire [31:0]ahb_brg_inst_AHBL_M02_interconnect_HWDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M01_interconnect_HRDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M01_interconnect_HADDR;
-    wire [2:0]ahb_brg_inst_AHBL_M01_interconnect_HBURST;
-    wire [2:0]ahb_brg_inst_AHBL_M01_interconnect_HSIZE;
-    wire [1:0]ahb_brg_inst_AHBL_M01_interconnect_HTRANS;
-    wire [31:0]ahb_brg_inst_AHBL_M01_interconnect_HWDATA;
-    wire [31:0]cpu_inst_AHBL_M1_DATA_interconnect_HADDR;
-    wire [2:0]cpu_inst_AHBL_M1_DATA_interconnect_HBURST;
-    wire [2:0]cpu_inst_AHBL_M1_DATA_interconnect_HSIZE;
-    wire [3:0]cpu_inst_AHBL_M1_DATA_interconnect_HPROT;
-    wire [1:0]cpu_inst_AHBL_M1_DATA_interconnect_HTRANS;
-    wire [31:0]cpu_inst_AHBL_M1_DATA_interconnect_HWDATA;
-    wire [31:0]cpu_inst_AHBL_M1_DATA_interconnect_HRDATA;
-    wire [31:0]ahb_brg_inst_AHBL_M00_interconnect_HRDATA;
     wire [31:0]ahb_brg_inst_AHBL_M00_interconnect_HADDR;
     wire [2:0]ahb_brg_inst_AHBL_M00_interconnect_HBURST;
+    wire [31:0]ahb_brg_inst_AHBL_M00_interconnect_HRDATA;
     wire [2:0]ahb_brg_inst_AHBL_M00_interconnect_HSIZE;
     wire [1:0]ahb_brg_inst_AHBL_M00_interconnect_HTRANS;
     wire [31:0]ahb_brg_inst_AHBL_M00_interconnect_HWDATA;
+    wire [31:0]ahb_brg_inst_AHBL_M01_interconnect_HADDR;
+    wire [2:0]ahb_brg_inst_AHBL_M01_interconnect_HBURST;
+    wire [31:0]ahb_brg_inst_AHBL_M01_interconnect_HRDATA;
+    wire [2:0]ahb_brg_inst_AHBL_M01_interconnect_HSIZE;
+    wire [1:0]ahb_brg_inst_AHBL_M01_interconnect_HTRANS;
+    wire [31:0]ahb_brg_inst_AHBL_M01_interconnect_HWDATA;
+    wire [31:0]ahb_brg_inst_AHBL_M02_interconnect_HADDR;
+    wire [2:0]ahb_brg_inst_AHBL_M02_interconnect_HBURST;
+    wire [31:0]ahb_brg_inst_AHBL_M02_interconnect_HRDATA;
+    wire [2:0]ahb_brg_inst_AHBL_M02_interconnect_HSIZE;
+    wire [1:0]ahb_brg_inst_AHBL_M02_interconnect_HTRANS;
+    wire [31:0]ahb_brg_inst_AHBL_M02_interconnect_HWDATA;
+    wire [31:0]ahb_brg_inst_AHBL_M03_interconnect_HADDR;
+    wire [2:0]ahb_brg_inst_AHBL_M03_interconnect_HBURST;
+    wire [31:0]ahb_brg_inst_AHBL_M03_interconnect_HRDATA;
+    wire [2:0]ahb_brg_inst_AHBL_M03_interconnect_HSIZE;
+    wire [1:0]ahb_brg_inst_AHBL_M03_interconnect_HTRANS;
+    wire [31:0]ahb_brg_inst_AHBL_M03_interconnect_HWDATA;
+    wire [31:0]ahb_brg_inst_AHBL_M04_interconnect_HADDR;
+    wire [2:0]ahb_brg_inst_AHBL_M04_interconnect_HBURST;
+    wire [31:0]ahb_brg_inst_AHBL_M04_interconnect_HRDATA;
+    wire [2:0]ahb_brg_inst_AHBL_M04_interconnect_HSIZE;
+    wire [1:0]ahb_brg_inst_AHBL_M04_interconnect_HTRANS;
+    wire [31:0]ahb_brg_inst_AHBL_M04_interconnect_HWDATA;
+    wire [31:0]cpu_inst_AHBL_M1_DATA_interconnect_HADDR;
+    wire [2:0]cpu_inst_AHBL_M1_DATA_interconnect_HBURST;
+    wire [3:0]cpu_inst_AHBL_M1_DATA_interconnect_HPROT;
+    wire [31:0]cpu_inst_AHBL_M1_DATA_interconnect_HRDATA;
+    wire [2:0]cpu_inst_AHBL_M1_DATA_interconnect_HSIZE;
+    wire [1:0]cpu_inst_AHBL_M1_DATA_interconnect_HTRANS;
+    wire [31:0]cpu_inst_AHBL_M1_DATA_interconnect_HWDATA;
     
-    wire cpu_inst_system_resetn_o_net, ahb_brg_inst_AHBL_M04_interconnect_HREADYOUT, 
-        ahb_brg_inst_AHBL_M04_interconnect_HRESP, ahb_brg_inst_AHBL_M04_interconnect_HSELx, 
-        ahb_brg_inst_AHBL_M04_interconnect_HWRITE, ahb_brg_inst_AHBL_M04_interconnect_HREADY, 
-        ahb_brg_inst_AHBL_M03_interconnect_HREADYOUT, ahb_brg_inst_AHBL_M03_interconnect_HRESP, 
-        ahb_brg_inst_AHBL_M03_interconnect_HSELx, ahb_brg_inst_AHBL_M03_interconnect_HWRITE, 
-        ahb_brg_inst_AHBL_M03_interconnect_HREADY, ahb_brg_inst_AHBL_M02_interconnect_HREADYOUT, 
-        ahb_brg_inst_AHBL_M02_interconnect_HRESP, ahb_brg_inst_AHBL_M02_interconnect_HSELx, 
-        ahb_brg_inst_AHBL_M02_interconnect_HWRITE, ahb_brg_inst_AHBL_M02_interconnect_HREADY, 
-        ahb_brg_inst_AHBL_M01_interconnect_HREADYOUT, ahb_brg_inst_AHBL_M01_interconnect_HRESP, 
-        ahb_brg_inst_AHBL_M01_interconnect_HSELx, ahb_brg_inst_AHBL_M01_interconnect_HWRITE, 
-        ahb_brg_inst_AHBL_M01_interconnect_HREADY, cpu_inst_AHBL_M1_DATA_interconnect_HMASTLOCK, 
-        cpu_inst_AHBL_M1_DATA_interconnect_HWRITE, cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT, 
-        cpu_inst_AHBL_M1_DATA_interconnect_HRESP, ahb_brg_inst_AHBL_M00_interconnect_HREADYOUT, 
-        ahb_brg_inst_AHBL_M00_interconnect_HRESP, ahb_brg_inst_AHBL_M00_interconnect_HSELx, 
-        ahb_brg_inst_AHBL_M00_interconnect_HWRITE, ahb_brg_inst_AHBL_M00_interconnect_HREADY;
+    wire cpu_inst_system_resetn_o_net, ahb_brg_inst_AHBL_M00_interconnect_HREADYOUT, 
+        ahb_brg_inst_AHBL_M00_interconnect_HREADY, ahb_brg_inst_AHBL_M00_interconnect_HRESP, 
+        ahb_brg_inst_AHBL_M00_interconnect_HSELx, ahb_brg_inst_AHBL_M00_interconnect_HWRITE, 
+        ahb_brg_inst_AHBL_M01_interconnect_HREADYOUT, ahb_brg_inst_AHBL_M01_interconnect_HREADY, 
+        ahb_brg_inst_AHBL_M01_interconnect_HRESP, ahb_brg_inst_AHBL_M01_interconnect_HSELx, 
+        ahb_brg_inst_AHBL_M01_interconnect_HWRITE, ahb_brg_inst_AHBL_M02_interconnect_HREADYOUT, 
+        ahb_brg_inst_AHBL_M02_interconnect_HREADY, ahb_brg_inst_AHBL_M02_interconnect_HRESP, 
+        ahb_brg_inst_AHBL_M02_interconnect_HSELx, ahb_brg_inst_AHBL_M02_interconnect_HWRITE, 
+        ahb_brg_inst_AHBL_M03_interconnect_HREADYOUT, ahb_brg_inst_AHBL_M03_interconnect_HREADY, 
+        ahb_brg_inst_AHBL_M03_interconnect_HRESP, ahb_brg_inst_AHBL_M03_interconnect_HSELx, 
+        ahb_brg_inst_AHBL_M03_interconnect_HWRITE, ahb_brg_inst_AHBL_M04_interconnect_HREADYOUT, 
+        ahb_brg_inst_AHBL_M04_interconnect_HREADY, ahb_brg_inst_AHBL_M04_interconnect_HRESP, 
+        ahb_brg_inst_AHBL_M04_interconnect_HSELx, ahb_brg_inst_AHBL_M04_interconnect_HWRITE, 
+        cpu_inst_AHBL_M1_DATA_interconnect_HMASTLOCK, cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT, 
+        cpu_inst_AHBL_M1_DATA_interconnect_HRESP, cpu_inst_AHBL_M1_DATA_interconnect_HWRITE;
     wire [31:0]cpu_inst_AHBL_M0_INSTR_interconnect_HADDR;
     wire [2:0]cpu_inst_AHBL_M0_INSTR_interconnect_HBURST;
     wire [31:0]cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA;
@@ -152,77 +152,77 @@ module ice40_sm (gpio_io, ip_addr_o, ip_int_i, ip_rdata_i, ip_wdata_o,
     wire [31:0]timer_inst_systime_o_netbus;
     
     
-    ahb_brg ahb_brg_inst (.ahbl_m04_hrdata_mstr_i({ahb_brg_inst_AHBL_M04_interconnect_HRDATA}), 
-            .ahbl_m04_haddr_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HADDR}), 
-            .ahbl_m04_hburst_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HBURST}), 
-            .ahbl_m04_hsize_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HSIZE}), 
-            .ahbl_m04_htrans_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HTRANS}), 
-            .ahbl_m04_hwdata_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HWDATA}), 
-            .ahbl_m03_hrdata_mstr_i({ahb_brg_inst_AHBL_M03_interconnect_HRDATA}), 
-            .ahbl_m03_haddr_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HADDR}), 
-            .ahbl_m03_hburst_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HBURST}), 
-            .ahbl_m03_hsize_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HSIZE}), 
-            .ahbl_m03_htrans_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HTRANS}), 
-            .ahbl_m03_hwdata_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HWDATA}), 
-            .ahbl_m02_hrdata_mstr_i({ahb_brg_inst_AHBL_M02_interconnect_HRDATA}), 
-            .ahbl_m02_haddr_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HADDR}), 
-            .ahbl_m02_hburst_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HBURST}), 
-            .ahbl_m02_hsize_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HSIZE}), 
-            .ahbl_m02_htrans_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HTRANS}), 
-            .ahbl_m02_hwdata_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HWDATA}), 
-            .ahbl_m01_hrdata_mstr_i({ahb_brg_inst_AHBL_M01_interconnect_HRDATA}), 
-            .ahbl_m01_haddr_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HADDR}), 
-            .ahbl_m01_hburst_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HBURST}), 
-            .ahbl_m01_hsize_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HSIZE}), 
-            .ahbl_m01_htrans_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HTRANS}), 
-            .ahbl_m01_hwdata_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HWDATA}), 
-            .ahbl_s00_haddr_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HADDR}), 
-            .ahbl_s00_hburst_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HBURST}), 
-            .ahbl_s00_hsize_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HSIZE}), 
-            .ahbl_s00_hprot_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HPROT}), 
-            .ahbl_s00_htrans_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HTRANS}), 
-            .ahbl_s00_hwdata_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HWDATA}), 
-            .ahbl_s00_hrdata_slv_o({cpu_inst_AHBL_M1_DATA_interconnect_HRDATA}), 
-            .ahbl_m00_hrdata_mstr_i({ahb_brg_inst_AHBL_M00_interconnect_HRDATA}), 
-            .ahbl_m00_haddr_mstr_o({ahb_brg_inst_AHBL_M00_interconnect_HADDR}), 
+    ahb_brg ahb_brg_inst (.ahbl_m00_haddr_mstr_o({ahb_brg_inst_AHBL_M00_interconnect_HADDR}), 
             .ahbl_m00_hburst_mstr_o({ahb_brg_inst_AHBL_M00_interconnect_HBURST}), 
+            .ahbl_m00_hrdata_mstr_i({ahb_brg_inst_AHBL_M00_interconnect_HRDATA}), 
             .ahbl_m00_hsize_mstr_o({ahb_brg_inst_AHBL_M00_interconnect_HSIZE}), 
             .ahbl_m00_htrans_mstr_o({ahb_brg_inst_AHBL_M00_interconnect_HTRANS}), 
             .ahbl_m00_hwdata_mstr_o({ahb_brg_inst_AHBL_M00_interconnect_HWDATA}), 
+            .ahbl_m01_haddr_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HADDR}), 
+            .ahbl_m01_hburst_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HBURST}), 
+            .ahbl_m01_hrdata_mstr_i({ahb_brg_inst_AHBL_M01_interconnect_HRDATA}), 
+            .ahbl_m01_hsize_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HSIZE}), 
+            .ahbl_m01_htrans_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HTRANS}), 
+            .ahbl_m01_hwdata_mstr_o({ahb_brg_inst_AHBL_M01_interconnect_HWDATA}), 
+            .ahbl_m02_haddr_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HADDR}), 
+            .ahbl_m02_hburst_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HBURST}), 
+            .ahbl_m02_hrdata_mstr_i({ahb_brg_inst_AHBL_M02_interconnect_HRDATA}), 
+            .ahbl_m02_hsize_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HSIZE}), 
+            .ahbl_m02_htrans_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HTRANS}), 
+            .ahbl_m02_hwdata_mstr_o({ahb_brg_inst_AHBL_M02_interconnect_HWDATA}), 
+            .ahbl_m03_haddr_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HADDR}), 
+            .ahbl_m03_hburst_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HBURST}), 
+            .ahbl_m03_hrdata_mstr_i({ahb_brg_inst_AHBL_M03_interconnect_HRDATA}), 
+            .ahbl_m03_hsize_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HSIZE}), 
+            .ahbl_m03_htrans_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HTRANS}), 
+            .ahbl_m03_hwdata_mstr_o({ahb_brg_inst_AHBL_M03_interconnect_HWDATA}), 
+            .ahbl_m04_haddr_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HADDR}), 
+            .ahbl_m04_hburst_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HBURST}), 
+            .ahbl_m04_hrdata_mstr_i({ahb_brg_inst_AHBL_M04_interconnect_HRDATA}), 
+            .ahbl_m04_hsize_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HSIZE}), 
+            .ahbl_m04_htrans_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HTRANS}), 
+            .ahbl_m04_hwdata_mstr_o({ahb_brg_inst_AHBL_M04_interconnect_HWDATA}), 
+            .ahbl_s00_haddr_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HADDR}), 
+            .ahbl_s00_hburst_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HBURST}), 
+            .ahbl_s00_hprot_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HPROT}), 
+            .ahbl_s00_hrdata_slv_o({cpu_inst_AHBL_M1_DATA_interconnect_HRDATA}), 
+            .ahbl_s00_hsize_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HSIZE}), 
+            .ahbl_s00_htrans_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HTRANS}), 
+            .ahbl_s00_hwdata_slv_i({cpu_inst_AHBL_M1_DATA_interconnect_HWDATA}), 
             .ahbl_hclk_i(clk_i), .ahbl_hresetn_i(cpu_inst_system_resetn_o_net), 
-            .ahbl_m04_hready_mstr_i(ahb_brg_inst_AHBL_M04_interconnect_HREADYOUT), 
-            .ahbl_m04_hresp_mstr_i(ahb_brg_inst_AHBL_M04_interconnect_HRESP), 
-            .ahbl_m04_hsel_mstr_o(ahb_brg_inst_AHBL_M04_interconnect_HSELx), 
-            .ahbl_m04_hwrite_mstr_o(ahb_brg_inst_AHBL_M04_interconnect_HWRITE), 
-            .ahbl_m04_hready_mstr_o(ahb_brg_inst_AHBL_M04_interconnect_HREADY), 
-            .ahbl_m03_hready_mstr_i(ahb_brg_inst_AHBL_M03_interconnect_HREADYOUT), 
-            .ahbl_m03_hresp_mstr_i(ahb_brg_inst_AHBL_M03_interconnect_HRESP), 
-            .ahbl_m03_hsel_mstr_o(ahb_brg_inst_AHBL_M03_interconnect_HSELx), 
-            .ahbl_m03_hwrite_mstr_o(ahb_brg_inst_AHBL_M03_interconnect_HWRITE), 
-            .ahbl_m03_hready_mstr_o(ahb_brg_inst_AHBL_M03_interconnect_HREADY), 
-            .ahbl_m02_hready_mstr_i(ahb_brg_inst_AHBL_M02_interconnect_HREADYOUT), 
-            .ahbl_m02_hresp_mstr_i(ahb_brg_inst_AHBL_M02_interconnect_HRESP), 
-            .ahbl_m02_hsel_mstr_o(ahb_brg_inst_AHBL_M02_interconnect_HSELx), 
-            .ahbl_m02_hwrite_mstr_o(ahb_brg_inst_AHBL_M02_interconnect_HWRITE), 
-            .ahbl_m02_hready_mstr_o(ahb_brg_inst_AHBL_M02_interconnect_HREADY), 
-            .ahbl_m01_hready_mstr_i(ahb_brg_inst_AHBL_M01_interconnect_HREADYOUT), 
-            .ahbl_m01_hresp_mstr_i(ahb_brg_inst_AHBL_M01_interconnect_HRESP), 
-            .ahbl_m01_hsel_mstr_o(ahb_brg_inst_AHBL_M01_interconnect_HSELx), 
-            .ahbl_m01_hwrite_mstr_o(ahb_brg_inst_AHBL_M01_interconnect_HWRITE), 
-            .ahbl_m01_hready_mstr_o(ahb_brg_inst_AHBL_M01_interconnect_HREADY), 
-            .ahbl_s00_hsel_slv_i(1'b1), .ahbl_s00_hmastlock_slv_i(cpu_inst_AHBL_M1_DATA_interconnect_HMASTLOCK), 
-            .ahbl_s00_hwrite_slv_i(cpu_inst_AHBL_M1_DATA_interconnect_HWRITE), 
-            .ahbl_s00_hready_slv_i(cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT), 
-            .ahbl_s00_hreadyout_slv_o(cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT), 
-            .ahbl_s00_hresp_slv_o(cpu_inst_AHBL_M1_DATA_interconnect_HRESP), 
             .ahbl_m00_hready_mstr_i(ahb_brg_inst_AHBL_M00_interconnect_HREADYOUT), 
+            .ahbl_m00_hready_mstr_o(ahb_brg_inst_AHBL_M00_interconnect_HREADY), 
             .ahbl_m00_hresp_mstr_i(ahb_brg_inst_AHBL_M00_interconnect_HRESP), 
             .ahbl_m00_hsel_mstr_o(ahb_brg_inst_AHBL_M00_interconnect_HSELx), 
             .ahbl_m00_hwrite_mstr_o(ahb_brg_inst_AHBL_M00_interconnect_HWRITE), 
-            .ahbl_m00_hready_mstr_o(ahb_brg_inst_AHBL_M00_interconnect_HREADY));
+            .ahbl_m01_hready_mstr_i(ahb_brg_inst_AHBL_M01_interconnect_HREADYOUT), 
+            .ahbl_m01_hready_mstr_o(ahb_brg_inst_AHBL_M01_interconnect_HREADY), 
+            .ahbl_m01_hresp_mstr_i(ahb_brg_inst_AHBL_M01_interconnect_HRESP), 
+            .ahbl_m01_hsel_mstr_o(ahb_brg_inst_AHBL_M01_interconnect_HSELx), 
+            .ahbl_m01_hwrite_mstr_o(ahb_brg_inst_AHBL_M01_interconnect_HWRITE), 
+            .ahbl_m02_hready_mstr_i(ahb_brg_inst_AHBL_M02_interconnect_HREADYOUT), 
+            .ahbl_m02_hready_mstr_o(ahb_brg_inst_AHBL_M02_interconnect_HREADY), 
+            .ahbl_m02_hresp_mstr_i(ahb_brg_inst_AHBL_M02_interconnect_HRESP), 
+            .ahbl_m02_hsel_mstr_o(ahb_brg_inst_AHBL_M02_interconnect_HSELx), 
+            .ahbl_m02_hwrite_mstr_o(ahb_brg_inst_AHBL_M02_interconnect_HWRITE), 
+            .ahbl_m03_hready_mstr_i(ahb_brg_inst_AHBL_M03_interconnect_HREADYOUT), 
+            .ahbl_m03_hready_mstr_o(ahb_brg_inst_AHBL_M03_interconnect_HREADY), 
+            .ahbl_m03_hresp_mstr_i(ahb_brg_inst_AHBL_M03_interconnect_HRESP), 
+            .ahbl_m03_hsel_mstr_o(ahb_brg_inst_AHBL_M03_interconnect_HSELx), 
+            .ahbl_m03_hwrite_mstr_o(ahb_brg_inst_AHBL_M03_interconnect_HWRITE), 
+            .ahbl_m04_hready_mstr_i(ahb_brg_inst_AHBL_M04_interconnect_HREADYOUT), 
+            .ahbl_m04_hready_mstr_o(ahb_brg_inst_AHBL_M04_interconnect_HREADY), 
+            .ahbl_m04_hresp_mstr_i(ahb_brg_inst_AHBL_M04_interconnect_HRESP), 
+            .ahbl_m04_hsel_mstr_o(ahb_brg_inst_AHBL_M04_interconnect_HSELx), 
+            .ahbl_m04_hwrite_mstr_o(ahb_brg_inst_AHBL_M04_interconnect_HWRITE), 
+            .ahbl_s00_hmastlock_slv_i(cpu_inst_AHBL_M1_DATA_interconnect_HMASTLOCK), 
+            .ahbl_s00_hready_slv_i(cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT), 
+            .ahbl_s00_hreadyout_slv_o(cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT), 
+            .ahbl_s00_hresp_slv_o(cpu_inst_AHBL_M1_DATA_interconnect_HRESP), 
+            .ahbl_s00_hsel_slv_i(1'b1), .ahbl_s00_hwrite_slv_i(cpu_inst_AHBL_M1_DATA_interconnect_HWRITE));
     defparam ahb_brg_inst.FULL_DECODE_EN = 1;
     defparam ahb_brg_inst.S0_ADDR_RANGE = 32'h00020000;
-    defparam ahb_brg_inst.S0_BASE_ADDR = 32'h00020000;
+    defparam ahb_brg_inst.S0_BASE_ADDR = 32'h00000000;
     defparam ahb_brg_inst.S1_ADDR_RANGE = 32'h00000400;
     defparam ahb_brg_inst.S1_BASE_ADDR = 32'h00050000;
     defparam ahb_brg_inst.S2_ADDR_RANGE = 32'h00000400;
@@ -253,16 +253,6 @@ module ice40_sm (gpio_io, ip_addr_o, ip_int_i, ip_rdata_i, ip_wdata_o,
         .clk_i(clk_i), .irq0_i(ice40_ip_if_inst_IRQ_interconnect_IRQ), .irq1_i(uart_inst_IRQ_interconnect_IRQ), 
         .rst_n_i(rstn_i), .system_resetn_o(cpu_inst_system_resetn_o_net), 
         .timer_irq_i(timer_inst_IRQ_interconnect_IRQ));
-    dram_if dram_if_inst (.HADDR({ahb_brg_inst_AHBL_M00_interconnect_HADDR}), 
-            .HBURST({ahb_brg_inst_AHBL_M00_interconnect_HBURST}), .HTRANS({ahb_brg_inst_AHBL_M00_interconnect_HTRANS}), 
-            .HSIZE({ahb_brg_inst_AHBL_M00_interconnect_HSIZE}), .HWDATA({ahb_brg_inst_AHBL_M00_interconnect_HWDATA}), 
-            .HRDATA({ahb_brg_inst_AHBL_M00_interconnect_HRDATA}), .sram_addr({dram_addr}), 
-            .sram_maskwe({dram_maskwe}), .sram_din({dram_din}), .sram_dout({dram_dout}), 
-            .HCLK(clk_i), .HRESETn(cpu_inst_system_resetn_o_net), .HWRITE(ahb_brg_inst_AHBL_M00_interconnect_HWRITE), 
-            .HSEL(ahb_brg_inst_AHBL_M00_interconnect_HSELx), .HREADY(ahb_brg_inst_AHBL_M00_interconnect_HREADY), 
-            .HREADYOUT(ahb_brg_inst_AHBL_M00_interconnect_HREADYOUT), .HRESP(ahb_brg_inst_AHBL_M00_interconnect_HRESP), 
-            .sram_we(dram_we), .sram_re(dram_re), .sram_write_done(dram_write_done), 
-            .sram_read_valid(dram_read_valid));
     gpio gpio_inst (.ahbl_haddr_i({ahb_brg_inst_AHBL_M02_interconnect_HADDR}), 
          .ahbl_hburst_i({ahb_brg_inst_AHBL_M02_interconnect_HBURST}), .ahbl_hrdata_o({ahb_brg_inst_AHBL_M02_interconnect_HRDATA}), 
          .ahbl_hsize_i({ahb_brg_inst_AHBL_M02_interconnect_HSIZE}), .ahbl_htrans_i({ahb_brg_inst_AHBL_M02_interconnect_HTRANS}), 
@@ -281,16 +271,26 @@ module ice40_sm (gpio_io, ip_addr_o, ip_int_i, ip_rdata_i, ip_wdata_o,
             .HWRITE(ahb_brg_inst_AHBL_M01_interconnect_HWRITE), .clk(clk_i), 
             .int_o(ice40_ip_if_inst_IRQ_interconnect_IRQ), .ip_ack_i(ip_ack_i), 
             .ip_stb_o(ip_stb_o), .ip_we_o(ip_we_o), .resetn(cpu_inst_system_resetn_o_net));
-    spram_if spram_if_inst (.HADDR({cpu_inst_AHBL_M0_INSTR_interconnect_HADDR}), 
-            .HBURST({cpu_inst_AHBL_M0_INSTR_interconnect_HBURST}), .HRDATA({cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA}), 
-            .HSIZE({cpu_inst_AHBL_M0_INSTR_interconnect_HSIZE}), .HTRANS({cpu_inst_AHBL_M0_INSTR_interconnect_HTRANS}), 
-            .HWDATA({cpu_inst_AHBL_M0_INSTR_interconnect_HWDATA}), .sram_addr({sram_addr}), 
-            .sram_din({sram_din}), .sram_dout({sram_dout}), .sram_maskwe({sram_maskwe}), 
-            .HCLK(clk_i), .HREADY(cpu_inst_AHBL_M0_INSTR_interconnect_HREADYOUT), 
-            .HREADYOUT(cpu_inst_AHBL_M0_INSTR_interconnect_HREADYOUT), .HRESETn(cpu_inst_system_resetn_o_net), 
-            .HRESP(cpu_inst_AHBL_M0_INSTR_interconnect_HRESP), .HSEL(1'b1), 
-            .HWRITE(cpu_inst_AHBL_M0_INSTR_interconnect_HWRITE), .sram_re(sram_re), 
-            .sram_read_valid(sram_read_valid), .sram_we(sram_we), .sram_write_done(sram_write_done));
+    system0 system0_inst (.HADDR({cpu_inst_AHBL_M0_INSTR_interconnect_HADDR}), 
+            .HBURST({cpu_inst_AHBL_M0_INSTR_interconnect_HBURST}), .HTRANS({cpu_inst_AHBL_M0_INSTR_interconnect_HTRANS}), 
+            .HSIZE({cpu_inst_AHBL_M0_INSTR_interconnect_HSIZE}), .HWDATA({cpu_inst_AHBL_M0_INSTR_interconnect_HWDATA}), 
+            .HRDATA({cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA}), .sram_addr({sram_addr}), 
+            .sram_maskwe({sram_maskwe}), .sram_din({sram_din}), .sram_dout({sram_dout}), 
+            .HCLK(clk_i), .HRESETn(cpu_inst_system_resetn_o_net), .HWRITE(cpu_inst_AHBL_M0_INSTR_interconnect_HWRITE), 
+            .HSEL(1'b1), .HREADY(cpu_inst_AHBL_M0_INSTR_interconnect_HREADYOUT), 
+            .HREADYOUT(cpu_inst_AHBL_M0_INSTR_interconnect_HREADYOUT), .HRESP(cpu_inst_AHBL_M0_INSTR_interconnect_HRESP), 
+            .sram_we(sram_we), .sram_re(sram_re), .sram_write_done(sram_write_done), 
+            .sram_read_valid(sram_read_valid));
+    system1 system1_inst (.HADDR({ahb_brg_inst_AHBL_M00_interconnect_HADDR}), 
+            .HBURST({ahb_brg_inst_AHBL_M00_interconnect_HBURST}), .HTRANS({ahb_brg_inst_AHBL_M00_interconnect_HTRANS}), 
+            .HSIZE({ahb_brg_inst_AHBL_M00_interconnect_HSIZE}), .HWDATA({ahb_brg_inst_AHBL_M00_interconnect_HWDATA}), 
+            .HRDATA({ahb_brg_inst_AHBL_M00_interconnect_HRDATA}), .sram_addr({dram_addr}), 
+            .sram_maskwe({dram_maskwe}), .sram_din({dram_din}), .sram_dout({dram_dout}), 
+            .HCLK(clk_i), .HRESETn(cpu_inst_system_resetn_o_net), .HWRITE(ahb_brg_inst_AHBL_M00_interconnect_HWRITE), 
+            .HSEL(ahb_brg_inst_AHBL_M00_interconnect_HSELx), .HREADY(ahb_brg_inst_AHBL_M00_interconnect_HREADY), 
+            .HREADYOUT(ahb_brg_inst_AHBL_M00_interconnect_HREADYOUT), .HRESP(ahb_brg_inst_AHBL_M00_interconnect_HRESP), 
+            .sram_we(dram_we), .sram_re(dram_re), .sram_write_done(dram_write_done), 
+            .sram_read_valid(dram_read_valid));
     timer timer_inst (.ahbl_haddr_i({ahb_brg_inst_AHBL_M04_interconnect_HADDR}), 
           .ahbl_hburst_i({ahb_brg_inst_AHBL_M04_interconnect_HBURST}), .ahbl_hrdata_o({ahb_brg_inst_AHBL_M04_interconnect_HRDATA}), 
           .ahbl_hsize_i({ahb_brg_inst_AHBL_M04_interconnect_HSIZE}), .ahbl_htrans_i({ahb_brg_inst_AHBL_M04_interconnect_HTRANS}), 

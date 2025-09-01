@@ -30,9 +30,6 @@
         <Source name="ice40_sm/hard_ip.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="ice40_sm/lib/personal/ip/spram_if/1.0.0/spram_if.ipx" type="IPX_Module" type_short="IPX">
-            <Options/>
-        </Source>
         <Source name="ice40_sm/lib/personal/ip/timer/1.0.0/timer.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
@@ -66,7 +63,10 @@
         <Source name="dpram4096x8/dpram4096x8.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
-        <Source name="ice40_sm/lib/personal/ip/dram_if/1.0.0/dram_if.ipx" type="IPX_Module" type_short="IPX">
+        <Source name="ice40_sm/lib/personal/ip/system0/1.0.0/system0.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="ice40_sm/lib/personal/ip/system1/1.0.0/system1.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
         <Source name="ice40_sm.sdc" type="Pre-Synthesis Constraints File" type_short="SDC">

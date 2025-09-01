@@ -39,7 +39,7 @@ wire [23:0]     flash_addr;
 reg [13:0]	r_spi_sram_addr;
 wire 		spi_sram_we;
 wire [31:0]	spi_sram_din;
-wire [31:0]	soc_sram_addr;
+wire [13:0]	soc_sram_addr;
 wire [31:0]	soc_sram_din;
 wire [31:0]	soc_sram_dout;
 wire		soc_sram_we;
@@ -57,7 +57,7 @@ wire [3:0]	sram_maskwe;
 reg [13:0]	r_spi_dram_addr;
 wire 		spi_dram_we;
 wire [31:0]	spi_dram_din;
-wire [31:0]	soc_dram_addr;
+wire [13:0]	soc_dram_addr;
 wire [31:0]	soc_dram_din;
 wire [31:0]	soc_dram_dout;
 wire		soc_dram_we;
@@ -83,30 +83,22 @@ wire		ip_ack;
 
 
 
-assign sram_addr   = (load_state==STATE_LOAD_SYSTEM0) ? r_spi_sram_addr : 
-			soc_sram_addr[13:0]  ;
-assign sram_din    = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_din : 
-			soc_sram_din;
-assign sram_we     = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_we :
-			(load_state==STATE_LOAD_SYSTEM0) ? soc_sram_we   : 1'b0  ;
-assign sram_maskwe     = (load_state==STATE_LOAD_SYSTEM0) ? 4'b1111 :
-			(load_state==STATE_LOAD_SYSTEM0) ? soc_sram_maskwe   : 4'b0  ;
+assign sram_addr     = (load_state==STATE_LOAD_SYSTEM0) ? r_spi_sram_addr : soc_sram_addr[13:0]  ;
+assign sram_din      = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_din    : soc_sram_din;
+assign sram_we       = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_we     : soc_sram_we;
+assign sram_maskwe   = (load_state==STATE_LOAD_SYSTEM0) ? 4'b1111         : soc_sram_maskwe;
 assign soc_sram_dout = sram_dout;
-assign soc_sram_write_done = 1'b1;
+assign soc_sram_write_done = soc_sram_we;
 
-assign dram_addr   = (load_state==STATE_LOAD_SYSTEM1) ? r_spi_sram_addr : 
-			soc_dram_addr[13:0]  ;
-assign dram_din    = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_din : 
-			soc_dram_din;
-assign dram_we     = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_we :
-			(load_state==STATE_LOAD_SYSTEM1) ? soc_dram_we   : 1'b0  ;
-assign dram_maskwe     = (load_state==STATE_LOAD_SYSTEM1) ? 4'b1111 :
-			(load_state==STATE_LOAD_SYSTEM1) ? soc_dram_maskwe   : 4'b0  ;
+assign dram_addr     = (load_state==STATE_LOAD_SYSTEM1) ? r_spi_sram_addr : soc_dram_addr[13:0]  ;
+assign dram_din      = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_din    : soc_dram_din;
+assign dram_we       = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_we     : soc_dram_we;
+assign dram_maskwe   = (load_state==STATE_LOAD_SYSTEM1) ? 4'b1111         : soc_dram_maskwe  ;
 assign soc_dram_dout = dram_dout;
-assign soc_dram_write_done = 1'b1;
+assign soc_dram_write_done = soc_dram_we;
 
 
-assign load_done = (load_state == STATE_LOAD_DONE) & ip_done;
+assign load_done  = (load_state == STATE_LOAD_DONE) & ip_done;
 assign flash_addr = (load_state == STATE_LOAD_SYSTEM0) ? 24'h030000 : 24'h050000;
 assign resetn_soc = load_done;
 

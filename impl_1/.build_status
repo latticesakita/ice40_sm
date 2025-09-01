@@ -6,8 +6,8 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1756357516">
-            <Task name="Map" build_result="0" update_result="2" update_time="1756357516"/>
+        <Milestone name="Map" build_result="0" build_time="1756719569">
+            <Task name="Map" build_result="0" update_result="2" update_time="1756719569"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
         <Milestone name="PAR" build_result="0" build_time="1756357516">
@@ -16,12 +16,12 @@
             <Task name="PARTrace" build_result="0" update_result="2" update_time="1756357516"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1756518598">
-            <Task name="Synplify_Synthesis" build_result="0" update_result="2" update_time="1756518598"/>
-            <Task name="Synplify_Lint" build_result="0" update_result="2" update_time="1756511394"/>
-            <Task name="SynTrace" build_result="0" update_result="2" update_time="1756511394"/>
-            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1756511394"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1756511394"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1756719569">
+            <Task name="Synplify_Synthesis" build_result="0" update_result="2" update_time="1756719569"/>
+            <Task name="Synplify_Lint" build_result="0" update_result="2" update_time="1756718129"/>
+            <Task name="SynTrace" build_result="0" update_result="2" update_time="1756718129"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1756718129"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1756718129"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="0" update_result="2" update_time="1755754183"/>
@@ -34,8 +34,8 @@
         <Report name="ice40_sm_impl_1.bin" last_build_time="1755766117" last_build_size="104156"/>
         <Report name="ice40_sm_impl_1.twr.html" last_build_time="1755766095" last_build_size="1483164"/>
         <Report name="ice40_sm_impl_1.udb" last_build_time="1755766082" last_build_size="743774"/>
-        <Report name="ice40_sm_impl_1_map.udb" last_build_time="1755765989" last_build_size="543469"/>
+        <Report name="ice40_sm_impl_1_map.udb" last_build_time="1756718550" last_build_size="379425"/>
         <Report name="ice40_sm_impl_1_rtl.udb" last_build_time="1755765837" last_build_size="338175"/>
-        <Report name="ice40_sm_impl_1_syn.udb" last_build_time="1756517271" last_build_size="195766"/>
+        <Report name="ice40_sm_impl_1_syn.udb" last_build_time="1756718417" last_build_size="199482"/>
     </Strategy>
 </BuildStatus>

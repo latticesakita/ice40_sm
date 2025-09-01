@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="ice40tp" date="2025 09 01 14:37:54" device="iCE40UP5K" device_int="itpa08" display_module="ahb_spsram_if" display_vendor="personal" family="iCE40UP" gen_platform="Propel" gen_platform_version="2025.1.0.2506031608" generator="ipgen" library="ip" module="ahb_spsram_if" name="instr_if" operation="Industrial" package="SG48" package_int="SG48" partnumber="iCE40UP5K-SG48I" source_format="Verilog" speed="High-Performance_1.2V" speed_int="6" vendor="personal" version="1.5.1">
+ <Package>
+  <File modified="2025 09 01 14:37:54" name="rtl/instr_if_bb.v" type="black_box_verilog"/>
+  <File modified="2025 09 01 14:37:54" name="instr_if.cfg" type="cfg"/>
+  <File modified="2025 09 01 14:37:54" name="misc/instr_if_tmpl.v" type="template_verilog"/>
+  <File modified="2025 09 01 14:37:54" name="misc/instr_if_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2025 09 01 14:37:54" name="rtl/instr_if.v" type="top_level_verilog"/>
+  <File modified="2025 09 01 14:37:54" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2025 09 01 14:37:54" name="design.xml" type="IP-XACT_design"/>
+ </Package>
+</RadiantModule>

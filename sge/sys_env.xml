@@ -25,12 +25,6 @@
                         <ipxact:width>32</ipxact:width>
                         <ipxact:segments>
                             <ipxact:segment>
-                                <ipxact:name>ice40_sm_dram_if_inst_ahb_spsram</ipxact:name>
-                                <ipxact:displayName>ice40_sm/dram_if_inst/ahb_spsram</ipxact:displayName>
-                                <ipxact:addressOffset>0x20000</ipxact:addressOffset>
-                                <ipxact:range>0x20000</ipxact:range>
-                            </ipxact:segment>
-                            <ipxact:segment>
                                 <ipxact:name>ice40_sm_gpio_inst_gpio_ahb</ipxact:name>
                                 <ipxact:displayName>ice40_sm/gpio_inst/gpio_ahb</ipxact:displayName>
                                 <ipxact:addressOffset>0x40000</ipxact:addressOffset>
@@ -41,6 +35,12 @@
                                 <ipxact:displayName>ice40_sm/ice40_ip_if_inst/iCE40_IP_IF</ipxact:displayName>
                                 <ipxact:addressOffset>0x50000</ipxact:addressOffset>
                                 <ipxact:range>0x400</ipxact:range>
+                            </ipxact:segment>
+                            <ipxact:segment>
+                                <ipxact:name>ice40_sm_system1_inst_ahb_spsram</ipxact:name>
+                                <ipxact:displayName>ice40_sm/system1_inst/ahb_spsram</ipxact:displayName>
+                                <ipxact:addressOffset>0x0</ipxact:addressOffset>
+                                <ipxact:range>0x20000</ipxact:range>
                             </ipxact:segment>
                             <ipxact:segment>
                                 <ipxact:name>ice40_sm_timer_inst_timer_memmap</ipxact:name>
@@ -80,9 +80,9 @@
                         <ipxact:width>32</ipxact:width>
                         <ipxact:segments>
                             <ipxact:segment>
-                                <ipxact:name>ice40_sm_spram_if_inst_ahb_spsram</ipxact:name>
-                                <ipxact:displayName>ice40_sm/spram_if_inst/ahb_spsram</ipxact:displayName>
-                                <ipxact:addressOffset>0x0</ipxact:addressOffset>
+                                <ipxact:name>ice40_sm_system0_inst_ahb_spsram</ipxact:name>
+                                <ipxact:displayName>ice40_sm/system0_inst/ahb_spsram</ipxact:displayName>
+                                <ipxact:addressOffset>0x20000</ipxact:addressOffset>
                                 <ipxact:range>0x20000</ipxact:range>
                             </ipxact:segment>
                         </ipxact:segments>
@@ -159,26 +159,6 @@
                 <lattice:driverVersion>1.8.0</lattice:driverVersion>
             </lattice:ipInstance>
             <lattice:ipInstance>
-                <lattice:instanceName vendor="personal" library="ip" name="spsram_if_ahb" version="1.0.0">dram_if_inst</lattice:instanceName>
-                <ipxact:memoryMaps>
-                    <ipxact:memoryMap>
-                        <ipxact:name>ahb_spsram</ipxact:name>
-                        <ipxact:displayName>ahb_spsram</ipxact:displayName>
-                        <ipxact:description>ahb_spsram</ipxact:description>
-                        <ipxact:addressBlock>
-                            <ipxact:name>NewAddressBlock1</ipxact:name>
-                            <ipxact:displayName>NewAddressBlock1</ipxact:displayName>
-                            <ipxact:description>NewAddressBlock1</ipxact:description>
-                            <ipxact:baseAddress>0x20000</ipxact:baseAddress>
-                            <ipxact:range>0x20000</ipxact:range>
-                            <ipxact:width>32</ipxact:width>
-                            <ipxact:vendorExtensions/>
-                        </ipxact:addressBlock>
-                    </ipxact:memoryMap>
-                </ipxact:memoryMaps>
-                <lattice:configurableParameters/>
-            </lattice:ipInstance>
-            <lattice:ipInstance>
                 <lattice:instanceName vendor="personal" library="ip" name="gpio_ahb" version="1.0.0">gpio_inst</lattice:instanceName>
                 <ipxact:addressSpaces>
                     <ipxact:addressSpace>
@@ -253,7 +233,27 @@
                 <lattice:interruptPort>IRQ_S0</lattice:interruptPort>
             </lattice:ipInstance>
             <lattice:ipInstance>
-                <lattice:instanceName vendor="personal" library="ip" name="spsram_if_ahb" version="1.0.0">spram_if_inst</lattice:instanceName>
+                <lattice:instanceName vendor="personal" library="ip" name="spsram_if_ahb_sm" version="1.0.0">system0_inst</lattice:instanceName>
+                <ipxact:memoryMaps>
+                    <ipxact:memoryMap>
+                        <ipxact:name>ahb_spsram</ipxact:name>
+                        <ipxact:displayName>ahb_spsram</ipxact:displayName>
+                        <ipxact:description>ahb_spsram</ipxact:description>
+                        <ipxact:addressBlock>
+                            <ipxact:name>NewAddressBlock1</ipxact:name>
+                            <ipxact:displayName>NewAddressBlock1</ipxact:displayName>
+                            <ipxact:description>NewAddressBlock1</ipxact:description>
+                            <ipxact:baseAddress>0x20000</ipxact:baseAddress>
+                            <ipxact:range>0x20000</ipxact:range>
+                            <ipxact:width>32</ipxact:width>
+                            <ipxact:vendorExtensions/>
+                        </ipxact:addressBlock>
+                    </ipxact:memoryMap>
+                </ipxact:memoryMaps>
+                <lattice:configurableParameters/>
+            </lattice:ipInstance>
+            <lattice:ipInstance>
+                <lattice:instanceName vendor="personal" library="ip" name="spsram_if_ahb_sm" version="1.0.0">system1_inst</lattice:instanceName>
                 <ipxact:memoryMaps>
                     <ipxact:memoryMap>
                         <ipxact:name>ahb_spsram</ipxact:name>

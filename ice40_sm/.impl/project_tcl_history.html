@@ -2,7 +2,138 @@
 <HEAD>
 <TITLE>Lattice TCL Log</TITLE>
 </HEAD>
-<BODY><DIV id="content" ><PRE><A name="250828153636" href="#250828153636"></A><B><U><big>250828153636</big></U></B>
+<BODY><DIV id="content" ><PRE><A name="250901203935" href="#250901203935"></A><B><U><big>250901203935</big></U></B>
+#Start recording tcl command: 9/1/2025 14:35:11
+sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
+sbp_delete {ice40_sm/spram_if_inst} -type component
+sbp_delete {ice40_sm/dram_if_inst} -type component
+sbp_config_ip -vlnv {personal:ip:instr_if:1.5.1} -meta_vlnv {personal:ip:ahb_spsram_if:1.5.1}
+sbp_add_component -vlnv {personal:ip:instr_if:1.5.1} -name {instr_if_inst}
+sbp_config_ip -vlnv {personal:ip:data_if:1.5.1} -meta_vlnv {personal:ip:ahb_spsram_if:1.5.1}
+sbp_add_component -vlnv {personal:ip:data_if:1.5.1} -name {data_if_inst}
+sbp_connect_interface_net {ice40_sm/cpu_inst/AHBL_M0_INSTR} {ice40_sm/instr_if_inst/AHBL_S0}
+sbp_connect_interface_net {ice40_sm/ahb_brg_inst/AHBL_M00} {ice40_sm/data_if_inst/AHBL_S0}
+sbp_connect_net {ice40_sm/sram_dout} {ice40_sm/instr_if_inst/sram_dout}
+sbp_connect_net -name {ice40_sm/ice40_sm_clk_i_net} {ice40_sm/instr_if_inst/HCLK}
+sbp_connect_net -name {ice40_sm/cpu_inst_system_resetn_o_net} {ice40_sm/instr_if_inst/HRESETn}
+sbp_connect_net {ice40_sm/sram_read_valid} {ice40_sm/instr_if_inst/sram_read_valid}
+sbp_connect_net {ice40_sm/sram_write_done} {ice40_sm/instr_if_inst/sram_write_done}
+sbp_connect_net {ice40_sm/dram_dout} {ice40_sm/data_if_inst/sram_dout}
+sbp_design undo
+sbp_connect_net {ice40_sm/dram_dout} {ice40_sm/data_if_inst/sram_dout}
+sbp_connect_net -name {ice40_sm/ice40_sm_clk_i_net} {ice40_sm/data_if_inst/HCLK}
+sbp_connect_net -name {ice40_sm/cpu_inst_system_resetn_o_net} {ice40_sm/data_if_inst/HRESETn}
+sbp_connect_net {ice40_sm/dram_read_valid} {ice40_sm/data_if_inst/sram_read_valid}
+sbp_connect_net {ice40_sm/dram_write_done} {ice40_sm/data_if_inst/sram_write_done}
+sbp_connect_net {ice40_sm/sram_addr} {ice40_sm/instr_if_inst/sram_addr}
+sbp_connect_net {ice40_sm/sram_din} {ice40_sm/instr_if_inst/sram_din}
+sbp_connect_net {ice40_sm/sram_re} {ice40_sm/instr_if_inst/sram_re}
+sbp_delete {ice40_sm/instr_if_inst} -type component
+sbp_delete {ice40_sm/data_if_inst} -type component
+sbp_config_ip -vlnv {personal:ip:system0:1.0.0} -meta_vlnv {personal:ip:spsram_if_ahb_sm:1.0.0}
+sbp_add_component -vlnv {personal:ip:system0:1.0.0} -name {system0_inst}
+sbp_config_ip -vlnv {personal:ip:system1:1.0.0} -meta_vlnv {personal:ip:spsram_if_ahb_sm:1.0.0}
+sbp_add_component -vlnv {personal:ip:system1:1.0.0} -name {system1_inst}
+sbp_modify_port -name ice40_sm/sram_addr -direction out -from 13 -to 0
+sbp_modify_port -name ice40_sm/dram_addr -direction out -from 13 -to 0
+sbp_connect_net {ice40_sm/sram_addr} {ice40_sm/system0_inst/sram_addr}
+sbp_connect_net {ice40_sm/sram_din} {ice40_sm/system0_inst/sram_din}
+sbp_connect_net {ice40_sm/sram_maskwe} {ice40_sm/system0_inst/sram_maskwe}
+sbp_connect_net {ice40_sm/sram_re} {ice40_sm/system0_inst/sram_re}
+sbp_connect_net {ice40_sm/sram_we} {ice40_sm/system0_inst/sram_we}
+sbp_connect_net {ice40_sm/dram_addr} {ice40_sm/system1_inst/sram_addr}
+sbp_connect_net {ice40_sm/dram_din} {ice40_sm/system1_inst/sram_din}
+sbp_connect_net {ice40_sm/dram_maskwe} {ice40_sm/system1_inst/sram_maskwe}
+sbp_connect_net {ice40_sm/dram_re} {ice40_sm/system1_inst/sram_re}
+sbp_connect_net {ice40_sm/dram_we} {ice40_sm/system1_inst/sram_we}
+sbp_connect_interface_net {ice40_sm/ahb_brg_inst/AHBL_M00} {ice40_sm/system1_inst/AHBL_S0}
+sbp_connect_interface_net {ice40_sm/cpu_inst/AHBL_M0_INSTR} {ice40_sm/system0_inst/AHBL_S0}
+sbp_connect_net {ice40_sm/sram_dout} {ice40_sm/system0_inst/sram_dout}
+sbp_connect_net -name {ice40_sm/ice40_sm_clk_i_net} {ice40_sm/system0_inst/HCLK}
+sbp_connect_net -name {ice40_sm/cpu_inst_system_resetn_o_net} {ice40_sm/system0_inst/HRESETn}
+sbp_connect_net {ice40_sm/sram_read_valid} {ice40_sm/system0_inst/sram_read_valid}
+sbp_connect_net {ice40_sm/sram_write_done} {ice40_sm/system0_inst/sram_write_done}
+sbp_connect_net {ice40_sm/dram_dout} {ice40_sm/system1_inst/sram_dout}
+sbp_connect_net -name {ice40_sm/ice40_sm_clk_i_net} {ice40_sm/system1_inst/HCLK}
+sbp_connect_net -name {ice40_sm/cpu_inst_system_resetn_o_net} {ice40_sm/system1_inst/HRESETn}
+sbp_connect_net {ice40_sm/dram_read_valid} {ice40_sm/system1_inst/sram_read_valid}
+sbp_connect_net {ice40_sm/dram_write_done} {ice40_sm/system1_inst/sram_write_done}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design pge dge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -radiant
+sbp_design close
+#Stop recording: 9/1/2025 20:39:35
+
+<A name="250830130047" href="#250830130047"></A><B><U><big>250830130047</big></U></B>
+#Start recording tcl command: 8/29/2025 20:04:38
+sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
+sbp_config_ip -vlnv {latticesemi.com:module:ahb_brg:1.4.0} -meta_vlnv {latticesemi.com:module:ahb_lite_interconnect:1.4.0} -cfg_value {S0_ARBITER_SCHEME:3'd0,S0_MAX_BURST_SIZE:256,S1_MAX_BURST_SIZE:256,TOTAL_SLAVE_CNT:5,m0_s1_conn_en:false,m0_s2_conn_en:false,m0_s3_conn_en:false,m0_s4_conn_en:false}
+sbp_replace -vlnv {latticesemi.com:module:ahb_brg:1.4.0} -name {ahb_brg_inst} -component {ice40_sm/ahb_brg_inst}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design pge dge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -radiant
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design pge dge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -radiant
+sbp_config_ip -vlnv {personal:ip:dram_if:1.0.0} -meta_vlnv {personal:ip:spsram_if_ahb:1.0.0}
+sbp_add_component -vlnv {personal:ip:dram_if:1.0.0} -name {dram_if_inst}
+sbp_add_port -from 31 -to 0 -direction out dram_addr
+sbp_add_port -from 31 -to 0 -direction out dram_din
+sbp_add_port -from 3 -to 0 -direction out dram_maskwe
+sbp_add_port -direction out dram_re
+sbp_add_port -direction out dram_we
+sbp_connect_net {ice40_sm/dram_addr} {ice40_sm/dram_if_inst/sram_addr}
+sbp_connect_net {ice40_sm/dram_din} {ice40_sm/dram_if_inst/sram_din}
+sbp_connect_net {ice40_sm/dram_maskwe} {ice40_sm/dram_if_inst/sram_maskwe}
+sbp_connect_net {ice40_sm/dram_re} {ice40_sm/dram_if_inst/sram_re}
+sbp_connect_net {ice40_sm/dram_we} {ice40_sm/dram_if_inst/sram_we}
+sbp_add_port -from 31 -to 0 -direction in dram_dout
+sbp_add_port -direction in dram_read_valid
+sbp_add_port -direction in dram_write_done
+sbp_connect_net {ice40_sm/dram_dout} {ice40_sm/dram_if_inst/sram_dout}
+sbp_connect_net {ice40_sm/dram_read_valid} {ice40_sm/dram_if_inst/sram_read_valid}
+sbp_connect_net {ice40_sm/dram_write_done} {ice40_sm/dram_if_inst/sram_write_done}
+sbp_connect_net -name {ice40_sm/cpu_inst_system_resetn_o_net} {ice40_sm/dram_if_inst/HRESETn}
+sbp_connect_net -name {ice40_sm/ice40_sm_clk_i_net} {ice40_sm/dram_if_inst/HCLK}
+sbp_config_ip -vlnv {latticesemi.com:module:ahb_brg:1.4.0} -meta_vlnv {latticesemi.com:module:ahb_lite_interconnect:1.4.0} -cfg_value {S0_ARBITER_SCHEME:3'd0,S0_MAX_BURST_SIZE:0,S1_MAX_BURST_SIZE:0,TOTAL_MASTER_CNT:1,TOTAL_SLAVE_CNT:5,m0_s1_conn_en:true,m0_s2_conn_en:true,m0_s3_conn_en:true,m0_s4_conn_en:true}
+sbp_replace -vlnv {latticesemi.com:module:ahb_brg:1.4.0} -name {ahb_brg_inst} -component {ice40_sm/ahb_brg_inst}
+sbp_delete {ice40_sm/cpu_inst_AHBL_M0_INSTR_interconnect} -type interconnect
+sbp_connect_interface_net {ice40_sm/ahb_brg_inst/AHBL_S00} {ice40_sm/cpu_inst/AHBL_M1_DATA}
+sbp_delete {ice40_sm/ahb_brg_inst_AHBL_M00_interconnect} -type interconnect
+sbp_connect_interface_net {ice40_sm/spram_if_inst/AHBL_S0} {ice40_sm/cpu_inst/AHBL_M0_INSTR}
+sbp_connect_interface_net {ice40_sm/ahb_brg_inst/AHBL_M00} {ice40_sm/dram_if_inst/AHBL_S0}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design pge dge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -radiant
+sbp_assign_addr_seg -offset 'h00020000 {ice40_sm/ahb_brg_inst/AHBL_M00} {ice40_sm/dram_if_inst/AHBL_S0}
+sbp_assign_addr_seg -offset 'h00040000 {ice40_sm/ahb_brg_inst/AHBL_M02} {ice40_sm/gpio_inst/AHBL_S0}
+sbp_assign_addr_seg -offset 'h00050000 {ice40_sm/ahb_brg_inst/AHBL_M04} {ice40_sm/timer_inst/AHBL_S0}
+sbp_assign_addr_seg -offset 'h00050000 {ice40_sm/ahb_brg_inst/AHBL_M01} {ice40_sm/ice40_ip_if_inst/AHBL_S0}
+sbp_assign_addr_seg -offset 'h00060000 {ice40_sm/ahb_brg_inst/AHBL_M04} {ice40_sm/timer_inst/AHBL_S0}
+sbp_assign_addr_seg -offset 'h00070000 {ice40_sm/ahb_brg_inst/AHBL_M03} {ice40_sm/uart_inst/AHBL}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design close
+#Stop recording: 8/30/2025 13:00:47
+
+<A name="250828153636" href="#250828153636"></A><B><U><big>250828153636</big></U></B>
 #Start recording tcl command: 8/28/2025 13:01:47
 sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
 sbp_design save
