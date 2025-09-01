@@ -1198,7 +1198,7 @@
                     <ipxact:segment>
                         <ipxact:name>ice40_sm_system1_inst_ahb_spsram</ipxact:name>
                         <ipxact:displayName>ice40_sm/system1_inst/ahb_spsram</ipxact:displayName>
-                        <ipxact:addressOffset>32&apos;h00000000</ipxact:addressOffset>
+                        <ipxact:addressOffset>32&apos;h00020000</ipxact:addressOffset>
                         <ipxact:range>32&apos;h00020000</ipxact:range>
                     </ipxact:segment>
                     <ipxact:segment>
@@ -1241,7 +1241,7 @@
                     <ipxact:segment>
                         <ipxact:name>ice40_sm_system0_inst_ahb_spsram</ipxact:name>
                         <ipxact:displayName>ice40_sm/system0_inst/ahb_spsram</ipxact:displayName>
-                        <ipxact:addressOffset>32&apos;h00020000</ipxact:addressOffset>
+                        <ipxact:addressOffset>32&apos;h00000000</ipxact:addressOffset>
                         <ipxact:range>32&apos;h00020000</ipxact:range>
                     </ipxact:segment>
                 </ipxact:segments>
@@ -2459,7 +2459,7 @@
                         <ipxact:moduleParameter configGroups="SystemBuilder" latticeDefaultValue="000000400" parameterId="S0_BASE_ADDR" resolve="generated" type="string">
                             <ipxact:name>S0_BASE_ADDR</ipxact:name>
                             <ipxact:displayName>INFO: Actual Base Address</ipxact:displayName>
-                            <ipxact:value>32&apos;h00000000</ipxact:value>
+                            <ipxact:value>32&apos;h00020000</ipxact:value>
                         </ipxact:moduleParameter>
                         <ipxact:moduleParameter configGroups="SystemBuilder" latticeDefaultValue="1" parameterId="S0_FRAGMENT_EN" resolve="generated" type="int">
                             <ipxact:name>S0_FRAGMENT_EN</ipxact:name>
@@ -19701,7 +19701,7 @@
                     <ipxact:name>NewAddressBlock1</ipxact:name>
                     <ipxact:displayName>NewAddressBlock1</ipxact:displayName>
                     <ipxact:description>NewAddressBlock1</ipxact:description>
-                    <ipxact:baseAddress>32&apos;h00020000</ipxact:baseAddress>
+                    <ipxact:baseAddress>32&apos;h00000000</ipxact:baseAddress>
                     <ipxact:range>32&apos;h00020000</ipxact:range>
                     <ipxact:width>32</ipxact:width>
                     <ipxact:vendorExtensions>
@@ -20072,7 +20072,7 @@
                     <ipxact:name>NewAddressBlock1</ipxact:name>
                     <ipxact:displayName>NewAddressBlock1</ipxact:displayName>
                     <ipxact:description>NewAddressBlock1</ipxact:description>
-                    <ipxact:baseAddress>32&apos;h00000000</ipxact:baseAddress>
+                    <ipxact:baseAddress>32&apos;h00020000</ipxact:baseAddress>
                     <ipxact:range>32&apos;h00020000</ipxact:range>
                     <ipxact:width>32</ipxact:width>
                     <ipxact:vendorExtensions>

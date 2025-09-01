@@ -40,15 +40,6 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
-<A name="pn250821082040"></A><B><U><big>pn250821082040</big></U></B>
-#Start recording tcl command: 8/21/2025 08:10:23
-#Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
-source "O:/src/Propel/iCE40UP/ice40_sm/radiant_setup_template.tcl"
-prj_set_impl_opt -impl "impl_1" {hdl_sort} {off}
-#Stop recording: 8/21/2025 08:20:40
-
-
-
 <A name="pn250821143900"></A><B><U><big>pn250821143900</big></U></B>
 #Start recording tcl command: 8/21/2025 14:17:35
 #Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
@@ -164,11 +155,21 @@ prj_open "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm.rdf"
 
 
 
+<A name="pn250901203919"></A><B><U><big>pn250901203919</big></U></B>
+#Start recording tcl command: 9/1/2025 18:15:28
+#Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
+source "O:/src/Propel/iCE40UP/ice40_sm/radiant_setup_template.tcl"
+prj_run Synthesis -impl impl_1
+prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/tb/tb.spf"
+prj_run Map -impl impl_1
+#Stop recording: 9/1/2025 20:39:19
+
+
+
 </PRE></DIV>
 
 <DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
 <UL id="toc_list">
-<LI><A href=#pn250821082040>pn250821082040</A></LI>
 <LI><A href=#pn250821143900>pn250821143900</A></LI>
 <LI><A href=#pn250821181402>pn250821181402</A></LI>
 <LI><A href=#pn250828153628>pn250828153628</A></LI>
@@ -178,6 +179,7 @@ prj_open "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm.rdf"
 <LI><A href=#pn250901084614>pn250901084614</A></LI>
 <LI><A href=#pn250901130528>pn250901130528</A></LI>
 <LI><A href=#pn250901143432>pn250901143432</A></LI>
+<LI><A href=#pn250901203919>pn250901203919</A></LI>
 </UL>
 </DIV>
 

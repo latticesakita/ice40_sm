@@ -51,12 +51,13 @@
 //
 // Verific Verilog Description of module ice40_sm
 //
-module ice40_sm (dram_din, dram_dout, dram_maskwe, gpio_io, ip_addr_o, 
-            ip_int_i, ip_rdata_i, ip_wdata_o, sram_din, sram_dout, 
-            sram_maskwe, sram_addr, dram_addr, clk_i, dram_re, dram_read_valid, 
+module ice40_sm (dram_addr, dram_din, dram_dout, dram_maskwe, gpio_io, 
+            ip_addr_o, ip_int_i, ip_rdata_i, ip_wdata_o, sram_addr, 
+            sram_din, sram_dout, sram_maskwe, clk_i, dram_re, dram_read_valid, 
             dram_we, dram_write_done, ip_ack_i, ip_stb_o, ip_we_o, 
             rstn_i, rxd, sram_re, sram_read_valid, sram_we, sram_write_done, 
             txd);
+    output [13:0]dram_addr;
     output [31:0]dram_din;
     input [31:0]dram_dout;
     output [3:0]dram_maskwe;
@@ -65,11 +66,10 @@ module ice40_sm (dram_din, dram_dout, dram_maskwe, gpio_io, ip_addr_o,
     input [1:0]ip_int_i;
     input [7:0]ip_rdata_i;
     output [7:0]ip_wdata_o;
+    output [13:0]sram_addr;
     output [31:0]sram_din;
     input [31:0]sram_dout;
     output [3:0]sram_maskwe;
-    output [13:0]sram_addr;
-    output [13:0]dram_addr;
     input clk_i;
     output dram_re;
     input dram_read_valid;
@@ -222,7 +222,7 @@ module ice40_sm (dram_din, dram_dout, dram_maskwe, gpio_io, ip_addr_o,
             .ahbl_s00_hsel_slv_i(1'b1), .ahbl_s00_hwrite_slv_i(cpu_inst_AHBL_M1_DATA_interconnect_HWRITE));
     defparam ahb_brg_inst.FULL_DECODE_EN = 1;
     defparam ahb_brg_inst.S0_ADDR_RANGE = 32'h00020000;
-    defparam ahb_brg_inst.S0_BASE_ADDR = 32'h00000000;
+    defparam ahb_brg_inst.S0_BASE_ADDR = 32'h00020000;
     defparam ahb_brg_inst.S1_ADDR_RANGE = 32'h00000400;
     defparam ahb_brg_inst.S1_BASE_ADDR = 32'h00050000;
     defparam ahb_brg_inst.S2_ADDR_RANGE = 32'h00000400;

@@ -245,7 +245,7 @@
     <peripheral>
           <name>system0_inst</name>
           <version>1.0.0</version>
-          <baseAddress>0x00020000</baseAddress>
+          <baseAddress>0x00000000</baseAddress>
           <groupName>spsram_if_ahb_sm</groupName>
           <description></description>
 
@@ -262,7 +262,7 @@
     <peripheral>
           <name>system1_inst</name>
           <version>1.0.0</version>
-          <baseAddress>0x00000000</baseAddress>
+          <baseAddress>0x00020000</baseAddress>
           <groupName>spsram_if_ahb_sm</groupName>
           <description></description>
 

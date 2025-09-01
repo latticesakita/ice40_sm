@@ -39,7 +39,7 @@
                             <ipxact:segment>
                                 <ipxact:name>ice40_sm_system1_inst_ahb_spsram</ipxact:name>
                                 <ipxact:displayName>ice40_sm/system1_inst/ahb_spsram</ipxact:displayName>
-                                <ipxact:addressOffset>0x0</ipxact:addressOffset>
+                                <ipxact:addressOffset>0x20000</ipxact:addressOffset>
                                 <ipxact:range>0x20000</ipxact:range>
                             </ipxact:segment>
                             <ipxact:segment>
@@ -82,7 +82,7 @@
                             <ipxact:segment>
                                 <ipxact:name>ice40_sm_system0_inst_ahb_spsram</ipxact:name>
                                 <ipxact:displayName>ice40_sm/system0_inst/ahb_spsram</ipxact:displayName>
-                                <ipxact:addressOffset>0x20000</ipxact:addressOffset>
+                                <ipxact:addressOffset>0x0</ipxact:addressOffset>
                                 <ipxact:range>0x20000</ipxact:range>
                             </ipxact:segment>
                         </ipxact:segments>
@@ -243,7 +243,7 @@
                             <ipxact:name>NewAddressBlock1</ipxact:name>
                             <ipxact:displayName>NewAddressBlock1</ipxact:displayName>
                             <ipxact:description>NewAddressBlock1</ipxact:description>
-                            <ipxact:baseAddress>0x20000</ipxact:baseAddress>
+                            <ipxact:baseAddress>0x0</ipxact:baseAddress>
                             <ipxact:range>0x20000</ipxact:range>
                             <ipxact:width>32</ipxact:width>
                             <ipxact:vendorExtensions/>
@@ -263,7 +263,7 @@
                             <ipxact:name>NewAddressBlock1</ipxact:name>
                             <ipxact:displayName>NewAddressBlock1</ipxact:displayName>
                             <ipxact:description>NewAddressBlock1</ipxact:description>
-                            <ipxact:baseAddress>0x0</ipxact:baseAddress>
+                            <ipxact:baseAddress>0x20000</ipxact:baseAddress>
                             <ipxact:range>0x20000</ipxact:range>
                             <ipxact:width>32</ipxact:width>
                             <ipxact:vendorExtensions/>

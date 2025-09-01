@@ -2,7 +2,21 @@
 <HEAD>
 <TITLE>Lattice TCL Log</TITLE>
 </HEAD>
-<BODY><DIV id="content" ><PRE><A name="250901203935" href="#250901203935"></A><B><U><big>250901203935</big></U></B>
+<BODY><DIV id="content" ><PRE><A name="250902072951" href="#250902072951"></A><B><U><big>250902072951</big></U></B>
+#Start recording tcl command: 9/2/2025 07:17:36
+sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
+sbp_config_ip -vlnv {personal:ip:system0:1.0.0} -meta_vlnv {personal:ip:spsram_if_ahb_sm:1.0.0}
+sbp_replace -vlnv {personal:ip:system0:1.0.0} -name {system0_inst} -component {ice40_sm/system0_inst}
+sbp_config_ip -vlnv {personal:ip:system1:1.0.0} -meta_vlnv {personal:ip:spsram_if_ahb_sm:1.0.0}
+sbp_replace -vlnv {personal:ip:system1:1.0.0} -name {system1_inst} -component {ice40_sm/system1_inst}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design pge dge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -radiant
+sbp_design close
+#Stop recording: 9/2/2025 07:29:51
+
+<A name="250901203935" href="#250901203935"></A><B><U><big>250901203935</big></U></B>
 #Start recording tcl command: 9/1/2025 14:35:11
 sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
 sbp_delete {ice40_sm/spram_if_inst} -type component
