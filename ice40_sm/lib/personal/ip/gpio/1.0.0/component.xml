@@ -48,10 +48,26 @@
                         </ipxact:portMap>
                         <ipxact:portMap>
                             <ipxact:logicalPort>
+                                <ipxact:name>HREADYOUT</ipxact:name>
+                            </ipxact:logicalPort>
+                            <ipxact:physicalPort>
+                                <ipxact:name>ahbl_hreadyout_o</ipxact:name>
+                            </ipxact:physicalPort>
+                        </ipxact:portMap>
+                        <ipxact:portMap>
+                            <ipxact:logicalPort>
                                 <ipxact:name>HRESP</ipxact:name>
                             </ipxact:logicalPort>
                             <ipxact:physicalPort>
                                 <ipxact:name>ahbl_hresp_o</ipxact:name>
+                            </ipxact:physicalPort>
+                        </ipxact:portMap>
+                        <ipxact:portMap>
+                            <ipxact:logicalPort>
+                                <ipxact:name>HSELx</ipxact:name>
+                            </ipxact:logicalPort>
+                            <ipxact:physicalPort>
+                                <ipxact:name>ahbl_hsel_i</ipxact:name>
                             </ipxact:physicalPort>
                         </ipxact:portMap>
                         <ipxact:portMap>
@@ -84,22 +100,6 @@
                             </ipxact:logicalPort>
                             <ipxact:physicalPort>
                                 <ipxact:name>ahbl_hwrite_i</ipxact:name>
-                            </ipxact:physicalPort>
-                        </ipxact:portMap>
-                        <ipxact:portMap>
-                            <ipxact:logicalPort>
-                                <ipxact:name>HREADYOUT</ipxact:name>
-                            </ipxact:logicalPort>
-                            <ipxact:physicalPort>
-                                <ipxact:name>ahbl_hreadyout_o</ipxact:name>
-                            </ipxact:physicalPort>
-                        </ipxact:portMap>
-                        <ipxact:portMap>
-                            <ipxact:logicalPort>
-                                <ipxact:name>HSELx</ipxact:name>
-                            </ipxact:logicalPort>
-                            <ipxact:physicalPort>
-                                <ipxact:name>ahbl_hsel_i</ipxact:name>
                             </ipxact:physicalPort>
                         </ipxact:portMap>
                     </ipxact:portMaps>
@@ -137,7 +137,6 @@
     <ipxact:addressSpaces>
         <ipxact:addressSpace>
             <ipxact:name>IRQ_Address_Space</ipxact:name>
-            <ipxact:displayName>IRQ_Address_Space</ipxact:displayName>
             <ipxact:description>IRQ_Address_Space</ipxact:description>
             <ipxact:range>4294967296</ipxact:range>
             <ipxact:width>32</ipxact:width>
@@ -146,7 +145,7 @@
     <ipxact:memoryMaps>
         <ipxact:memoryMap>
             <ipxact:name>gpio_ahb</ipxact:name>
-            <ipxact:displayName>NewMemmap1</ipxact:displayName>
+            <ipxact:displayName>gpio_ahb</ipxact:displayName>
             <ipxact:description>gpio_ahb</ipxact:description>
             <ipxact:addressBlock>
                 <ipxact:name>NewAddressBlock1</ipxact:name>
@@ -389,7 +388,7 @@
         </lsccip:deviceInfo>
         <lsccip:generationInfo>
             <lsccip:fileVersion>20180929</lsccip:fileVersion>
-            <lsccip:createdTimestamp>2025 08 21 07:25:19</lsccip:createdTimestamp>
+            <lsccip:createdTimestamp>2025 09 02 15:35:18</lsccip:createdTimestamp>
             <lsccip:radiantBuild>&quot;Lattice Propel&quot; (64-bit) 2025.1.0.2506031608</lsccip:radiantBuild>
         </lsccip:generationInfo>
     </ipxact:vendorExtensions>

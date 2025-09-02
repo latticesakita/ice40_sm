@@ -9,7 +9,7 @@
             <ipxact:instanceName>timer_ahbl_inst</ipxact:instanceName>
             <ipxact:componentRef library="ip" name="timer_ahb" vendor="personal" version="1.0.0">
                 <ipxact:configurableElementValues>
-                    <ipxact:configurableElementValue referenceId="PRESCALE">23</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="PRESCALE">11</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="USE_DSP">1</ipxact:configurableElementValue>
                 </ipxact:configurableElementValues>
             </ipxact:componentRef>

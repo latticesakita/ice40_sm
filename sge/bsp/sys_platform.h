@@ -125,7 +125,7 @@ and make sure to disable it when developing the application firmware. */
 /* system1_inst parameters */
 
 /* timer_inst parameters */
-#define TIMER_INST_PRESCALE 23
+#define TIMER_INST_PRESCALE 11
 #define TIMER_INST_USE_DSP 1
 
 /* uart_inst parameters */

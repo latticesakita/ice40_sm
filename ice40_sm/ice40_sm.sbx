@@ -449,14 +449,14 @@
                 <ipxact:name>cpu_inst_system_resetn_o_net</ipxact:name>
                 <ipxact:displayName>cpu_inst_system_resetn_o_net</ipxact:displayName>
                 <ipxact:portReferences>
-                    <ipxact:internalPortReference componentRef="gpio_inst" portRef="resetn_i" />
-                    <ipxact:internalPortReference componentRef="ice40_ip_if_inst" portRef="resetn" />
                     <ipxact:internalPortReference componentRef="cpu_inst" portRef="system_resetn_o" />
-                    <ipxact:internalPortReference componentRef="timer_inst" portRef="resetn_i" />
                     <ipxact:internalPortReference componentRef="ahb_brg_inst" portRef="ahbl_hresetn_i" />
-                    <ipxact:internalPortReference componentRef="uart_inst" portRef="resetn" />
                     <ipxact:internalPortReference componentRef="system0_inst" portRef="HRESETn" />
                     <ipxact:internalPortReference componentRef="system1_inst" portRef="HRESETn" />
+                    <ipxact:internalPortReference componentRef="ice40_ip_if_inst" portRef="resetn" />
+                    <ipxact:internalPortReference componentRef="gpio_inst" portRef="resetn_i" />
+                    <ipxact:internalPortReference componentRef="timer_inst" portRef="resetn_i" />
+                    <ipxact:internalPortReference componentRef="uart_inst" portRef="resetn" />
                 </ipxact:portReferences>
             </ipxact:adHocConnection>
             <ipxact:adHocConnection>
@@ -479,14 +479,14 @@
                 <ipxact:name>ice40_sm_clk_i_net</ipxact:name>
                 <ipxact:displayName>ice40_sm_clk_i_net</ipxact:displayName>
                 <ipxact:portReferences>
-                    <ipxact:internalPortReference componentRef="ice40_ip_if_inst" portRef="clk" />
-                    <ipxact:internalPortReference componentRef="gpio_inst" portRef="clk_i" />
                     <ipxact:internalPortReference componentRef="cpu_inst" portRef="clk_i" />
-                    <ipxact:internalPortReference componentRef="timer_inst" portRef="clk_i" />
                     <ipxact:internalPortReference componentRef="ahb_brg_inst" portRef="ahbl_hclk_i" />
-                    <ipxact:internalPortReference componentRef="uart_inst" portRef="clk" />
                     <ipxact:internalPortReference componentRef="system0_inst" portRef="HCLK" />
                     <ipxact:internalPortReference componentRef="system1_inst" portRef="HCLK" />
+                    <ipxact:internalPortReference componentRef="ice40_ip_if_inst" portRef="clk" />
+                    <ipxact:internalPortReference componentRef="gpio_inst" portRef="clk_i" />
+                    <ipxact:internalPortReference componentRef="timer_inst" portRef="clk_i" />
+                    <ipxact:internalPortReference componentRef="uart_inst" portRef="clk" />
                     <ipxact:externalPortReference portRef="clk_i" />
                 </ipxact:portReferences>
             </ipxact:adHocConnection>
@@ -18927,7 +18927,6 @@
         <ipxact:addressSpaces>
             <ipxact:addressSpace>
                 <ipxact:name>IRQ_Address_Space</ipxact:name>
-                <ipxact:displayName>IRQ_Address_Space</ipxact:displayName>
                 <ipxact:description>IRQ_Address_Space</ipxact:description>
                 <ipxact:range>4294967296</ipxact:range>
                 <ipxact:width>32</ipxact:width>
@@ -18937,7 +18936,7 @@
         <ipxact:memoryMaps>
             <ipxact:memoryMap>
                 <ipxact:name>gpio_ahb</ipxact:name>
-                <ipxact:displayName>NewMemmap1</ipxact:displayName>
+                <ipxact:displayName>gpio_ahb</ipxact:displayName>
                 <ipxact:description>gpio_ahb</ipxact:description>
                 <ipxact:addressBlock>
                     <ipxact:name>NewAddressBlock1</ipxact:name>
@@ -20657,7 +20656,7 @@
         <ipxact:parameters>
             <ipxact:parameter>
                 <ipxact:name>PRESCALE</ipxact:name>
-                <ipxact:value>23</ipxact:value>
+                <ipxact:value>11</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter>
                 <ipxact:name>USE_DSP</ipxact:name>

@@ -171,7 +171,7 @@
                 <ipxact:memoryMaps>
                     <ipxact:memoryMap>
                         <ipxact:name>gpio_ahb</ipxact:name>
-                        <ipxact:displayName>NewMemmap1</ipxact:displayName>
+                        <ipxact:displayName>gpio_ahb</ipxact:displayName>
                         <ipxact:description>gpio_ahb</ipxact:description>
                         <ipxact:addressBlock>
                             <ipxact:name>NewAddressBlock1</ipxact:name>
@@ -301,7 +301,7 @@
                 <lattice:configurableParameters>
                     <lattice:configurableParameter>
                         <lattice:name sequence_id="0">PRESCALE</lattice:name>
-                        <lattice:value>23</lattice:value>
+                        <lattice:value>11</lattice:value>
                     </lattice:configurableParameter>
                     <lattice:configurableParameter>
                         <lattice:name sequence_id="0">USE_DSP</lattice:name>

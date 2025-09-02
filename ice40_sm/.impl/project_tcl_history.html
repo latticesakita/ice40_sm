@@ -2,7 +2,38 @@
 <HEAD>
 <TITLE>Lattice TCL Log</TITLE>
 </HEAD>
-<BODY><DIV id="content" ><PRE><A name="250902110237" href="#250902110237"></A><B><U><big>250902110237</big></U></B>
+<BODY><DIV id="content" ><PRE><A name="250902204508" href="#250902204508"></A><B><U><big>250902204508</big></U></B>
+#Start recording tcl command: 9/2/2025 18:20:33
+sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
+sbp_design close
+#Stop recording: 9/2/2025 20:45:08
+
+<A name="250902155338" href="#250902155338"></A><B><U><big>250902155338</big></U></B>
+#Start recording tcl command: 9/2/2025 15:04:04
+sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
+sbp_config_ip -vlnv {personal:ip:ice40_ip_if:1.0.0} -meta_vlnv {personal:ip:ice40_ip_if_ahb:1.0.0}
+sbp_replace -vlnv {personal:ip:ice40_ip_if:1.0.0} -name {ice40_ip_if_inst} -component {ice40_sm/ice40_ip_if_inst}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_config_ip -vlnv {personal:ip:gpio:1.0.0} -meta_vlnv {personal:ip:gpio_ahb:1.0.0} -cfg_value {DEVICE:ICE40UP}
+sbp_replace -vlnv {personal:ip:gpio:1.0.0} -name {gpio_inst} -component {ice40_sm/gpio_inst}
+sbp_config_ip -vlnv {personal:ip:timer:1.0.0} -meta_vlnv {personal:ip:timer_ahb:1.0.0} -cfg_value {PRESCALE:11}
+sbp_replace -vlnv {personal:ip:timer:1.0.0} -name {timer_inst} -component {ice40_sm/timer_inst}
+sbp_config_ip -vlnv {personal:ip:uart:1.0.0} -meta_vlnv {personal:ip:uart_ahb:1.0.0}
+sbp_replace -vlnv {personal:ip:uart:1.0.0} -name {uart_inst} -component {ice40_sm/uart_inst}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_config_ip -vlnv {personal:ip:uart:1.0.0} -meta_vlnv {personal:ip:uart_ahb:1.0.0}
+sbp_replace -vlnv {personal:ip:uart:1.0.0} -name {uart_inst} -component {ice40_sm/uart_inst}
+sbp_design save
+sbp_design generate
+sbp_design pge sge  -i {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx} -o {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/../} -nc
+sbp_design close
+#Stop recording: 9/2/2025 15:53:38
+
+<A name="250902110237" href="#250902110237"></A><B><U><big>250902110237</big></U></B>
 #Start recording tcl command: 9/2/2025 08:12:59
 sbp_design open -name ice40_sm -path {O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.sbx}
 sbp_config_ip -vlnv {personal:ip:uart:1.0.0} -meta_vlnv {personal:ip:uart_ahb:1.0.0}
