@@ -1605,3 +1605,34 @@ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be
 O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>pause
 Press any key to continue . . . 
  
+08:23:47 **** Build of configuration Debug for project ice40_sm ****
+make all 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7436	      8	   4796	  12240	   2fd0	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm*.mem ..\..\..\tb  
+ice40_sm_Code.mem
+ice40_sm_Data.mem
+        2 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>for %f in (*.mem) do (
+python mem2bin.py %f %~nf_BE.bin -be  
+ python mem2bin.py %f %~nf_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_BE.bin -be  
+ python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be  
+ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_LE.bin -le 
+) 
+ 

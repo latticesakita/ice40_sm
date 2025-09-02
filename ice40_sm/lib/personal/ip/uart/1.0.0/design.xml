@@ -9,7 +9,7 @@
             <ipxact:instanceName>lsc_uart_inst</ipxact:instanceName>
             <ipxact:componentRef library="ip" name="uart_ahb" vendor="personal" version="1.0.0">
                 <ipxact:configurableElementValues>
-                    <ipxact:configurableElementValue referenceId="CLOCK_FREQ">24000000</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="CLOCK_FREQ">12000000</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="UART_BAUDRATE">115200</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="BUFFER_SIZE">512</ipxact:configurableElementValue>
                 </ipxact:configurableElementValues>

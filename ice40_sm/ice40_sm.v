@@ -305,8 +305,8 @@ module ice40_sm (dram_addr, dram_din, dram_dout, dram_maskwe, gpio_io,
          .ahbl_hwdata_i({ahb_brg_inst_AHBL_M03_interconnect_HWDATA}), .systime_i({timer_inst_systime_o_netbus}), 
          .ahbl_hready_i(ahb_brg_inst_AHBL_M03_interconnect_HREADY), .ahbl_hreadyout_o(ahb_brg_inst_AHBL_M03_interconnect_HREADYOUT), 
          .ahbl_hresp_o(ahb_brg_inst_AHBL_M03_interconnect_HRESP), .ahbl_hsel_i(ahb_brg_inst_AHBL_M03_interconnect_HSELx), 
-         .ahbl_hwrite_i(ahb_brg_inst_AHBL_M03_interconnect_HWRITE), .clk(clk_i), 
-         .i_rxd(rxd), .int_o(uart_inst_IRQ_interconnect_IRQ), .o_txd(txd), 
+         .ahbl_hwrite_i(ahb_brg_inst_AHBL_M03_interconnect_HWRITE), .i_rxd(rxd), 
+         .o_txd(txd), .int_o(uart_inst_IRQ_interconnect_IRQ), .clk(clk_i), 
          .resetn(cpu_inst_system_resetn_o_net));
     
 endmodule

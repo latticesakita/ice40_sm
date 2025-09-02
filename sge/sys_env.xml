@@ -337,7 +337,7 @@
                 <lattice:configurableParameters>
                     <lattice:configurableParameter>
                         <lattice:name sequence_id="0">CLOCK_FREQ</lattice:name>
-                        <lattice:value>24000000</lattice:value>
+                        <lattice:value>12000000</lattice:value>
                     </lattice:configurableParameter>
                     <lattice:configurableParameter>
                         <lattice:name sequence_id="0">UART_BAUDRATE</lattice:name>

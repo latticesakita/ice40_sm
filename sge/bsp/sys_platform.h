@@ -130,7 +130,7 @@ and make sure to disable it when developing the application firmware. */
 
 /* uart_inst parameters */
 #define UART_INST_BUFFER_SIZE 512
-#define UART_INST_CLOCK_FREQ 24000000
+#define UART_INST_CLOCK_FREQ 12000000
 #define UART_INST_UART_BAUDRATE 115200
 
 /* interrupt */

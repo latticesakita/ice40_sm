@@ -1,8 +1,8 @@
 <HTML>
 <HEAD>
 <TITLE>Lattice TCL Log</TITLE>
-<link href="file:///C:/lscc/radiant/2025.2/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="file:///C:/lscc/radiant/2025.2/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<link href="file:///C:/lscc/radiant/2025.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/2025.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
 <style type="text/css">
 #toc {
   position: fixed;
@@ -40,32 +40,6 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
-<A name="pn250821143900"></A><B><U><big>pn250821143900</big></U></B>
-#Start recording tcl command: 8/21/2025 14:17:35
-#Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
-prj_open "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm.rdf"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/hard_ip.v"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm_top.v"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/tb.v"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/i2c_slave_tb.v"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spram16384x32.v"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spi_fifo.v" "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spi_flash_tb.v"
-prj_syn_sim_source -src "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/i2c_slave_tb.v" SimulateOnly
-prj_syn_sim_source -src "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spi_flash_tb.v" SimulateOnly
-prj_syn_sim_source -src "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/tb.v" SimulateOnly
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/dpram512x8.ipx"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/dpram1024x8.ipx"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/dpram2048x2_512x8.ipx"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/dpram2048x8.ipx"
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/dpram4096x8.ipx"
-prj_run Synthesis -impl impl_1
-prj_set_impl_opt -impl "impl_1" {top} {ice40_sm_top}
-prj_run Synthesis -impl impl_1
-prj_run Map -impl impl_1
-#Stop recording: 8/21/2025 14:39:00
-
-
-
 <A name="pn250821181402"></A><B><U><big>pn250821181402</big></U></B>
 #Start recording tcl command: 8/21/2025 16:48:40
 #Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
@@ -166,11 +140,19 @@ prj_run Map -impl impl_1
 
 
 
+<A name="pn250902072948"></A><B><U><big>pn250902072948</big></U></B>
+#Start recording tcl command: 9/2/2025 07:19:19
+#Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
+source "O:/src/Propel/iCE40UP/ice40_sm/radiant_setup_template.tcl"
+prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/tb/tb.spf"
+#Stop recording: 9/2/2025 07:29:48
+
+
+
 </PRE></DIV>
 
 <DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
 <UL id="toc_list">
-<LI><A href=#pn250821143900>pn250821143900</A></LI>
 <LI><A href=#pn250821181402>pn250821181402</A></LI>
 <LI><A href=#pn250828153628>pn250828153628</A></LI>
 <LI><A href=#pn250829200727>pn250829200727</A></LI>
@@ -180,6 +162,7 @@ prj_run Map -impl impl_1
 <LI><A href=#pn250901130528>pn250901130528</A></LI>
 <LI><A href=#pn250901143432>pn250901143432</A></LI>
 <LI><A href=#pn250901203919>pn250901203919</A></LI>
+<LI><A href=#pn250902072948>pn250902072948</A></LI>
 </UL>
 </DIV>
 

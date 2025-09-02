@@ -45,7 +45,7 @@ wire [31:0]	soc_sram_dout;
 wire		soc_sram_we;
 wire [3:0]	soc_sram_maskwe;
 wire		soc_sram_re;
-wire		soc_sram_write_done;
+reg 		soc_sram_write_done;
 reg		soc_sram_read_valid;
 wire [13:0]	sram_addr;
 wire [31:0]	sram_din;
@@ -63,7 +63,7 @@ wire [31:0]	soc_dram_dout;
 wire		soc_dram_we;
 wire [3:0]	soc_dram_maskwe;
 wire		soc_dram_re;
-wire		soc_dram_write_done;
+reg 		soc_dram_write_done;
 reg		soc_dram_read_valid;
 wire [13:0]	dram_addr;
 wire [31:0]	dram_din;
@@ -88,14 +88,14 @@ assign sram_din      = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_din    : soc_
 assign sram_we       = (load_state==STATE_LOAD_SYSTEM0) ? spi_sram_we     : soc_sram_we;
 assign sram_maskwe   = (load_state==STATE_LOAD_SYSTEM0) ? 4'b1111         : soc_sram_maskwe;
 assign soc_sram_dout = sram_dout;
-assign soc_sram_write_done = soc_sram_we;
+//assign soc_sram_write_done = soc_sram_we;
 
 assign dram_addr     = (load_state==STATE_LOAD_SYSTEM1) ? r_spi_sram_addr : soc_dram_addr[13:0]  ;
 assign dram_din      = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_din    : soc_dram_din;
 assign dram_we       = (load_state==STATE_LOAD_SYSTEM1) ? spi_sram_we     : soc_dram_we;
 assign dram_maskwe   = (load_state==STATE_LOAD_SYSTEM1) ? 4'b1111         : soc_dram_maskwe  ;
 assign soc_dram_dout = dram_dout;
-assign soc_dram_write_done = soc_dram_we;
+//assign soc_dram_write_done = soc_dram_we;
 
 
 assign load_done  = (load_state == STATE_LOAD_DONE) & ip_done;
@@ -165,16 +165,20 @@ always @(posedge clk_soc or negedge resetn) begin
 	if(!resetn) begin
 		soc_sram_read_valid <= 1'b0;
 		soc_dram_read_valid <= 1'b0;
+		soc_sram_write_done <= 1'b0;
+		soc_dram_write_done <= 1'b0;
 	end
 	else begin
 		soc_sram_read_valid <= soc_sram_re;
 		soc_dram_read_valid <= soc_dram_re;
+		soc_sram_write_done <= soc_sram_we;
+		soc_dram_write_done <= soc_dram_we;
 	end
 end
 
 hard_ip hard_ip_i (
 	.ipload_i	(resetn),
-	.rst_i		(~resetn),
+	.rst_i		(resetn),
 	.sb_adr_i	(ip_addr[7:0]),	// 8bits
 	.sb_clk_i	(clk_soc),
 	.sb_dat_i	(ip_wdata[7:0]),	// 8bits

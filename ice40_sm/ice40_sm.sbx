@@ -451,10 +451,10 @@
                 <ipxact:portReferences>
                     <ipxact:internalPortReference componentRef="gpio_inst" portRef="resetn_i" />
                     <ipxact:internalPortReference componentRef="ice40_ip_if_inst" portRef="resetn" />
-                    <ipxact:internalPortReference componentRef="uart_inst" portRef="resetn" />
                     <ipxact:internalPortReference componentRef="cpu_inst" portRef="system_resetn_o" />
                     <ipxact:internalPortReference componentRef="timer_inst" portRef="resetn_i" />
                     <ipxact:internalPortReference componentRef="ahb_brg_inst" portRef="ahbl_hresetn_i" />
+                    <ipxact:internalPortReference componentRef="uart_inst" portRef="resetn" />
                     <ipxact:internalPortReference componentRef="system0_inst" portRef="HRESETn" />
                     <ipxact:internalPortReference componentRef="system1_inst" portRef="HRESETn" />
                 </ipxact:portReferences>
@@ -481,10 +481,10 @@
                 <ipxact:portReferences>
                     <ipxact:internalPortReference componentRef="ice40_ip_if_inst" portRef="clk" />
                     <ipxact:internalPortReference componentRef="gpio_inst" portRef="clk_i" />
-                    <ipxact:internalPortReference componentRef="uart_inst" portRef="clk" />
                     <ipxact:internalPortReference componentRef="cpu_inst" portRef="clk_i" />
                     <ipxact:internalPortReference componentRef="timer_inst" portRef="clk_i" />
                     <ipxact:internalPortReference componentRef="ahb_brg_inst" portRef="ahbl_hclk_i" />
+                    <ipxact:internalPortReference componentRef="uart_inst" portRef="clk" />
                     <ipxact:internalPortReference componentRef="system0_inst" portRef="HCLK" />
                     <ipxact:internalPortReference componentRef="system1_inst" portRef="HCLK" />
                     <ipxact:externalPortReference portRef="clk_i" />
@@ -19705,7 +19705,7 @@
                     <ipxact:range>32&apos;h00020000</ipxact:range>
                     <ipxact:width>32</ipxact:width>
                     <ipxact:vendorExtensions>
-                        <lattice:fixedOffset>false</lattice:fixedOffset>
+                        <lattice:fixedOffset>true</lattice:fixedOffset>
                     </ipxact:vendorExtensions>
                 </ipxact:addressBlock>
             </ipxact:memoryMap>
@@ -20076,7 +20076,7 @@
                     <ipxact:range>32&apos;h00020000</ipxact:range>
                     <ipxact:width>32</ipxact:width>
                     <ipxact:vendorExtensions>
-                        <lattice:fixedOffset>false</lattice:fixedOffset>
+                        <lattice:fixedOffset>true</lattice:fixedOffset>
                     </ipxact:vendorExtensions>
                 </ipxact:addressBlock>
             </ipxact:memoryMap>
@@ -21025,7 +21025,7 @@
             </ipxact:parameter>
             <ipxact:parameter>
                 <ipxact:name>CLOCK_FREQ</ipxact:name>
-                <ipxact:value>24000000</ipxact:value>
+                <ipxact:value>12000000</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter>
                 <ipxact:name>UART_BAUDRATE</ipxact:name>

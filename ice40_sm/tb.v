@@ -93,59 +93,107 @@ initial begin
 	code_log = $fopen("code.log", "w");
 	data_log = $fopen("data.log", "w");
 end
-reg r_htransm0_d = 0;
-reg r_htransm1_d = 0;
-reg r_hwrite0_d = 0;
-reg r_hwrite1_d = 0;
-reg [31:0] r_haddr0;
-reg [31:0] r_haddr1;
-always @(posedge dut.clk_soc) begin
-	r_htransm0_d    <= dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HTRANS[1];
-	r_htransm1_d    <= dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HTRANS[1];
-	r_hwrite0_d    <= dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWRITE;
-	r_hwrite1_d    <= dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWRITE;
-	r_haddr0 <= dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HADDR;
-	r_haddr1 <= dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HADDR;
-end
-always @(posedge dut.clk_soc) begin
-	if(!r_htransm0_d ) begin
+
+// ************************
+wire [ 1:0] w_instr_htrans     = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HTRANS;
+wire [31:0] w_instr_haddr      = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HADDR;
+wire [31:0] w_instr_hwdata     = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWDATA;
+wire [31:0] w_instr_hrdata     = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA;
+wire        w_instr_hwrite     = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWRITE;
+wire        w_instr_hready_o   = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HREADYOUT;
+wire        w_instr_ahb_access = w_instr_htrans[1];
+reg  [31:0] r_instr_haddr ;
+reg  [31:0] r_instr_hwdata;
+reg         r_instr_we;
+reg         r_instr_re;
+
+always @(posedge dut.clk_soc or negedge rstn) begin
+	if(!rstn) begin
+		r_instr_we <= 0;
+		r_instr_re <= 0;
+		r_instr_haddr <= 0;
 	end
-	else if(r_hwrite0_d) begin
-			$display(code_log, "%0t: %08x, %08x", $time, 
-				r_haddr0,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWDATA);
-			$fwrite(code_log, "%0t: %08x, %08x, write\n", $time, 
-				r_haddr0,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HWDATA);
+	else if(w_instr_ahb_access) begin
+		r_instr_we <= w_instr_hwrite;
+		r_instr_re <= ~w_instr_hwrite;
+		r_instr_haddr <= w_instr_haddr;
 	end
-	else begin
-			$display(code_log, "%0t: %08x, %08x", $time, 
-				r_haddr0,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA);
-			$fwrite(code_log, "%0t: %08x, %08x\n", $time, 
-				r_haddr0,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HRDATA);
+	else if(w_instr_hready_o) begin
+		r_instr_we <= 0;
+		r_instr_re <= 0;
 	end
 end
+
 always @(posedge dut.clk_soc) begin
-	if(!r_htransm1_d ) begin
+	if(!w_instr_hready_o) begin
 	end
-	else if(r_hwrite1_d) begin
-			$display(data_log, "%0t: %08x, %08x write", $time, 
-				r_haddr1,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWDATA);
-			$fwrite(data_log, "%0t: %08x, %08x, write\n", $time, 
-				r_haddr1,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWDATA);
+	else if(r_instr_we) begin
+		$display(code_log, "%0t: %08x, %08x", $time, 
+			r_instr_haddr,
+			w_instr_hwdata);
+		$fwrite(code_log, "%0t: %08x, %08x, write\n", $time, 
+			r_instr_haddr,
+			w_instr_hwdata);
 	end
-	else begin
-			$display(data_log, "%0t: %08x, %08x read", $time, 
-				r_haddr1,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HRDATA);
-			$fwrite(data_log, "%0t: %08x, %08x read\n", $time, 
-				r_haddr1,
-				dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HRDATA);
+	else if(r_instr_re) begin
+		$display(code_log, "%0t: %08x, %08x", $time, 
+			r_instr_haddr,
+			w_instr_hrdata);
+		$fwrite(code_log, "%0t: %08x, %08x, read\n", $time, 
+			r_instr_haddr,
+			w_instr_hrdata);
 	end
 end
+// ************************
+wire [ 1:0] w_data_htrans     = dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HTRANS;
+wire [31:0] w_data_haddr      = dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HADDR;
+wire [31:0] w_data_hwdata     = dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWDATA;
+wire [31:0] w_data_hrdata     = dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HRDATA;
+wire        w_data_hwrite     = dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HWRITE;
+wire        w_data_hready_o   = dut.ice40_sm_inst.cpu_inst_AHBL_M1_DATA_interconnect_HREADYOUT;
+wire        w_data_ahb_access = w_data_htrans[1];
+reg  [31:0] r_data_haddr ;
+reg  [31:0] r_data_hwdata;
+reg         r_data_we;
+reg         r_data_re;
+
+always @(posedge dut.clk_soc or negedge rstn) begin
+	if(!rstn) begin
+		r_data_we <= 0;
+		r_data_re <= 0;
+		r_data_haddr <= 0;
+	end
+	else if(w_data_ahb_access) begin
+		r_data_we <= w_data_hwrite;
+		r_data_re <= ~w_data_hwrite;
+		r_data_haddr <= w_data_haddr;
+	end
+	else if(w_data_hready_o) begin
+		r_data_we <= 0;
+		r_data_re <= 0;
+	end
+end
+
+always @(posedge dut.clk_soc) begin
+	if(!w_data_hready_o) begin
+	end
+	else if(r_data_we) begin
+		$display(data_log, "%0t: %08x, %08x", $time, 
+			r_data_haddr,
+			w_data_hwdata);
+		$fwrite(data_log, "%0t: %08x, %08x, write\n", $time, 
+			r_data_haddr,
+			w_data_hwdata);
+	end
+	else if(r_data_re) begin
+		$display(data_log, "%0t: %08x, %08x", $time, 
+			r_data_haddr,
+			w_data_hrdata);
+		$fwrite(data_log, "%0t: %08x, %08x, read\n", $time, 
+			r_data_haddr,
+			w_data_hrdata);
+	end
+end
+
 
 endmodule
