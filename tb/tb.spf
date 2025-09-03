@@ -3,6 +3,7 @@
     <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_common/spi_flash_tb.v" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="Verilog 2001" path="ice40_sm/tb.v" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_sm_top.v" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="Verilog 2001" path="ice40_sm/genclk.v" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_sm.v" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_common/spram16384x32.v" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="Verilog 2001" path="ice40_sm/ice40_common/spi_fifo.v" type="VERILOG" worklib="work"/>

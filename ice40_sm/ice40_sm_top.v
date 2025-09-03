@@ -1,7 +1,6 @@
 
 
 module ice40_sm_top (
-	input clk_i, // 12MHz
 	input rxd_i,
 	output txd_o,
 	inout [7:0] led_o,
@@ -26,7 +25,7 @@ wire clk2x_spi;
 wire resetn;
 wire resetn_soc;
 
-assign clk_soc = clk_i; // oclk;
+//assign clk_soc = clk_i; // oclk;
 assign clk_spi = clk_soc;
 assign clk2x_spi = oclk;
 assign resetn = r_rst_cnt[7];
@@ -102,14 +101,18 @@ assign load_done  = (load_state == STATE_LOAD_DONE) & ip_done;
 assign flash_addr = (load_state == STATE_LOAD_SYSTEM0) ? 24'h030000 : 24'h050000;
 assign resetn_soc = load_done;
 
+genclk genclk_i (
+	.clk24	(oclk),
+	.clk12	(clk_soc)
+);
+
+
 always @(posedge oclk) begin
 	if(!resetn) begin
 		r_rst_cnt <= r_rst_cnt + 1;
 	end
 end
 
-// DIV:00 = 48MHz, DIV:01=24MHz, DIV:10=12MHz, DIV:11=6MHz
-HSOSC #(.CLKHF_DIV ("0b01")) osc0(.CLKHFEN (1'b1), .CLKHFPU(1'b1), .CLKHF(oclk));
 
 ice40_sm ice40_sm_inst (
 	.clk_i		(clk_soc), 

@@ -59,7 +59,7 @@ pullup(spi_mosi);
 
 ice40_sm_top dut (
 	//.rstn_i	(rstn),
-	.clk_i	(clk),
+	//.clk_i	(clk),
 	.rxd_i	(uart_rx),
 	.txd_o	(uart_tx),
 	.led_o	(led[7:0]),
