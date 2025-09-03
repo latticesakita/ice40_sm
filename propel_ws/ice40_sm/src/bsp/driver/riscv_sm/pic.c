@@ -71,7 +71,7 @@ unsigned char pic_init(unsigned int base)
 	pic_dev->pic_en = 0;
 
 	/* enable external interrupt */
-	__asm__ __volatile__("csrw mie, %0"::"r"(0x800));
+	__asm__ __volatile__("csrw mie, %0"::"r"(0x880)); // bit 23: external interrupt, bit 7: timer interrupt
 
 	/* enable interrupts */
 	__asm__ __volatile__("csrw mstatus, %0"::"r"(0x1808));
@@ -137,9 +137,11 @@ unsigned char pic_isr_register(unsigned char src, void (*isr) (void *),
 	if (src > S_INT_NUM) {
 		return 1;
 	}
+	/* ****
 	if (NULL == context) {
 		return 1;
 	}
+	**** */
 
 	/* register on the isr */
 	int_table[src].isr = isr;

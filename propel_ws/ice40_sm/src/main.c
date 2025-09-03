@@ -72,8 +72,8 @@ struct gpio_instance led_gpio_inst;
 #include "pic.h"
 #include "lib_ov08x.h"
 
-//#define GPIO_INTERVAL    500000 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
-#define GPIO_INTERVAL    1500 // 1500(1.5ms) for simulation, 500000(500ms) for target, less than 1ms won't work due to slow processing speed
+//#define GPIO_INTERVAL    500000 // 1500(1.5ms) for simulation, 500000(500ms) for target
+#define GPIO_INTERVAL    1500 // 1500(1.5ms) for simulation, 500000(500ms) for target
 #define TIMER_PRESCALE 11
 
 #if (defined TERM_UART_INST_BASE_ADDR)
@@ -120,6 +120,7 @@ static int bsp_init(void)
 {
 	int ret = 0;
 	pic_init(CPU_INST_0_PICTIMER_START_ADDR);
+
 #if (defined TERM_UART_INST_BASE_ADDR)
 #ifndef _UART_NO_INTERRUPTS_
 	//setup uart IRQ
@@ -172,7 +173,7 @@ static void every500ms(void)
 	pin_val = ((s & 0x7F)<<1) | (pin_state & 0x0001);
 
 	gpio_output_write(&led_gpio_inst, GPIO0|GPIO1|GPIO2|GPIO3|GPIO4|GPIO5, pin_val);
-
+	pic_int_clear(S_INT_TIMER);
 #if 0
 	static uint8_t print_en = 0;
 	if(print_en ==0){
@@ -197,7 +198,7 @@ int main(void) {
 	gpio_set_direction(&led_gpio_inst, GPIO0|GPIO1|GPIO2|GPIO3|GPIO4|GPIO5, GPIO_OUTPUT);
 	timer2_register(TIMER1_SRC, every500ms);
 	timer2_set(TIMER1_SRC, GPIO_INTERVAL, TIMER_REPEAT);
-
+	pic_int_enable(S_INT_TIMER);
 #endif
 	log_puts(&term_uart_core_uart, 1, "Started!\nHello RISC-V world!\n");
 	//log_printf(&term_uart_core_uart, 1, "Started!\nHello RISC-V world!\n");

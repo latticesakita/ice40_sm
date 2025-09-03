@@ -63,7 +63,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(1): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(1):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_addsub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>1</Navigation>
@@ -71,7 +71,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_addsub.v(40): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_addsub.v(40):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_addsub.v</Navigation>
             <Navigation>40</Navigation>
@@ -79,7 +79,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(2): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(2):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_add.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>2</Navigation>
@@ -87,7 +87,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_add.v(50): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_add.v(50):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/adder/rtl/lscc_adder.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_add.v</Navigation>
             <Navigation>50</Navigation>
@@ -95,7 +95,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(3): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(3):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_complex_mult.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>3</Navigation>
@@ -103,7 +103,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_complex_mult.v(52): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_complex_mult.v(52):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_complex_mult.v</Navigation>
             <Navigation>52</Navigation>
@@ -111,7 +111,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(4): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(4):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_counter.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>4</Navigation>
@@ -119,7 +119,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_counter.v(39): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_counter.v(39):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/counter/rtl/lscc_cntr.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_counter.v</Navigation>
             <Navigation>39</Navigation>
@@ -127,7 +127,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(5): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(5):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>5</Navigation>
@@ -135,7 +135,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo.v(44): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo.v(44):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/fifo/rtl/lscc_fifo.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo.v</Navigation>
             <Navigation>44</Navigation>
@@ -143,7 +143,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(6): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(6):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo_dc.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>6</Navigation>
@@ -151,7 +151,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo_dc.v(47): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo_dc.v(47):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/fifo_dc/rtl/lscc_fifo_dc.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo_dc.v</Navigation>
             <Navigation>47</Navigation>
@@ -159,7 +159,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(7): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(7):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_mac.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>7</Navigation>
@@ -167,7 +167,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_mac.v(52): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_mac.v(52):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_mac.v</Navigation>
             <Navigation>52</Navigation>
@@ -175,7 +175,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(8): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(8):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsubsum.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>8</Navigation>
@@ -183,7 +183,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsubsum.v(53): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsubsum.v(53):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsubsum.v</Navigation>
             <Navigation>53</Navigation>
@@ -191,7 +191,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(9): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(9):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>9</Navigation>
@@ -199,7 +199,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsub.v(52): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsub.v(52):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsub.v</Navigation>
             <Navigation>52</Navigation>
@@ -207,7 +207,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(10): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(10):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_mult.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>10</Navigation>
@@ -215,7 +215,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_mult.v(51): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_mult.v(51):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_mult.v</Navigation>
             <Navigation>51</Navigation>
@@ -223,7 +223,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(11): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(11):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>11</Navigation>
@@ -231,7 +231,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v(48): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v(48):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v</Navigation>
             <Navigation>48</Navigation>
@@ -239,7 +239,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v(49): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v(49):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v</Navigation>
             <Navigation>49</Navigation>
@@ -247,7 +247,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(12): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(12):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>12</Navigation>
@@ -255,7 +255,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v(45): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v(45):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v</Navigation>
             <Navigation>45</Navigation>
@@ -263,7 +263,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v(46): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v(46):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v</Navigation>
             <Navigation>46</Navigation>
@@ -271,7 +271,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(13): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(13):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_rom.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>13</Navigation>
@@ -279,7 +279,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_rom.v(45): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_rom.v(45):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/rom/rtl/lscc_rom.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_rom.v</Navigation>
             <Navigation>45</Navigation>
@@ -287,7 +287,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(14): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(14):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_sub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>14</Navigation>
@@ -295,7 +295,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_sub.v(50): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_sub.v(50):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_sub.v</Navigation>
             <Navigation>50</Navigation>
@@ -303,7 +303,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(15): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(15):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>15</Navigation>
@@ -311,7 +311,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v(49): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v(49):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v</Navigation>
             <Navigation>49</Navigation>
@@ -319,7 +319,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v(50): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v(50):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v</Navigation>
             <Navigation>50</Navigation>
@@ -327,7 +327,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(16): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(16):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>16</Navigation>
@@ -335,7 +335,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v(45): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v(45):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v</Navigation>
             <Navigation>45</Navigation>
@@ -343,7 +343,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v(46): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v(46):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v</Navigation>
             <Navigation>46</Navigation>
@@ -351,7 +351,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(17): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(17):</Dynamic>
             <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_dsp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>17</Navigation>
@@ -359,7 +359,7 @@
         <Message>
             <ID>35921014</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd(4): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd(4):</Dynamic>
             <Dynamic>components</Dynamic>
             <Navigation>c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd</Navigation>
             <Navigation>4</Navigation>
@@ -373,7 +373,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(3): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(3):</Dynamic>
             <Dynamic>ice40_sm_top</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v</Navigation>
             <Navigation>3</Navigation>
@@ -381,7 +381,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(107): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(107):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v</Navigation>
@@ -390,7 +390,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756):</Dynamic>
             <Dynamic>HSOSC(CLKHF_DIV=&quot;0b01&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>756</Navigation>
@@ -398,7 +398,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm.v(54): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm.v(54):</Dynamic>
             <Dynamic>ice40_sm</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm.v</Navigation>
             <Navigation>54</Navigation>
@@ -406,7 +406,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(11):</Dynamic>
             <Dynamic>ahb_brg(S0_BASE_ADDR=32'b0100000000000000000,S0_ADDR_RANGE=32'b0100000000000000000,S1_BASE_ADDR=32'b01010000000000000000,S2_BASE_ADDR=32'b01000000000000000000,S3_BASE_ADDR=32'b01110000000000000000,S4_BASE_ADDR=32'b01100000000000000000)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>11</Navigation>
@@ -414,7 +414,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -422,7 +422,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -430,7 +430,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -438,7 +438,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>993</Dynamic>
             <Dynamic>160</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
@@ -447,7 +447,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -455,7 +455,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -463,7 +463,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -471,7 +471,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -479,7 +479,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -487,7 +487,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -495,7 +495,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -503,7 +503,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -511,7 +511,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -519,7 +519,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -527,7 +527,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -535,7 +535,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -543,7 +543,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(11):</Dynamic>
             <Dynamic>cpu</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>11</Navigation>
@@ -551,7 +551,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -559,7 +559,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -567,7 +567,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -575,7 +575,7 @@
         <Message>
             <ID>35901330</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>16</Dynamic>
             <Dynamic>2</Dynamic>
             <Dynamic>intr_in</Dynamic>
@@ -585,7 +585,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -593,7 +593,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -601,7 +601,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -609,7 +609,7 @@
         <Message>
             <ID>35901330</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(84): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(84):</Dynamic>
             <Dynamic>2</Dynamic>
             <Dynamic>16</Dynamic>
             <Dynamic>IRQ</Dynamic>
@@ -639,7 +639,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(11):</Dynamic>
             <Dynamic>gpio</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
             <Navigation>11</Navigation>
@@ -647,7 +647,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(82): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(82):</Dynamic>
             <Dynamic>gpio_ipgen_gpio_ahbl(DIRECTION=8'b11111111,INIT_OUTVAL=8'b0,DEVICE=&quot;ICE40UP&quot;)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
             <Navigation>82</Navigation>
@@ -655,7 +655,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(196): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(196):</Dynamic>
             <Dynamic>16</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
@@ -664,7 +664,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(201): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(201):</Dynamic>
             <Dynamic>16</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
@@ -673,7 +673,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(206): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(206):</Dynamic>
             <Dynamic>16</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
@@ -682,7 +682,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(223): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(223):</Dynamic>
             <Dynamic>16</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
@@ -691,7 +691,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(418): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(418):</Dynamic>
             <Dynamic>BB_B</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>418</Navigation>
@@ -699,7 +699,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(11):</Dynamic>
             <Dynamic>ice40_ip_if</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v</Navigation>
             <Navigation>11</Navigation>
@@ -707,7 +707,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(81): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(81):</Dynamic>
             <Dynamic>ice40_ip_if_ipgen_ice40_ip_if_ahb</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v</Navigation>
             <Navigation>81</Navigation>
@@ -715,7 +715,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(11):</Dynamic>
             <Dynamic>system0</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v</Navigation>
             <Navigation>11</Navigation>
@@ -723,7 +723,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(81): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(81):</Dynamic>
             <Dynamic>system0_ipgen_ahb_spsram_sm</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v</Navigation>
             <Navigation>81</Navigation>
@@ -731,7 +731,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(11):</Dynamic>
             <Dynamic>system1</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v</Navigation>
             <Navigation>11</Navigation>
@@ -739,7 +739,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(81): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(81):</Dynamic>
             <Dynamic>system1_ipgen_ahb_spsram_sm</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v</Navigation>
             <Navigation>81</Navigation>
@@ -747,7 +747,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(11):</Dynamic>
             <Dynamic>timer</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>11</Navigation>
@@ -755,7 +755,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(90): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(90):</Dynamic>
             <Dynamic>timer_ipgen_timer_ahbl(PRESCALE=11)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>90</Navigation>
@@ -763,7 +763,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(263): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(263):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
@@ -772,7 +772,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(587): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(587):</Dynamic>
             <Dynamic>timer_ipgen_timer_dsp_acc32</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>587</Navigation>
@@ -780,7 +780,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1):</Dynamic>
             <Dynamic>MAC16(TOPOUTPUT_SELECT=&quot;0b01&quot;,TOPADDSUB_CARRYSELECT=&quot;0b10&quot;,BOTOUTPUT_SELECT=&quot;0b01&quot;,MODE_8x8=&quot;0b1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>1</Navigation>
@@ -788,7 +788,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(756): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(756):</Dynamic>
             <Dynamic>timer_ipgen_timer_dsp_add32</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>756</Navigation>
@@ -796,7 +796,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1):</Dynamic>
             <Dynamic>MAC16(TOPADDSUB_UPPERINPUT=&quot;0b1&quot;,TOPADDSUB_CARRYSELECT=&quot;0b10&quot;,BOTADDSUB_UPPERINPUT=&quot;0b1&quot;,MODE_8x8=&quot;0b1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>1</Navigation>
@@ -804,7 +804,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(11):</Dynamic>
             <Dynamic>uart</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v</Navigation>
             <Navigation>11</Navigation>
@@ -812,7 +812,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(82): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(82):</Dynamic>
             <Dynamic>uart_ipgen_lsc_uart(CLOCK_FREQ=12000000,BUFFER_SIZE=&quot;512&quot;)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v</Navigation>
             <Navigation>82</Navigation>
@@ -820,7 +820,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(426): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(426):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>10</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v</Navigation>
@@ -829,7 +829,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(483): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(483):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>10</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v</Navigation>
@@ -838,7 +838,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(11):</Dynamic>
             <Dynamic>dpram512x8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>11</Navigation>
@@ -846,7 +846,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(252): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(252):</Dynamic>
             <Dynamic>dpram512x8_ipgen_lscc_ram_dp(MEM_ID=&quot;dpram512x8&quot;,MEM_SIZE=&quot;8,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=8,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>252</Navigation>
@@ -854,7 +854,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(657): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(657):</Dynamic>
             <Dynamic>dpram512x8_ipgen_lscc_ram_dp_main(MEM_ID=&quot;dpram512x8&quot;,MEM_SIZE=&quot;8,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=8,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>657</Navigation>
@@ -862,7 +862,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(3996): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v(3996):</Dynamic>
             <Dynamic>dpram512x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram512x8&quot;,MEM_SIZE=&quot;8,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -870,7 +870,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(DATA_WIDTH_W=&quot;8&quot;,DATA_WIDTH_R=&quot;8&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -878,7 +878,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(804): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(804):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>4</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v</Navigation>
@@ -892,7 +892,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spram16384x32.v(3): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spram16384x32.v(3):</Dynamic>
             <Dynamic>spram16384x32</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spram16384x32.v</Navigation>
             <Navigation>3</Navigation>
@@ -900,7 +900,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(742): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(742):</Dynamic>
             <Dynamic>SP256K</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>742</Navigation>
@@ -908,7 +908,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/hard_ip.v(3): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/hard_ip.v(3):</Dynamic>
             <Dynamic>hard_ip</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/hard_ip.v</Navigation>
             <Navigation>3</Navigation>
@@ -916,7 +916,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278):</Dynamic>
             <Dynamic>I2C_B(SDA_INPUT_DELAYED=&quot;1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>278</Navigation>
@@ -924,7 +924,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278):</Dynamic>
             <Dynamic>I2C_B(BUS_ADDR74=&quot;0b0011&quot;,SDA_INPUT_DELAYED=&quot;1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>278</Navigation>
@@ -932,7 +932,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(4): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(4):</Dynamic>
             <Dynamic>spi_fifo</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v</Navigation>
             <Navigation>4</Navigation>
@@ -940,7 +940,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(220): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(220):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>11</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v</Navigation>
@@ -949,7 +949,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(238): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(238):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>9</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_common/spi_fifo.v</Navigation>
@@ -958,7 +958,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(11): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(11):</Dynamic>
             <Dynamic>dpram2048x2_512x8</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>11</Navigation>
@@ -966,7 +966,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(252): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(252):</Dynamic>
             <Dynamic>dpram2048x2_512x8_ipgen_lscc_ram_dp(MEM_ID=&quot;dpram2048x2_512x8&quot;,MEM_SIZE=&quot;2,2048&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=2048,WADDR_WIDTH=11,WDATA_WIDTH=2,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>252</Navigation>
@@ -974,7 +974,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(657): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(657):</Dynamic>
             <Dynamic>dpram2048x2_512x8_ipgen_lscc_ram_dp_main(MEM_ID=&quot;dpram2048x2_512x8&quot;,MEM_SIZE=&quot;2,2048&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=2048,WADDR_WIDTH=11,WDATA_WIDTH=2,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>657</Navigation>
@@ -982,7 +982,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(3996): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(3996):</Dynamic>
             <Dynamic>dpram2048x2_512x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram2048x2_512x8&quot;,MEM_SIZE=&quot;2,2048&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b01000,REGMODE=&quot;noreg&quot;)</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -990,7 +990,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(DATA_WIDTH_R=&quot;8&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -998,7 +998,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339):</Dynamic>
             <Dynamic>IOL_B(LATCHIN=&quot;NONE_DDR&quot;,DDROUT=&quot;YES&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>339</Navigation>
@@ -1006,7 +1006,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339):</Dynamic>
             <Dynamic>IOL_B(LATCHIN=&quot;LATCH_REG&quot;,DDROUT=&quot;YES&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>339</Navigation>
@@ -1029,7 +1029,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(236): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(236):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>4</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v</Navigation>
@@ -1038,7 +1038,7 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(259): </Dynamic>
+            <Dynamic>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v(259):</Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>14</Dynamic>
             <Navigation>o:/src/propel/ice40up/ice40_sm/ice40_sm/ice40_sm_top.v</Navigation>
