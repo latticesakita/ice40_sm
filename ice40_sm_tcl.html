@@ -40,16 +40,6 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
-<A name="pn250830125532"></A><B><U><big>pn250830125532</big></U></B>
-#Start recording tcl command: 8/30/2025 08:49:53
-#Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
-source "O:/src/Propel/iCE40UP/ice40_sm/radiant_setup_template.tcl"
-prj_run Synthesis -impl impl_1
-prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/tb/tb.spf"
-#Stop recording: 8/30/2025 12:55:32
-
-
-
 <A name="pn250901084614"></A><B><U><big>pn250901084614</big></U></B>
 #Start recording tcl command: 8/31/2025 14:22:47
 #Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
@@ -127,11 +117,27 @@ prj_open "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm.rdf"
 
 
 
+<A name="pn250904083837"></A><B><U><big>pn250904083837</big></U></B>
+#Start recording tcl command: 9/4/2025 08:00:29
+#Project Location: O:/src/Propel/iCE40UP/ice40_sm; Project name: ice40_sm
+prj_open "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm.rdf"
+prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/genclk.v"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm.pdc"
+prj_run Synthesis -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "O:/src/Propel/iCE40UP/ice40_sm/tb/tb.spf"
+#Stop recording: 9/4/2025 08:38:37
+
+
+
 </PRE></DIV>
 
 <DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
 <UL id="toc_list">
-<LI><A href=#pn250830125532>pn250830125532</A></LI>
 <LI><A href=#pn250901084614>pn250901084614</A></LI>
 <LI><A href=#pn250901130528>pn250901130528</A></LI>
 <LI><A href=#pn250901143432>pn250901143432</A></LI>
@@ -141,6 +147,7 @@ prj_open "O:/src/Propel/iCE40UP/ice40_sm/ice40_sm.rdf"
 <LI><A href=#pn250902155329>pn250902155329</A></LI>
 <LI><A href=#pn250902204519>pn250902204519</A></LI>
 <LI><A href=#pn250904074648>pn250904074648</A></LI>
+<LI><A href=#pn250904083837>pn250904083837</A></LI>
 </UL>
 </DIV>
 

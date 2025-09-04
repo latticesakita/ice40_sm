@@ -72,8 +72,8 @@ struct gpio_instance led_gpio_inst;
 #include "pic.h"
 #include "lib_ov08x.h"
 
-//#define GPIO_INTERVAL    500000 // 1500(1.5ms) for simulation, 500000(500ms) for target
-#define GPIO_INTERVAL    1500 // 1500(1.5ms) for simulation, 500000(500ms) for target
+#define GPIO_INTERVAL    500000 // 1500(1.5ms) for simulation, 500000(500ms) for target
+//#define GPIO_INTERVAL    1500 // 1500(1.5ms) for simulation, 500000(500ms) for target
 #define TIMER_PRESCALE 11
 
 #if (defined TERM_UART_INST_BASE_ADDR)

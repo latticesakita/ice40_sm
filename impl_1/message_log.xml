@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
-    </Task>
     <Task name="Map">
         <Message>
             <ID>1026001</ID>
@@ -154,6 +147,13 @@
             <Dynamic>ldc_set_location -site {37} [get_ports reset_spi]</Dynamic>
         </Message>
     </Task>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35831026</ID>
@@ -217,7 +217,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(11):</Dynamic>
             <Dynamic>timer</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>11</Navigation>
@@ -225,7 +225,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(90): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(90):</Dynamic>
             <Dynamic>timer_ipgen_timer_ahbl(PRESCALE=11)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>90</Navigation>
@@ -233,7 +233,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(587): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(587):</Dynamic>
             <Dynamic>timer_ipgen_timer_dsp_acc32</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>587</Navigation>
@@ -241,7 +241,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1):</Dynamic>
             <Dynamic>MAC16(TOPOUTPUT_SELECT=&quot;0b01&quot;,TOPADDSUB_CARRYSELECT=&quot;0b10&quot;,BOTOUTPUT_SELECT=&quot;0b01&quot;,MODE_8x8=&quot;0b1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>1</Navigation>
@@ -249,7 +249,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(756): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v(756):</Dynamic>
             <Dynamic>timer_ipgen_timer_dsp_add32</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/timer/1.0.0/rtl/timer.v</Navigation>
             <Navigation>756</Navigation>
@@ -257,7 +257,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(1):</Dynamic>
             <Dynamic>MAC16(TOPADDSUB_UPPERINPUT=&quot;0b1&quot;,TOPADDSUB_CARRYSELECT=&quot;0b10&quot;,BOTADDSUB_UPPERINPUT=&quot;0b1&quot;,MODE_8x8=&quot;0b1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>1</Navigation>
@@ -324,7 +324,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(11):</Dynamic>
             <Dynamic>gpio</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
             <Navigation>11</Navigation>
@@ -332,7 +332,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(82): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v(82):</Dynamic>
             <Dynamic>gpio_ipgen_gpio_ahbl(DIRECTION=8'b11111111,INIT_OUTVAL=8'b0,DEVICE=&quot;ICE40UP&quot;)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/gpio/1.0.0/rtl/gpio.v</Navigation>
             <Navigation>82</Navigation>
@@ -340,7 +340,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(418): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(418):</Dynamic>
             <Dynamic>BB_B</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>418</Navigation>
@@ -407,7 +407,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(11):</Dynamic>
             <Dynamic>cpu</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>11</Navigation>
@@ -415,7 +415,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -423,7 +423,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -431,7 +431,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -439,7 +439,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -447,7 +447,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -455,7 +455,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/ip/cpu/1.8.0/rtl/cpu.v</Navigation>
             <Navigation>0</Navigation>
@@ -542,7 +542,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(11):</Dynamic>
             <Dynamic>uart</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v</Navigation>
             <Navigation>11</Navigation>
@@ -550,7 +550,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(82): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v(82):</Dynamic>
             <Dynamic>uart_ipgen_lsc_uart(CLOCK_FREQ=12000000,BUFFER_SIZE=&quot;512&quot;)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/uart/1.0.0/rtl/uart.v</Navigation>
             <Navigation>82</Navigation>
@@ -617,7 +617,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(11):</Dynamic>
             <Dynamic>ahb_brg</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>11</Navigation>
@@ -625,7 +625,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -633,7 +633,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -641,7 +641,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -649,7 +649,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -657,7 +657,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -665,7 +665,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -673,7 +673,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -681,7 +681,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -689,7 +689,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -697,7 +697,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -705,7 +705,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -713,7 +713,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -721,7 +721,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -729,7 +729,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -737,7 +737,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v(0):</Dynamic>
             <Dynamic>'**'</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/latticesemi.com/module/ahb_brg/1.4.0/rtl/ahb_brg.v</Navigation>
             <Navigation>0</Navigation>
@@ -804,7 +804,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(11):</Dynamic>
             <Dynamic>ice40_ip_if</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v</Navigation>
             <Navigation>11</Navigation>
@@ -812,7 +812,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(81): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v(81):</Dynamic>
             <Dynamic>ice40_ip_if_ipgen_ice40_ip_if_ahb</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/ice40_ip_if/1.0.0/rtl/ice40_ip_if.v</Navigation>
             <Navigation>81</Navigation>
@@ -875,7 +875,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(11):</Dynamic>
             <Dynamic>dpram512x8</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>11</Navigation>
@@ -883,7 +883,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(252): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(252):</Dynamic>
             <Dynamic>dpram512x8_ipgen_lscc_ram_dp(MEM_ID=&quot;dpram512x8&quot;,MEM_SIZE=&quot;8,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=8,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>252</Navigation>
@@ -891,7 +891,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(657): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(657):</Dynamic>
             <Dynamic>dpram512x8_ipgen_lscc_ram_dp_main(MEM_ID=&quot;dpram512x8&quot;,MEM_SIZE=&quot;8,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=8,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>657</Navigation>
@@ -899,7 +899,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v(3996):</Dynamic>
             <Dynamic>dpram512x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram512x8&quot;,MEM_SIZE=&quot;8,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram512x8/rtl/dpram512x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -907,7 +907,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(DATA_WIDTH_W=&quot;8&quot;,DATA_WIDTH_R=&quot;8&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -970,7 +970,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(11):</Dynamic>
             <Dynamic>dpram1024x8</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v</Navigation>
             <Navigation>11</Navigation>
@@ -978,7 +978,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(252): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(252):</Dynamic>
             <Dynamic>dpram1024x8_ipgen_lscc_ram_dp(MEM_ID=&quot;dpram1024x8&quot;,MEM_SIZE=&quot;8,1024&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_WIDTH=10,WDATA_WIDTH=8,RADDR_WIDTH=10,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v</Navigation>
             <Navigation>252</Navigation>
@@ -986,7 +986,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(657): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(657):</Dynamic>
             <Dynamic>dpram1024x8_ipgen_lscc_ram_dp_main(MEM_ID=&quot;dpram1024x8&quot;,MEM_SIZE=&quot;8,1024&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_WIDTH=10,WDATA_WIDTH=8,RADDR_WIDTH=10,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v</Navigation>
             <Navigation>657</Navigation>
@@ -994,7 +994,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(3996):</Dynamic>
             <Dynamic>dpram1024x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram1024x8&quot;,MEM_SIZE=&quot;8,1024&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1002,7 +1002,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(DATA_WIDTH_W=&quot;4&quot;,DATA_WIDTH_R=&quot;4&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -1010,7 +1010,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v(3996):</Dynamic>
             <Dynamic>dpram1024x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram1024x8&quot;,MEM_SIZE=&quot;8,1024&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram1024x8/rtl/dpram1024x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1073,7 +1073,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(11):</Dynamic>
             <Dynamic>dpram2048x2_512x8</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>11</Navigation>
@@ -1081,7 +1081,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(252): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(252):</Dynamic>
             <Dynamic>dpram2048x2_512x8_ipgen_lscc_ram_dp(MEM_ID=&quot;dpram2048x2_512x8&quot;,MEM_SIZE=&quot;2,2048&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=2048,WADDR_WIDTH=11,WDATA_WIDTH=2,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>252</Navigation>
@@ -1089,7 +1089,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(657): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(657):</Dynamic>
             <Dynamic>dpram2048x2_512x8_ipgen_lscc_ram_dp_main(MEM_ID=&quot;dpram2048x2_512x8&quot;,MEM_SIZE=&quot;2,2048&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=2048,WADDR_WIDTH=11,WDATA_WIDTH=2,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>657</Navigation>
@@ -1097,7 +1097,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v(3996):</Dynamic>
             <Dynamic>dpram2048x2_512x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram2048x2_512x8&quot;,MEM_SIZE=&quot;2,2048&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b01000,REGMODE=&quot;noreg&quot;)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x2_512x8/rtl/dpram2048x2_512x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1105,7 +1105,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(DATA_WIDTH_R=&quot;8&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -1168,7 +1168,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(11):</Dynamic>
             <Dynamic>dpram2048x8</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v</Navigation>
             <Navigation>11</Navigation>
@@ -1176,7 +1176,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(252): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(252):</Dynamic>
             <Dynamic>dpram2048x8_ipgen_lscc_ram_dp(MEM_ID=&quot;dpram2048x8&quot;,MEM_SIZE=&quot;8,2048&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=2048,WADDR_WIDTH=11,WDATA_WIDTH=8,RADDR_DEPTH=2048,RADDR_WIDTH=11,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v</Navigation>
             <Navigation>252</Navigation>
@@ -1184,7 +1184,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(657): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(657):</Dynamic>
             <Dynamic>dpram2048x8_ipgen_lscc_ram_dp_main(MEM_ID=&quot;dpram2048x8&quot;,MEM_SIZE=&quot;8,2048&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=2048,WADDR_WIDTH=11,WDATA_WIDTH=8,RADDR_DEPTH=2048,RADDR_WIDTH=11,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v</Navigation>
             <Navigation>657</Navigation>
@@ -1192,7 +1192,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996):</Dynamic>
             <Dynamic>dpram2048x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram2048x8&quot;,MEM_SIZE=&quot;8,2048&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1200,7 +1200,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -1208,7 +1208,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996):</Dynamic>
             <Dynamic>dpram2048x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram2048x8&quot;,MEM_SIZE=&quot;8,2048&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b010,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1216,7 +1216,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996):</Dynamic>
             <Dynamic>dpram2048x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram2048x8&quot;,MEM_SIZE=&quot;8,2048&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1224,7 +1224,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v(3996):</Dynamic>
             <Dynamic>dpram2048x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram2048x8&quot;,MEM_SIZE=&quot;8,2048&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram2048x8/rtl/dpram2048x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1287,7 +1287,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(11):</Dynamic>
             <Dynamic>dpram4096x8</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>11</Navigation>
@@ -1295,7 +1295,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(252): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(252):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=4096,WADDR_WIDTH=12,WDATA_WIDTH=8,RADDR_DEPTH=4096,RADDR_WIDTH=12,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>252</Navigation>
@@ -1303,7 +1303,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(657): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(657):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_main(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=4096,WADDR_WIDTH=12,WDATA_WIDTH=8,RADDR_DEPTH=4096,RADDR_WIDTH=12,RDATA_WIDTH=8,REGMODE=&quot;noreg&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>657</Navigation>
@@ -1311,7 +1311,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1319,7 +1319,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -1327,7 +1327,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b010,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1335,7 +1335,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1343,7 +1343,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110,POSy=32'b0)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1351,7 +1351,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0100000000000)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1359,7 +1359,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b010,POSy=32'b0100000000000)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1367,7 +1367,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0100000000000)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1375,7 +1375,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v(3996):</Dynamic>
             <Dynamic>dpram4096x8_ipgen_lscc_ram_dp_core(MEM_ID=&quot;dpram4096x8&quot;,MEM_SIZE=&quot;8,4096&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010,DATA_WIDTH_R=32'b010,REGMODE=&quot;noreg&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110,POSy=32'b0100000000000)</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/dpram4096x8/rtl/dpram4096x8.v</Navigation>
             <Navigation>3996</Navigation>
@@ -1442,7 +1442,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(11):</Dynamic>
             <Dynamic>system0</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v</Navigation>
             <Navigation>11</Navigation>
@@ -1450,7 +1450,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(81): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v(81):</Dynamic>
             <Dynamic>system0_ipgen_ahb_spsram_sm</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system0/1.0.0/rtl/system0.v</Navigation>
             <Navigation>81</Navigation>
@@ -1517,7 +1517,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(11): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(11):</Dynamic>
             <Dynamic>system1</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v</Navigation>
             <Navigation>11</Navigation>
@@ -1525,7 +1525,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(81): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v(81):</Dynamic>
             <Dynamic>system1_ipgen_ahb_spsram_sm</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/lib/personal/ip/system1/1.0.0/rtl/system1.v</Navigation>
             <Navigation>81</Navigation>
@@ -1593,7 +1593,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm_top.v(3): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm_top.v(3):</Dynamic>
             <Dynamic>ice40_sm_top</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm_top.v</Navigation>
             <Navigation>3</Navigation>
@@ -1601,7 +1601,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/genclk.v(1): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/genclk.v(1):</Dynamic>
             <Dynamic>genclk</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/genclk.v</Navigation>
             <Navigation>1</Navigation>
@@ -1609,7 +1609,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756):</Dynamic>
             <Dynamic>HSOSC(CLKHF_DIV=&quot;0b01&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>756</Navigation>
@@ -1617,7 +1617,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.v(54): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.v(54):</Dynamic>
             <Dynamic>ice40_sm</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_sm.v</Navigation>
             <Navigation>54</Navigation>
@@ -1625,7 +1625,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>ahb_brg.v(66): </Dynamic>
+            <Dynamic>ahb_brg.v(66):</Dynamic>
             <Dynamic>ahb_brg(FULL_DECODE_EN=1,S0_ADDR_RANGE=32'b0100000000000000000,S0_BASE_ADDR=32'b0100000000000000000,S1_ADDR_RANGE=32'b010000000000,S1_BASE_ADDR=32'b01010000000000000000,S2_ADDR_RANGE=32'b010000000000,S2_BASE_ADDR=32'b01000000000000000000,S3_ADDR_RANGE=32'b010000000000,S3_BASE_ADDR=32'b01110000000000000000,S4_ADDR_RANGE=32'b010000000000,S4_BASE_ADDR=32'b01100000000000000000)</Dynamic>
             <Navigation>ahb_brg.v</Navigation>
             <Navigation>66</Navigation>
@@ -1633,7 +1633,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>cpu.v(66): </Dynamic>
+            <Dynamic>cpu.v(66):</Dynamic>
             <Dynamic>cpu</Dynamic>
             <Navigation>cpu.v</Navigation>
             <Navigation>66</Navigation>
@@ -1641,7 +1641,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>gpio.v(65): </Dynamic>
+            <Dynamic>gpio.v(65):</Dynamic>
             <Dynamic>gpio</Dynamic>
             <Navigation>gpio.v</Navigation>
             <Navigation>65</Navigation>
@@ -1649,7 +1649,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>ice40_ip_if.v(66): </Dynamic>
+            <Dynamic>ice40_ip_if.v(66):</Dynamic>
             <Dynamic>ice40_ip_if</Dynamic>
             <Navigation>ice40_ip_if.v</Navigation>
             <Navigation>66</Navigation>
@@ -1657,7 +1657,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>system0.v(66): </Dynamic>
+            <Dynamic>system0.v(66):</Dynamic>
             <Dynamic>system0</Dynamic>
             <Navigation>system0.v</Navigation>
             <Navigation>66</Navigation>
@@ -1665,7 +1665,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>system1.v(66): </Dynamic>
+            <Dynamic>system1.v(66):</Dynamic>
             <Dynamic>system1</Dynamic>
             <Navigation>system1.v</Navigation>
             <Navigation>66</Navigation>
@@ -1673,7 +1673,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>timer.v(65): </Dynamic>
+            <Dynamic>timer.v(65):</Dynamic>
             <Dynamic>timer</Dynamic>
             <Navigation>timer.v</Navigation>
             <Navigation>65</Navigation>
@@ -1681,7 +1681,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>uart.v(66): </Dynamic>
+            <Dynamic>uart.v(66):</Dynamic>
             <Dynamic>uart</Dynamic>
             <Navigation>uart.v</Navigation>
             <Navigation>66</Navigation>
@@ -1689,7 +1689,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spram16384x32.v(3): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spram16384x32.v(3):</Dynamic>
             <Dynamic>spram16384x32</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spram16384x32.v</Navigation>
             <Navigation>3</Navigation>
@@ -1697,7 +1697,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(742): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(742):</Dynamic>
             <Dynamic>SP256K</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>742</Navigation>
@@ -1705,7 +1705,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/hard_ip.v(3): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/hard_ip.v(3):</Dynamic>
             <Dynamic>hard_ip</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/hard_ip.v</Navigation>
             <Navigation>3</Navigation>
@@ -1713,7 +1713,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278):</Dynamic>
             <Dynamic>I2C_B(SDA_INPUT_DELAYED=&quot;1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>278</Navigation>
@@ -1721,7 +1721,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(418): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(418):</Dynamic>
             <Dynamic>BB_B</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>418</Navigation>
@@ -1729,7 +1729,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(278):</Dynamic>
             <Dynamic>I2C_B(BUS_ADDR74=&quot;0b0011&quot;,SDA_INPUT_DELAYED=&quot;1&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>278</Navigation>
@@ -1737,7 +1737,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(4): </Dynamic>
+            <Dynamic>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spi_fifo.v(4):</Dynamic>
             <Dynamic>spi_fifo</Dynamic>
             <Navigation>O:/src/Propel/iCE40UP/ice40_sm/ice40_sm/ice40_common/spi_fifo.v</Navigation>
             <Navigation>4</Navigation>
@@ -1745,7 +1745,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>dpram2048x2_512x8.v(66): </Dynamic>
+            <Dynamic>dpram2048x2_512x8.v(66):</Dynamic>
             <Dynamic>dpram2048x2_512x8</Dynamic>
             <Navigation>dpram2048x2_512x8.v</Navigation>
             <Navigation>66</Navigation>
@@ -1753,7 +1753,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339):</Dynamic>
             <Dynamic>IOL_B(LATCHIN=&quot;NONE_DDR&quot;,DDROUT=&quot;YES&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>339</Navigation>
@@ -1761,7 +1761,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339):</Dynamic>
             <Dynamic>IOL_B(LATCHIN=&quot;LATCH_REG&quot;,DDROUT=&quot;YES&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>339</Navigation>
@@ -1827,7 +1827,7 @@
             <Navigation>24</Navigation>
             <Navigation>85</Navigation>
             <Navigation>24</Navigation>
-            <Navigation>Input EXT_IRQ on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input EXT_IRQ on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2012744</ID>
@@ -1839,7 +1839,7 @@
             <Navigation>20</Navigation>
             <Navigation>110</Navigation>
             <Navigation>20</Navigation>
-            <Navigation>Input TDI on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input TDI on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2012744</ID>
@@ -1851,7 +1851,7 @@
             <Navigation>20</Navigation>
             <Navigation>112</Navigation>
             <Navigation>20</Navigation>
-            <Navigation>Input TCK on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input TCK on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2012744</ID>
@@ -1863,7 +1863,7 @@
             <Navigation>20</Navigation>
             <Navigation>113</Navigation>
             <Navigation>20</Navigation>
-            <Navigation>Input TMS on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input TMS on instance riscvsmall_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2019991</ID>
@@ -1959,7 +1959,7 @@
             <Navigation>35</Navigation>
             <Navigation>576</Navigation>
             <Navigation>46</Navigation>
-            <Navigation>Input rst_i on instance u_ram512x8_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input rst_i on instance u_ram512x8_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2012897</ID>
@@ -2247,7 +2247,7 @@
             <Navigation>18</Navigation>
             <Navigation>280</Navigation>
             <Navigation>27</Navigation>
-            <Navigation>Input rst_i on instance dpram2_8_i is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input rst_i on instance dpram2_8_i is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2012744</ID>
@@ -2259,7 +2259,7 @@
             <Navigation>12</Navigation>
             <Navigation>297</Navigation>
             <Navigation>12</Navigation>
-            <Navigation>Input PADDI on instance u_io_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input PADDI on instance u_io_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2012744</ID>
@@ -2271,7 +2271,7 @@
             <Navigation>12</Navigation>
             <Navigation>312</Navigation>
             <Navigation>12</Navigation>
-            <Navigation>Input PADDI on instance u_io_csb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </Navigation>
+            <Navigation>Input PADDI on instance u_io_csb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration.</Navigation>
         </Message>
         <Message>
             <ID>2012503</ID>
@@ -2595,7 +2595,7 @@
             <Navigation>0</Navigation>
             <Navigation>12</Navigation>
             <Navigation>5</Navigation>
-            <Navigation>User-specified initial value defined for instance genclk_i.r_div[0] is being ignored due to limitations in architecture. </Navigation>
+            <Navigation>User-specified initial value defined for instance genclk_i.r_div[0] is being ignored due to limitations in architecture.</Navigation>
         </Message>
         <Message>
             <ID>2019991</ID>
@@ -2607,7 +2607,7 @@
             <Navigation>4</Navigation>
             <Navigation>175</Navigation>
             <Navigation>9</Navigation>
-            <Navigation>User-specified initial value defined for instance ice40_sm_inst.timer_inst.timer_ahbl_inst.r_rst[2:0] is being ignored due to limitations in architecture. </Navigation>
+            <Navigation>User-specified initial value defined for instance ice40_sm_inst.timer_inst.timer_ahbl_inst.r_rst[2:0] is being ignored due to limitations in architecture.</Navigation>
         </Message>
         <Message>
             <ID>2019991</ID>
@@ -2619,7 +2619,7 @@
             <Navigation>0</Navigation>
             <Navigation>110</Navigation>
             <Navigation>5</Navigation>
-            <Navigation>User-specified initial value defined for instance r_rst_cnt[7:0] is being ignored due to limitations in architecture. </Navigation>
+            <Navigation>User-specified initial value defined for instance r_rst_cnt[7:0] is being ignored due to limitations in architecture.</Navigation>
         </Message>
         <Message>
             <ID>2019991</ID>
@@ -2631,7 +2631,7 @@
             <Navigation>0</Navigation>
             <Navigation>3</Navigation>
             <Navigation>0</Navigation>
-            <Navigation>Source for clock osc0/CLKHF should be moved to net genclk_i.clk24_i connected to driving cell pin genclk_i.osc0.CLKHF </Navigation>
+            <Navigation>Source for clock osc0/CLKHF should be moved to net genclk_i.clk24_i connected to driving cell pin genclk_i.osc0.CLKHF</Navigation>
         </Message>
         <Message>
             <ID>2019991</ID>
@@ -2643,7 +2643,7 @@
             <Navigation>0</Navigation>
             <Navigation>5</Navigation>
             <Navigation>0</Navigation>
-            <Navigation>Source for clock clk_i should be moved to net genclk_i.r_div[0] connected to driving cell pin genclk_i.r_div[0].Q[0] </Navigation>
+            <Navigation>Source for clock clk_i should be moved to net genclk_i.r_div[0] connected to driving cell pin genclk_i.r_div[0].Q[0]</Navigation>
         </Message>
         <Message>
             <ID>2013202</ID>
@@ -2655,7 +2655,7 @@
             <Navigation>0</Navigation>
             <Navigation>12</Navigation>
             <Navigation>5</Navigation>
-            <Navigation>Found inferred clock genclk|clk24_inferred_clock which controls 1 sequential elements including genclk_i.r_div[0]. This clock has no specified timing constraint which may adversely impact design performance. </Navigation>
+            <Navigation>Found inferred clock genclk|clk24_inferred_clock which controls 1 sequential elements including genclk_i.r_div[0]. This clock has no specified timing constraint which may adversely impact design performance.</Navigation>
         </Message>
         <Message>
             <ID>2019993</ID>

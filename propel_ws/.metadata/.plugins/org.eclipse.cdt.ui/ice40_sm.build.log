@@ -1,4 +1,4 @@
-07:47:02 **** Incremental Build of configuration Debug for project ice40_sm ****
+10:16:17 **** Incremental Build of configuration Debug for project ice40_sm ****
 make all 
 Building file: ../src/main.c
 Invoking: GNU RISC-V Cross C Compiler
@@ -29,7 +29,7 @@ Finished building: ice40_sm.lst
 Invoking: GNU RISC-V Cross Print Size
 riscv-none-embed-size --format=berkeley "ice40_sm.elf"
    text	   data	    bss	    dec	    hex	filename
-   7436	      8	   4796	  12240	   2fd0	ice40_sm.elf
+   7440	      8	   4796	  12244	   2fd4	ice40_sm.elf
 Finished building: ice40_sm.siz
  
 Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
@@ -64,5 +64,5 @@ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be
 ) 
  
 
-07:47:06 Build Finished. 0 errors, 0 warnings. (took 3s.897ms)
+10:16:24 Build Finished. 0 errors, 0 warnings. (took 6s.904ms)
 
