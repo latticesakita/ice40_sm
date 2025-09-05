@@ -1,21 +1,17 @@
-10:16:17 **** Incremental Build of configuration Debug for project ice40_sm ****
+21:28:02 **** Incremental Build of configuration Debug for project ice40_sm ****
 make all 
-Building file: ../src/main.c
+Building file: ../src/lib_ov08x.c
 Invoking: GNU RISC-V Cross C Compiler
-riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:48:
-../src/device_info.h:144:9: note: '#pragma message: 
-=====================================================================
-Processor: "cpu_inst", type: RISC-V SM
-    PIC enabled, Base Address: 0xFFFF0000
-    MTIMER disabled
-LED: "gpio_inst_gpio_ahb", base address: 0x40000
-Terminal: "uart_inst_ahb_uart", base address: 0x70000
-=====================================================================
-   '
-  144 | #pragma message (DEVICE_INFO)
-      |         ^~~~~~~
-Finished building: ../src/main.c
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+../src/lib_ov08x.c: In function 'ov08x_start':
+../src/lib_ov08x.c:496:44: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  496 |   ret = i2c_write(ov08x_slave, offset, sz, &i2c_data[i][3]);
+      |                                            ^~~~~~~~~~~~~~~
+In file included from ../src/lib_ov08x.c:2:
+../src/i2c_controller.h:13:94: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+   13 | int i2c_write(unsigned char slave, unsigned short offset, unsigned int count, unsigned char *val) ;
+      |                                                                               ~~~~~~~~~~~~~~~^~~
+Finished building: ../src/lib_ov08x.c
  
 Building target: ice40_sm.elf
 Invoking: GNU RISC-V Cross C Linker
@@ -29,7 +25,7 @@ Finished building: ice40_sm.lst
 Invoking: GNU RISC-V Cross Print Size
 riscv-none-embed-size --format=berkeley "ice40_sm.elf"
    text	   data	    bss	    dec	    hex	filename
-   7440	      8	   4796	  12244	   2fd4	ice40_sm.elf
+   5436	   1680	   4796	  11912	   2e88	ice40_sm.elf
 Finished building: ice40_sm.siz
  
 Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
@@ -64,5 +60,5 @@ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be
 ) 
  
 
-10:16:24 Build Finished. 0 errors, 0 warnings. (took 6s.904ms)
+21:28:06 Build Finished. 0 errors, 1 warnings. (took 4s.63ms)
 

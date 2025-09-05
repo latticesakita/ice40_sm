@@ -2033,3 +2033,239 @@ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be
  python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_LE.bin -le 
 ) 
  
+11:18:15 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+../src/lib_ov08x.c: In function 'ov08x_start':
+../src/lib_ov08x.c:494:44: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  494 |   ret = i2c_write(ov08x_slave, offset, sz, &i2c_data[i][3]);
+      |                                            ^~~~~~~~~~~~~~~
+In file included from ../src/lib_ov08x.c:2:
+../src/i2c_controller.h:13:94: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+   13 | int i2c_write(unsigned char slave, unsigned short offset, unsigned int count, unsigned char *val) ;
+      |                                                                               ~~~~~~~~~~~~~~~^~~
+Finished building: ../src/lib_ov08x.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5476	   1680	   4796	  11952	   2eb0	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .text -j .ctors -j .dtors "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Code.mem" -MEM 32
+Finished building: ice40_sm_Code.mem
+ 
+Invoking: Lattice Multi Memory Deployment (DATA SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .rodata -j .data -j .bss "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Data.mem" -MEM 32
+Finished building: ice40_sm_Data.mem
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm*.mem ..\..\..\tb  
+ice40_sm_Code.mem
+ice40_sm_Data.mem
+        2 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>for %f in (*.mem) do (
+python mem2bin.py %f %~nf_BE.bin -be  
+ python mem2bin.py %f %~nf_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_BE.bin -be  
+ python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be  
+ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_LE.bin -le 
+) 
+ 
+13:22:19 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+../src/lib_ov08x.c: In function 'ov08x_start':
+../src/lib_ov08x.c:496:44: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  496 |   ret = i2c_write(ov08x_slave, offset, sz, &i2c_data[i][3]);
+      |                                            ^~~~~~~~~~~~~~~
+In file included from ../src/lib_ov08x.c:2:
+../src/i2c_controller.h:13:94: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+   13 | int i2c_write(unsigned char slave, unsigned short offset, unsigned int count, unsigned char *val) ;
+      |                                                                               ~~~~~~~~~~~~~~~^~~
+Finished building: ../src/lib_ov08x.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5476	   1680	   4796	  11952	   2eb0	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .text -j .ctors -j .dtors "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Code.mem" -MEM 32
+Finished building: ice40_sm_Code.mem
+ 
+Invoking: Lattice Multi Memory Deployment (DATA SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .rodata -j .data -j .bss "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Data.mem" -MEM 32
+Finished building: ice40_sm_Data.mem
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm*.mem ..\..\..\tb  
+ice40_sm_Code.mem
+ice40_sm_Data.mem
+        2 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>for %f in (*.mem) do (
+python mem2bin.py %f %~nf_BE.bin -be  
+ python mem2bin.py %f %~nf_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_BE.bin -be  
+ python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be  
+ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_LE.bin -le 
+) 
+ 
+21:19:23 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/i2c_controller.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/i2c_controller.d" -MT"src/i2c_controller.o" -c -o "src/i2c_controller.o" "../src/i2c_controller.c"
+Finished building: ../src/i2c_controller.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5424	   1680	   4796	  11900	   2e7c	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .text -j .ctors -j .dtors "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Code.mem" -MEM 32
+Finished building: ice40_sm_Code.mem
+ 
+Invoking: Lattice Multi Memory Deployment (DATA SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .rodata -j .data -j .bss "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Data.mem" -MEM 32
+Finished building: ice40_sm_Data.mem
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm*.mem ..\..\..\tb  
+ice40_sm_Code.mem
+ice40_sm_Data.mem
+        2 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>for %f in (*.mem) do (
+python mem2bin.py %f %~nf_BE.bin -be  
+ python mem2bin.py %f %~nf_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_BE.bin -be  
+ python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be  
+ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_LE.bin -le 
+) 
+ 
+21:28:02 **** Incremental Build of configuration Debug for project ice40_sm ****
+make all 
+Building file: ../src/lib_ov08x.c
+Invoking: GNU RISC-V Cross C Compiler
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -DLSCC_STDIO_UART_APB -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/riscv_sm" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/gpio" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/timer2" -I"O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm/src/bsp/driver/uart" -std=gnu11 --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -MMD -MP -MF"src/lib_ov08x.d" -MT"src/lib_ov08x.o" -c -o "src/lib_ov08x.o" "../src/lib_ov08x.c"
+../src/lib_ov08x.c: In function 'ov08x_start':
+../src/lib_ov08x.c:496:44: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  496 |   ret = i2c_write(ov08x_slave, offset, sz, &i2c_data[i][3]);
+      |                                            ^~~~~~~~~~~~~~~
+In file included from ../src/lib_ov08x.c:2:
+../src/i2c_controller.h:13:94: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+   13 | int i2c_write(unsigned char slave, unsigned short offset, unsigned int count, unsigned char *val) ;
+      |                                                                               ~~~~~~~~~~~~~~~^~~
+Finished building: ../src/lib_ov08x.c
+ 
+Building target: ice40_sm.elf
+Invoking: GNU RISC-V Cross C Linker
+riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wframe-larger-than=2560  -g3 -T "O:/src/Propel/iCE40UP/ice40_sm/propel_ws/ice40_sm/src/linker.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ice40_sm.map" --specs=picolibc.specs -DPICOLIBC_INTEGER_PRINTF_SCANF -o "ice40_sm.elf"  ./src/bsp/driver/uart/uart.o  ./src/bsp/driver/timer2/timer2.o  ./src/bsp/driver/riscv_sm/crt0.o ./src/bsp/driver/riscv_sm/exit.o ./src/bsp/driver/riscv_sm/interrupt.o ./src/bsp/driver/riscv_sm/iob.o ./src/bsp/driver/riscv_sm/pic.o ./src/bsp/driver/riscv_sm/reg_access.o ./src/bsp/driver/riscv_sm/timer.o ./src/bsp/driver/riscv_sm/util.o  ./src/bsp/driver/gpio/gpio.o  ./src/bsp/reg_test.o  ./src/i2c_controller.o ./src/lib_ov08x.o ./src/main.o ./src/utils.o   
+Finished building target: ice40_sm.elf
+ 
+Invoking: GNU RISC-V Cross Create Listing
+riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "ice40_sm.elf" > "ice40_sm.lst"
+Finished building: ice40_sm.lst
+ 
+Invoking: GNU RISC-V Cross Print Size
+riscv-none-embed-size --format=berkeley "ice40_sm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5436	   1680	   4796	  11912	   2e88	ice40_sm.elf
+Finished building: ice40_sm.siz
+ 
+Invoking: Lattice Multi Memory Deployment (CODE SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .text -j .ctors -j .dtors "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Code.mem" -MEM 32
+Finished building: ice40_sm_Code.mem
+ 
+Invoking: Lattice Multi Memory Deployment (DATA SEGMENT)
+riscv-none-embed-objcopy -O binary --gap-fill 0 -j .rodata -j .data -j .bss "ice40_sm.elf" tmp; srec_cat tmp -Binary -byte-swap 4 -DISable Header -Output "ice40_sm_Data.mem" -MEM 32
+Finished building: ice40_sm_Data.mem
+ 
+Post build
+post_build.bat
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>copy /y ice40_sm*.mem ..\..\..\tb  
+ice40_sm_Code.mem
+ice40_sm_Data.mem
+        2 file(s) copied.
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>for %f in (*.mem) do (
+python mem2bin.py %f %~nf_BE.bin -be  
+ python mem2bin.py %f %~nf_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_BE.bin -be  
+ python mem2bin.py ice40_sm_Code.mem ice40_sm_Code_LE.bin -le 
+) 
+
+O:\src\Propel\iCE40UP\ice40_sm\propel_ws\ice40_sm\Debug>(
+python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_BE.bin -be  
+ python mem2bin.py ice40_sm_Data.mem ice40_sm_Data_LE.bin -le 
+) 
+ 

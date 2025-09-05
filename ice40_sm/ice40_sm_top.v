@@ -12,6 +12,7 @@ module ice40_sm_top (
 	inout  spi_mosi
 );
 
+localparam MINIMUM_SPI_LOAD_SIZE = 4096/4;
 localparam STATE_LOAD_SYSTEM0 = 0;
 localparam STATE_LOAD_WAIT = 1;
 localparam STATE_LOAD_SYSTEM1 = 14;
@@ -53,7 +54,6 @@ wire		sram_we;
 wire [3:0]	sram_maskwe;
 
 // system1
-reg [13:0]	r_spi_dram_addr;
 wire 		spi_dram_we;
 wire [31:0]	spi_dram_din;
 wire [13:0]	soc_dram_addr;
@@ -229,11 +229,15 @@ always @(posedge clk_spi or negedge resetn) begin
 	else if(load_state==STATE_LOAD_DONE) begin
 	end
 	else if(load_state==STATE_LOAD_SYSTEM0) begin
-		load_state <= (spi_sram_we&&(spi_sram_din == 32'hFFFF_FFFF)) ? STATE_LOAD_WAIT : STATE_LOAD_SYSTEM0;
+		if(spi_sram_we&&(spi_sram_din == 32'hFFFF_FFFF)) begin
+			load_state <= (r_spi_sram_addr < MINIMUM_SPI_LOAD_SIZE) ? STATE_LOAD_SYSTEM0 : STATE_LOAD_WAIT;
+		end
 	end
 	else if(load_state==STATE_LOAD_SYSTEM1) begin
 		//TODO: it won't work if data are initialized as FFFF_FFFF or -1 in software side
-		load_state <= (spi_sram_we&&(spi_sram_din == 32'hFFFF_FFFF)) ? STATE_LOAD_DONE : STATE_LOAD_SYSTEM1;
+		if(spi_sram_we&&(spi_sram_din == 32'hFFFF_FFFF)) begin
+			load_state <= (r_spi_sram_addr < MINIMUM_SPI_LOAD_SIZE) ? STATE_LOAD_SYSTEM1 : STATE_LOAD_DONE;
+		end
 	end
 	else begin
 		load_state <= load_state + 1;
