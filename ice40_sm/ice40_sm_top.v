@@ -102,7 +102,7 @@ assign flash_addr = (load_state == STATE_LOAD_SYSTEM0) ? 24'h030000 : 24'h050000
 assign resetn_soc = load_done;
 
 genclk genclk_i (
-	.clk24	(oclk),
+	.oclk	(oclk),
 	.clk12	(clk_soc)
 );
 
