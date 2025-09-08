@@ -190,6 +190,7 @@ reg [ 8:0] r_raddr_clkr;
 reg        r_ren;
 reg [1:0]  r_ren_d;
 reg        r_spram_en;
+reg [ 1:0] r_spram_addr_lsb;
 reg [31:0] r_spram_out;
 reg        r_wen;
 reg [1:0]  r_wdata;
@@ -242,10 +243,10 @@ always @(posedge clk or negedge resetn) begin
 	if(!resetn) begin
 		r_ren <= 0;
 	end
-	else if(r_ren) begin
-		r_ren <= 0;
-	end
-	else begin
+	// else if(r_ren) begin
+	// 	r_ren <= 0;
+	// end
+	else if( state == S_FILL ) begin
 		r_ren <= (r_waddr_clkr!=r_raddr_clkr) ? 1'b1 : 1'b0;
 	end
 end
@@ -260,8 +261,10 @@ end
 always @(posedge clk or negedge resetn) begin
 	if(!resetn) begin
 		r_spram_out <= 0;
+		r_spram_addr_lsb <= 0;
 	end
 	else if(r_ren_d[0]) begin
+		r_spram_addr_lsb <= r_spram_addr_lsb + 1;
 		r_spram_out <= {r_spram_out[23:0],w_rdata[1:0],w_rdata[3:2],w_rdata[5:4],w_rdata[7:6]};
 		//r_spram_out <= {w_rdata[1:0],w_rdata[3:2],w_rdata[5:4],w_rdata[7:6],r_spram_out[31:8]};
 	end
@@ -270,11 +273,11 @@ always @(posedge clk or negedge resetn) begin
 	if(!resetn) begin
 		r_spram_en <= 0;
 	end
-	else if(!r_ren_d[1]) begin
-		r_spram_en <= 0;
+	else if(r_ren_d[0])begin
+		r_spram_en <= r_spram_addr_lsb == 2'b11;
 	end
 	else begin
-		r_spram_en <= r_raddr_clkr[1:0] == 2'b00;
+		r_spram_en <= 0;
 	end
 end
 dpram2048x2_512x8 dpram2_8_i (

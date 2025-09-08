@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1756942278">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1756942278"/>
+        <Milestone name="Export" build_result="2" build_time="1757292436">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1757292436"/>
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1756942171">
-            <Task name="Map" build_result="2" update_result="0" update_time="1756942171"/>
+        <Milestone name="Map" build_result="2" build_time="1757292326">
+            <Task name="Map" build_result="2" update_result="0" update_time="1757292326"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1756941709"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1756942251">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1756942251"/>
+        <Milestone name="PAR" build_result="2" build_time="1757292407">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1757292407"/>
             <Task name="PostParVM" build_result="0" update_result="3" update_time="0"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1756942257"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1757292414"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1756941916">
-            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1756941916"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1757290164">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1757290164"/>
             <Task name="Synplify_Lint" build_result="0" update_result="2" update_time="1756941141"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1756941141"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1756941141"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1756941723"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1757289830"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="0" update_result="2" update_time="1755754183"/>
@@ -30,13 +30,12 @@
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name="ice40_sm_impl_1.bgn" last_build_time="1756942278" last_build_size="1212"/>
-        <Report name="ice40_sm_impl_1.bin" last_build_time="1756942278" last_build_size="104156"/>
-        <Report name="ice40_sm_impl_1.twr.html" last_build_time="1756942257" last_build_size="194856"/>
-        <Report name="ice40_sm_impl_1.udb" last_build_time="1756942251" last_build_size="563815"/>
-        <Report name="ice40_sm_impl_1_map.udb" last_build_time="1756942171" last_build_size="386235"/>
-        <Report name="ice40_sm_impl_1_rtl.udb" last_build_time="1756941355" last_build_size="244653"/>
-        <Report name="ice40_sm_impl_1_syn.udb" last_build_time="1756941916" last_build_size="204456"/>
+        <Report name="ice40_sm_impl_1.bgn" last_build_time="1757292436" last_build_size="1212"/>
+        <Report name="ice40_sm_impl_1.bin" last_build_time="1757292436" last_build_size="104156"/>
+        <Report name="ice40_sm_impl_1.twr.html" last_build_time="1757292414" last_build_size="169747"/>
+        <Report name="ice40_sm_impl_1.udb" last_build_time="1757292407" last_build_size="566575"/>
+        <Report name="ice40_sm_impl_1_map.udb" last_build_time="1757292326" last_build_size="388128"/>
+        <Report name="ice40_sm_impl_1_rtl.udb" last_build_time="1757289830" last_build_size="244555"/>
+        <Report name="ice40_sm_impl_1_syn.udb" last_build_time="1757290163" last_build_size="204740"/>
     </Strategy>
 </BuildStatus>
-          

@@ -1,3 +1,5 @@
+`timescale 1 ns / 100 ps
+
 module i2c_slave_tb (
   input wire scl,
   inout wire sda,

@@ -27,4 +27,4 @@ ldc_set_port -iobuf {PULLMODE=10K} [get_ports {sda_io[0]}]
 ldc_set_port -iobuf {PULLMODE=10K} [get_ports {sda_io[1]}]
 ldc_set_port -iobuf {PULLMODE=10K} [get_ports spi_miso]
 ldc_set_port -iobuf {PULLMODE=10K} [get_ports spi_mosi]
-set_clock_groups -group [get_clocks clk_i] -group [get_clocks oclk] -asynchronous
+set_clock_groups -group [get_clocks clk_i] -group [get_clocks oclk] -group [get_clocks osc0/CLKHF] -asynchronous

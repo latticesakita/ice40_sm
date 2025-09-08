@@ -1,4 +1,5 @@
 // simulate dual mode
+`timescale 1 ns / 100 ps
 
 module spi_flash
 (
@@ -125,7 +126,7 @@ always @(negedge clk or posedge cs) begin
 		addrf <= 0;
 	end
 	else begin
-		addrf <= #3000 addr;
+		addrf <= #3 addr;
 	end
 end
 
@@ -147,11 +148,11 @@ always @(negedge clk or posedge cs) begin
 		rf_bcnt <= 0;
 	end
 	else if( rf_byte_cnt < 5) begin
-		rf_bcnt <= #3000 rf_bcnt + 1;
+		rf_bcnt <= #3 rf_bcnt + 1;
 	end
 	else begin
-		rf_bcnt[2:1] <= #3000 rf_bcnt[2:1] + 1;
-		rf_bcnt[0]   <= #3000 1'b1;
+		rf_bcnt[2:1] <= #3 rf_bcnt[2:1] + 1;
+		rf_bcnt[0]   <= #3 1'b1;
 	end
 end
 always @(negedge clk or posedge cs) begin

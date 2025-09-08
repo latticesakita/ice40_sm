@@ -6,13 +6,13 @@
             <Option name="include path" value="."/>
             <Option name="top" value="ice40_sm_top"/>
         </Options>
+        <Source name="ice40_sm/tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
         <Source name="ice40_sm/i2c_slave_tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
         <Source name="ice40_sm/ice40_common/spi_flash_tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
-            <Options/>
-        </Source>
-        <Source name="ice40_sm/tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
         <Source name="ice40_sm/ice40_sm_top.v" type="Verilog" type_short="Verilog">

@@ -88,12 +88,19 @@ i2c_slave_tb ov08x (
 
 integer code_log;
 integer data_log;
+integer spram_init_log;
 
 initial begin
 	code_log = $fopen("code.log", "w");
 	data_log = $fopen("data.log", "w");
+	spram_init_log = $fopen("spram_init.log", "w");
 end
 
+// ************************
+always @(posedge dut.clk_soc or negedge rstn)
+	if(dut.spi_sram_we)
+		$fwrite(spram_init_log, "%08X\n", dut.spi_sram_din);
+ 
 // ************************
 wire [ 1:0] w_instr_htrans     = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HTRANS;
 wire [31:0] w_instr_haddr      = dut.ice40_sm_inst.cpu_inst_AHBL_M0_INSTR_interconnect_HADDR;
@@ -128,18 +135,18 @@ always @(posedge dut.clk_soc) begin
 	if(!w_instr_hready_o) begin
 	end
 	else if(r_instr_we) begin
-		$display(code_log, "%0t: %08x, %08x", $time, 
+		$display(code_log, "%0t: %08X, %08X", $time, 
 			r_instr_haddr,
 			w_instr_hwdata);
-		$fwrite(code_log, "%0t: %08x, %08x, write\n", $time, 
+		$fwrite(code_log, "%0t: %08X, %08X, write\n", $time, 
 			r_instr_haddr,
 			w_instr_hwdata);
 	end
 	else if(r_instr_re) begin
-		$display(code_log, "%0t: %08x, %08x", $time, 
+		$display(code_log, "%0t: %08X, %08X", $time, 
 			r_instr_haddr,
 			w_instr_hrdata);
-		$fwrite(code_log, "%0t: %08x, %08x, read\n", $time, 
+		$fwrite(code_log, "%0t: %08X, %08X, read\n", $time, 
 			r_instr_haddr,
 			w_instr_hrdata);
 	end
@@ -178,18 +185,18 @@ always @(posedge dut.clk_soc) begin
 	if(!w_data_hready_o) begin
 	end
 	else if(r_data_we) begin
-		$display(data_log, "%0t: %08x, %08x", $time, 
+		$display(data_log, "%0t: %08X, %08X", $time, 
 			r_data_haddr,
 			w_data_hwdata);
-		$fwrite(data_log, "%0t: %08x, %08x, write\n", $time, 
+		$fwrite(data_log, "%0t: %08X, %08X, write\n", $time, 
 			r_data_haddr,
 			w_data_hwdata);
 	end
 	else if(r_data_re) begin
-		$display(data_log, "%0t: %08x, %08x", $time, 
+		$display(data_log, "%0t: %08X, %08X", $time, 
 			r_data_haddr,
 			w_data_hrdata);
-		$fwrite(data_log, "%0t: %08x, %08x, read\n", $time, 
+		$fwrite(data_log, "%0t: %08X, %08X, read\n", $time, 
 			r_data_haddr,
 			w_data_hrdata);
 	end
