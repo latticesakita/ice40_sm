@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="ice40tp" date="2025 09 02 07:17:04" device="iCE40UP3K" device_int="itpa08" display_module="spsram_if_ahb_sm" display_vendor="personal" family="iCE40UP" gen_platform="Propel" gen_platform_version="2025.1.0.2506031608" generator="ipgen" library="ip" module="spsram_if_ahb_sm" name="spsram_if_ahb_sm_inst" operation="Industrial" package="FWG49" package_int="FWG49" partnumber="iCE40UP3K-FWG49ITR" source_format="Verilog" speed="High-Performance_1.2V" speed_int="6" vendor="personal" version="1.0.0">
+ <Package>
+  <File modified="2025 09 02 07:17:04" name="rtl/spsram_if_ahb_sm_inst_bb.v" type="black_box_verilog"/>
+  <File modified="2025 09 02 07:17:04" name="spsram_if_ahb_sm_inst.cfg" type="cfg"/>
+  <File modified="2025 09 02 07:17:04" name="misc/spsram_if_ahb_sm_inst_tmpl.v" type="template_verilog"/>
+  <File modified="2025 09 02 07:17:04" name="misc/spsram_if_ahb_sm_inst_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2025 09 02 07:17:04" name="rtl/spsram_if_ahb_sm_inst.v" type="top_level_verilog"/>
+  <File modified="2025 09 02 07:17:04" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2025 09 02 07:17:04" name="design.xml" type="IP-XACT_design"/>
+ </Package>
+</RadiantModule>

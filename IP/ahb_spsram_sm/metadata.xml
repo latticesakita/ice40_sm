@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lsccip:ip xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0" platform="Propel" platform_version="2025.1">
+    <lsccip:general>
+        <lsccip:vendor>personal</lsccip:vendor>
+        <lsccip:library>ip</lsccip:library>
+        <lsccip:name>spsram_if_ahb_sm</lsccip:name>
+        <lsccip:display_name>spsram_if_ahb_sm</lsccip:display_name>
+        <lsccip:version>1.0.0</lsccip:version>
+        <lsccip:category />
+        <lsccip:min_radiant_version>2025.1</lsccip:min_radiant_version>
+        <lsccip:min_esi_version>2025.1</lsccip:min_esi_version>
+        <lsccip:supported_products>
+            <lsccip:supported_family name="*" />
+        </lsccip:supported_products>
+        <lsccip:supported_platforms>
+            <lsccip:supported_platform name="esi" />
+            <lsccip:supported_platform name="radiant" />
+        </lsccip:supported_platforms>
+    </lsccip:general>
+    <lsccip:settings>
+        <lsccip:setting id="__dummy__"
+                        type="param"
+                        value_type="string"
+                        conn_mod="ahb_spsram_sm"
+                        hidden="True"
+         />
+    </lsccip:settings>
+    <lsccip:ports>
+        <lsccip:port name="HCLK"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+         />
+        <lsccip:port name="HRESETn"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+         />
+        <lsccip:port name="HADDR"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HBURST"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     range="(2,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HTRANS"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     range="(1,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HSIZE"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     range="(2,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HWRITE"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HSEL"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HREADY"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HWDATA"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HRDATA"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HREADYOUT"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="HRESP"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="sram_addr"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+                     range="(13,0)"
+         />
+        <lsccip:port name="sram_we"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+         />
+        <lsccip:port name="sram_maskwe"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+                     range="(3,0)"
+         />
+        <lsccip:port name="sram_re"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+         />
+        <lsccip:port name="sram_din"
+                     dir="out"
+                     conn_mod="ahb_spsram_sm"
+                     range="(31,0)"
+         />
+        <lsccip:port name="sram_dout"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+                     range="(31,0)"
+         />
+        <lsccip:port name="sram_write_done"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+         />
+        <lsccip:port name="sram_read_valid"
+                     dir="in"
+                     conn_mod="ahb_spsram_sm"
+         />
+    </lsccip:ports>
+    <lsccip:outFileConfigs>
+        <lsccip:fileConfig name="wrapper" rtl_seq="ahb_spsram_sm.v" />
+    </lsccip:outFileConfigs>
+    <xi:include parse="xml" href="bus_interface.xml" />
+    <xi:include parse="xml" href="memory_map.xml" />
+</lsccip:ip>

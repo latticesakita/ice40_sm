@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lsccip:ip xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0" platform="Propel" platform_version="2025.1">
+    <lsccip:general>
+        <lsccip:vendor>personal</lsccip:vendor>
+        <lsccip:library>ip</lsccip:library>
+        <lsccip:name>timer_ahb</lsccip:name>
+        <lsccip:display_name>timer_ahb</lsccip:display_name>
+        <lsccip:version>1.0.0</lsccip:version>
+        <lsccip:category />
+        <lsccip:min_radiant_version>2025.1</lsccip:min_radiant_version>
+        <lsccip:min_esi_version>2025.1</lsccip:min_esi_version>
+        <lsccip:supported_products>
+            <lsccip:supported_family name="*" />
+            <lsccip:supported_family name="iCE40UP" />
+        </lsccip:supported_products>
+        <lsccip:supported_platforms>
+            <lsccip:supported_platform name="esi" />
+            <lsccip:supported_platform name="radiant" />
+        </lsccip:supported_platforms>
+    </lsccip:general>
+    <lsccip:settings>
+        <lsccip:setting id="PRESCALE"
+                        type="param"
+                        value_type="int"
+                        conn_mod="timer_ahbl"
+                        default="23"
+                        group1="Group1"
+                        group2="Tab1"
+         />
+        <lsccip:setting id="USE_DSP"
+                        type="param"
+                        value_type="int"
+                        conn_mod="timer_ahbl"
+                        default="1"
+                        options="[0,1]"
+                        group1="Group1"
+                        group2="Tab1"
+         />
+    </lsccip:settings>
+    <lsccip:ports>
+        <lsccip:port name="int_o"
+                     dir="out"
+                     conn_mod="timer_ahbl"
+                     bus_interface="IRQ"
+         />
+        <lsccip:port name="ahbl_haddr_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hburst_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     range="(2,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hrdata_o"
+                     dir="out"
+                     conn_mod="timer_ahbl"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hsize_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     range="(2,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_htrans_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     range="(1,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hwdata_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hready_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hreadyout_o"
+                     dir="out"
+                     conn_mod="timer_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hresp_o"
+                     dir="out"
+                     conn_mod="timer_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hsel_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hwrite_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="systime_o"
+                     dir="out"
+                     conn_mod="timer_ahbl"
+                     range="(31,0)"
+         />
+        <lsccip:port name="clk_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+         />
+        <lsccip:port name="resetn_i"
+                     dir="in"
+                     conn_mod="timer_ahbl"
+         />
+    </lsccip:ports>
+    <lsccip:outFileConfigs>
+        <lsccip:fileConfig name="wrapper" rtl_seq="timer_ahbl.v;timer_dsp_acc32.v;timer_dsp_add32.v" />
+    </lsccip:outFileConfigs>
+    <xi:include parse="xml" href="bus_interface.xml" />
+    <xi:include parse="xml" href="address_space.xml" />
+    <xi:include parse="xml" href="memory_map.xml" />
+</lsccip:ip>

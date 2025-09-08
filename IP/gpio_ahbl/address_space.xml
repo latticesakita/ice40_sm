@@ -1,0 +1,9 @@
+
+<lsccip:addressSpaces xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+    <lsccip:addressSpace>
+        <lsccip:name>IRQ_Address_Space</lsccip:name>
+        <lsccip:description>IRQ_Address_Space</lsccip:description>
+        <lsccip:range>0x100000000</lsccip:range>
+        <lsccip:width>32</lsccip:width>
+    </lsccip:addressSpace>
+</lsccip:addressSpaces>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<lscc:hdlparseresult version="1.0">
+    <modules>
+        <module name="ahb_spsram_sm">
+            <ports>
+                <port dir="in" name="HCLK"/>
+                <port dir="in" name="HRESETn"/>
+                <port dir="in" name="HADDR" range="(31,0)"/>
+                <port dir="in" name="HBURST" range="(2,0)"/>
+                <port dir="in" name="HTRANS" range="(1,0)"/>
+                <port dir="in" name="HSIZE" range="(2,0)"/>
+                <port dir="in" name="HWRITE"/>
+                <port dir="in" name="HSEL"/>
+                <port dir="in" name="HREADY"/>
+                <port dir="in" name="HWDATA" range="(31,0)"/>
+                <port dir="out" name="HRDATA" range="(31,0)"/>
+                <port dir="out" name="HREADYOUT"/>
+                <port dir="out" name="HRESP"/>
+                <port dir="out" name="sram_addr" range="(13,0)"/>
+                <port dir="out" name="sram_we"/>
+                <port dir="out" name="sram_maskwe" range="(3,0)"/>
+                <port dir="out" name="sram_re"/>
+                <port dir="out" name="sram_din" range="(31,0)"/>
+                <port dir="in" name="sram_dout" range="(31,0)"/>
+                <port dir="in" name="sram_write_done"/>
+                <port dir="in" name="sram_read_valid"/>
+            </ports>
+        </module>
+    </modules>
+</lscc:hdlparseresult>

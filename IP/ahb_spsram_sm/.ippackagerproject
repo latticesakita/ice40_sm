@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ippackgerproject version="1.0">
+    <filegroups>
+        <filegroup filetype="metadata">
+            <file path="metadata.xml"/>
+        </filegroup>
+        <filegroup filetype="sub_metadata">
+            <file path="bus_interface.xml"/>
+            <file path="memory_map.xml"/>
+        </filegroup>
+        <filegroup filetype="rtl">
+            <file encryption="0" path="rtl/ahb_spsram_sm.v" type="verilog"/>
+        </filegroup>
+        <filegroup filetype="doc">
+            <file path="doc/introduction.html"/>
+        </filegroup>
+        <filegroup filetype="key">
+            <file path="C:/lscc/propel/2025.1/builder/rtf/ispfpga/data/key.txt"/>
+        </filegroup>
+    </filegroups>
+</ippackgerproject>

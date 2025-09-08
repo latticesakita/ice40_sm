@@ -1,0 +1,16 @@
+
+<lsccip:memoryMaps xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+    <lsccip:memoryMap>
+        <lsccip:name>ahb_spsram</lsccip:name>
+        <lsccip:displayName>ahb_spsram</lsccip:displayName>
+        <lsccip:description>ahb_spsram</lsccip:description>
+        <lsccip:addressBlock>
+            <lsccip:name>NewAddressBlock1</lsccip:name>
+            <lsccip:displayName>NewAddressBlock1</lsccip:displayName>
+            <lsccip:description>NewAddressBlock1</lsccip:description>
+            <lsccip:baseAddress>0</lsccip:baseAddress>
+            <lsccip:range>131072</lsccip:range>
+            <lsccip:width>32</lsccip:width>
+        </lsccip:addressBlock>
+    </lsccip:memoryMap>
+</lsccip:memoryMaps>

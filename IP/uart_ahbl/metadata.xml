@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lsccip:ip xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0" platform="Propel" platform_version="2025.1">
+    <lsccip:general>
+        <lsccip:vendor>personal</lsccip:vendor>
+        <lsccip:library>ip</lsccip:library>
+        <lsccip:name>uart_ahb</lsccip:name>
+        <lsccip:display_name>uart_ahb</lsccip:display_name>
+        <lsccip:version>1.0.0</lsccip:version>
+        <lsccip:category />
+        <lsccip:min_radiant_version>2025.1</lsccip:min_radiant_version>
+        <lsccip:min_esi_version>2025.1</lsccip:min_esi_version>
+        <lsccip:supported_products>
+            <lsccip:supported_family name="*" />
+        </lsccip:supported_products>
+        <lsccip:supported_platforms>
+            <lsccip:supported_platform name="esi" />
+            <lsccip:supported_platform name="radiant" />
+        </lsccip:supported_platforms>
+    </lsccip:general>
+    <lsccip:settings>
+        <lsccip:setting id="CLOCK_FREQ"
+                        type="param"
+                        value_type="int"
+                        conn_mod="lsc_uart"
+                        default="12000000"
+                        group1="Group1"
+                        group2="Tab1"
+         />
+        <lsccip:setting id="UART_BAUDRATE"
+                        type="param"
+                        value_type="int"
+                        conn_mod="lsc_uart"
+                        default="115200"
+                        group1="Group1"
+                        group2="Tab1"
+         />
+        <lsccip:setting id="BUFFER_SIZE"
+                        type="param"
+                        value_type="string"
+                        conn_mod="lsc_uart"
+                        options='[&quot;512&quot;,&quot;1K&quot;,&quot;2K&quot;,&quot;4K&quot;]'
+                        group1="Group1"
+                        group2="Tab1"
+         />
+    </lsccip:settings>
+    <lsccip:ports>
+        <lsccip:port name="ahbl_haddr_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     range="(31,0)"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hburst_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     range="(2,0)"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hrdata_o"
+                     dir="out"
+                     conn_mod="lsc_uart"
+                     range="(31,0)"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hsize_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     range="(2,0)"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_htrans_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     range="(1,0)"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hwdata_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     range="(31,0)"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hready_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hreadyout_o"
+                     dir="out"
+                     conn_mod="lsc_uart"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hresp_o"
+                     dir="out"
+                     conn_mod="lsc_uart"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hsel_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="ahbl_hwrite_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     bus_interface="AHBL"
+         />
+        <lsccip:port name="i_rxd"
+                     dir="in"
+                     conn_mod="lsc_uart"
+         />
+        <lsccip:port name="o_txd"
+                     dir="out"
+                     conn_mod="lsc_uart"
+         />
+        <lsccip:port name="int_o"
+                     dir="out"
+                     conn_mod="lsc_uart"
+                     bus_interface="IRQ"
+         />
+        <lsccip:port name="systime_i"
+                     dir="in"
+                     conn_mod="lsc_uart"
+                     range="(31,0)"
+         />
+        <lsccip:port name="clk"
+                     dir="in"
+                     conn_mod="lsc_uart"
+         />
+        <lsccip:port name="resetn"
+                     dir="in"
+                     conn_mod="lsc_uart"
+         />
+    </lsccip:ports>
+    <lsccip:outFileConfigs>
+        <lsccip:fileConfig name="wrapper" rtl_seq="lsc_uart.v" />
+    </lsccip:outFileConfigs>
+    <xi:include parse="xml" href="bus_interface.xml" />
+    <xi:include parse="xml" href="address_space.xml" />
+    <xi:include parse="xml" href="memory_map.xml" />
+</lsccip:ip>

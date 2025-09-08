@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lsccip:ip xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0" platform="Propel" platform_version="2025.1">
+    <lsccip:general>
+        <lsccip:vendor>personal</lsccip:vendor>
+        <lsccip:library>ip</lsccip:library>
+        <lsccip:name>gpio_ahb</lsccip:name>
+        <lsccip:display_name>gpio_ahb</lsccip:display_name>
+        <lsccip:version>1.0.0</lsccip:version>
+        <lsccip:category />
+        <lsccip:min_radiant_version>2025.1</lsccip:min_radiant_version>
+        <lsccip:min_esi_version>2025.1</lsccip:min_esi_version>
+        <lsccip:supported_products>
+            <lsccip:supported_family name="*" />
+        </lsccip:supported_products>
+        <lsccip:supported_platforms>
+            <lsccip:supported_platform name="esi" />
+            <lsccip:supported_platform name="radiant" />
+        </lsccip:supported_platforms>
+    </lsccip:general>
+    <lsccip:settings>
+        <lsccip:setting id="BUS_WIDTH"
+                        type="param"
+                        value_type="int"
+                        conn_mod="gpio_ahbl"
+                        default="8"
+                        options="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]"
+                        group1="Group1"
+                        group2="Tab1"
+         />
+        <lsccip:setting id="DIRECTION"
+                        type="param"
+                        value_type="string"
+                        conn_mod="gpio_ahbl"
+                        default="8&apos;hFF"
+                        output_formatter="nostr"
+                        group1="Group1"
+                        group2="Tab1"
+         />
+        <lsccip:setting id="INIT_OUTVAL"
+                        type="param"
+                        value_type="string"
+                        conn_mod="gpio_ahbl"
+                        default="8&apos;h00"
+                        output_formatter="nostr"
+                        group1="Group1"
+                        group2="Tab1"
+         />
+        <lsccip:setting id="DEVICE"
+                        type="param"
+                        value_type="string"
+                        conn_mod="gpio_ahbl"
+                        options='[&quot;CPNX&quot;,&quot;ICE40UP&quot;]'
+                        group1="Group1"
+                        group2="Tab1"
+         />
+    </lsccip:settings>
+    <lsccip:ports>
+        <lsccip:port name="gpio_io"
+                     dir="inout"
+                     conn_mod="gpio_ahbl"
+                     range="(7,0)"
+         />
+        <lsccip:port name="gpo_o"
+                     dir="out"
+                     conn_mod="gpio_ahbl"
+                     range="(7,0)"
+         />
+        <lsccip:port name="gpi_o"
+                     dir="out"
+                     conn_mod="gpio_ahbl"
+                     range="(7,0)"
+         />
+        <lsccip:port name="int_o"
+                     dir="out"
+                     conn_mod="gpio_ahbl"
+                     bus_interface="IRQ"
+         />
+        <lsccip:port name="ahbl_haddr_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hburst_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     range="(2,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hrdata_o"
+                     dir="out"
+                     conn_mod="gpio_ahbl"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hsize_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     range="(2,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_htrans_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     range="(1,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hwdata_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     range="(31,0)"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hready_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hreadyout_o"
+                     dir="out"
+                     conn_mod="gpio_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hresp_o"
+                     dir="out"
+                     conn_mod="gpio_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hsel_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="ahbl_hwrite_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+                     bus_interface="AHBL_S0"
+         />
+        <lsccip:port name="clk_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+         />
+        <lsccip:port name="resetn_i"
+                     dir="in"
+                     conn_mod="gpio_ahbl"
+         />
+    </lsccip:ports>
+    <lsccip:outFileConfigs>
+        <lsccip:fileConfig name="wrapper" rtl_seq="gpio_ahbl.v" />
+    </lsccip:outFileConfigs>
+    <xi:include parse="xml" href="bus_interface.xml" />
+    <xi:include parse="xml" href="address_space.xml" />
+    <xi:include parse="xml" href="memory_map.xml" />
+</lsccip:ip>
