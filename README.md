@@ -37,38 +37,25 @@ Lattice Propel を使用して RISC-V プロセッサを iCE40 Ultra Plus FPGA �
 
 ## 📁 ディレクトリ構成
 
-iCE40_SM/
-├── dpram1024x8/
-│   ├── constraints/
-│   ├── misc/
-│   ├── rtl/
-│   └── testbench/
-├── dpram2048x2_512x8/
-│   ├── constraints/
-│   ├── misc/
-│   ├── rtl/
-│   └── testbench/
-├── ice40_sm/
-│   ├── .impl/
-│   ├── ice40_common/
-│   └── lib/
-│       ├── IPs/
-│       ├── latticesemi.com/
-│       └── personal/
-├── IP/
-│   ├── ahb_spsram_sm/
-│   ├── gpio_ahbl/
-│   ├── timer_ahbl/
-│   └── uart_ahbl/
-├── propel_ws/
-│   └── ice40_sm/
-│       ├── src/
-│       └── Debug/
-├── sge/
-├── source/
-├── tb/
-├── verification/
-└── impl_1/
+- iCE40_SM/
+  - dpram1024x8/
+  - dpram2048x2_512x8/
+  - ice40_sm/
+    - ice40_common/
+    - lib/
+      - IPs/
+      - latticesemi.com/
+      - personal/
+  - IP/
+    - ahb_spsram_sm/
+    - gpio_ahbl/
+    - timer_ahbl/
+    - uart_ahbl/
+  - propel_ws/
+  - sge/
+  - tb/
+  - verification/
+  - impl_1/
 ---
 
 ## 🛠️ ビルド方法
