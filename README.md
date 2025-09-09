@@ -1,12 +1,13 @@
 # iCE40_SM
 
-Lattice Propel を使用して RISC-V プロセッサを iCE40 Ultra Plus FPGA に実装したプロジェクトです。
+Lattice Propel を使用して RISC-V プロセッサ(SM core)を iCE40 Ultra Plus FPGA に実装したプロジェクトです。
 
 ---
 
 ## 🚀 プロジェクト概要
 
 このプロジェクトは、低消費電力・小型 FPGA である **iCE40 Ultra Plus** 上に、RISC-V ベースの SoC を構築することを目的としています。Lattice Propel を活用して、ハードウェア設計とソフトウェア開発を統合的に行っています。参考までにイメージセンサーの初期化ルーチンを含んでいます。
+iCE40_nano プロジェクトは性能よりも小型を目指したもので、このプロジェクトはパフォーマンスを少し上げたものになります。Fmax は nano よりも劣りますが、それでも全体的な性能は nano の約5倍になります。使用するリソースは nano よりも約 800 LUTs 多く消費します。
 
 ---
 
