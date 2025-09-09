@@ -1,3 +1,5 @@
+[English version is available here → README_en.md](README_en.md)
+
 # iCE40_SM
 
 Lattice Propel を使用して RISC-V プロセッサ(SM core)を iCE40 Ultra Plus FPGA に実装したプロジェクトです。
