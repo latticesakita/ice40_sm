@@ -6,7 +6,7 @@ Lattice Propel を使用して RISC-V プロセッサを iCE40 Ultra Plus FPGA �
 
 ## 🚀 プロジェクト概要
 
-このプロジェクトは、低消費電力・小型 FPGA である **iCE40 Ultra Plus** 上に、RISC-V ベースの SoC を構築することを目的としています。Lattice Propel を活用して、ハードウェア設計とソフトウェア開発を統合的に行っています。
+このプロジェクトは、低消費電力・小型 FPGA である **iCE40 Ultra Plus** 上に、RISC-V ベースの SoC を構築することを目的としています。Lattice Propel を活用して、ハードウェア設計とソフトウェア開発を統合的に行っています。参考までにイメージセンサーの初期化ルーチンを含んでいます。
 
 ---
 
@@ -59,10 +59,20 @@ Lattice Propel を使用して RISC-V プロセッサを iCE40 Ultra Plus FPGA �
 ---
 
 ## 🛠️ ビルド方法
+システム上にPythonをインストールしてください。
+Propel で生成される mem file を Binary file へ変換しています。
 
-1. Lattice Propel を起動し、`propel_ws/ice40_sm/ice40_sm.sbx` を開く  
-2. RTL を編集・ビルド  
-3. Radiant で `ice40_sm.rdf` を開き、FPGA に書き込み
+1. C ソースの編集は、Lattice Propel を起動し、`propel_ws` を開く
+2. Post build で mem file は tb フォルダへ自動的にコピーされる。
+3. Radiant から tb/tb.spf スクリプトを実行するとシミュレーションを実行できる
+4. Propel Builder を起動し ice40_sm/ice40_sm.sbx を読み込む
+5. Builder で変更を行った場合、Builder から Radiant を起動すれば、Builder での変更が反映される。
+6. SPI Flash への書き込み
+7. Address: 0x000000 に impl_1/ice40_sm_impl_1.bin
+8. Address: 0x030000 に propel_ws/ice40_sm/Debug/ice40_sm_Code_BE.bin
+9. Address: 0x050000 に propel_ws/ice40_sm/Debug/ice40_sm_Data_BE.bin
+
+ターゲットとしている評価ボードは Upduino ボードです
 
 ---
 ## 📄 ライセンス
