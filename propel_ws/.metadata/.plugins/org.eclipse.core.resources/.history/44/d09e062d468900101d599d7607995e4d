@@ -1,0 +1,511 @@
+#include <stddef.h>
+#include "i2c_controller.h"
+#include "gpio.h"
+#include "timer2.h"
+#include "lib_ov08x.h"
+
+// this is example code, no guarantee to work with actual sensor
+// @@OV08X_ULP-RGB_240x136_DPHY140_4lane_intOSC
+static const unsigned char sensor_val0[] = {3,0x01,0x00,0x00};
+static const unsigned char sensor_val1[] = {3,0x01,0x03,0x01};
+static const unsigned char sensor_val2[] = {3,0x10,0x00,0x00};
+static const unsigned char sensor_val3[] = {4,0x16,0x00,0x62,0xD0};
+static const unsigned char sensor_val4[] = {3,0x10,0x01,0x02};
+static const unsigned char sensor_val5[] = {4,0x50,0x00,0x00,0x00};
+static const unsigned char sensor_val6[] = {3,0x50,0x04,0x53};
+static const unsigned char sensor_val7[] = {7,0x51,0x10,0x00,0x14,0x01,0x7B,0x00};
+static const unsigned char sensor_val8[] = {3,0x51,0x52,0xA3};
+static const unsigned char sensor_val9[] = {3,0x5A,0x52,0x1F};
+static const unsigned char sensor_val10[] = {4,0x5A,0x1A,0x0E,0x10};
+static const unsigned char sensor_val11[] = {3,0x5A,0x1F,0x0E};
+static const unsigned char sensor_val12[] = {3,0x5A,0x27,0x0E};
+static const unsigned char sensor_val13[] = {3,0x60,0x02,0x2E};
+static const unsigned char sensor_val14[] = {3,0x50,0x08,0xB0};
+static const unsigned char sensor_val15[] = {3,0x50,0xC1,0x00};
+static const unsigned char sensor_val16[] = {3,0x53,0xC1,0x00};
+static const unsigned char sensor_val17[] = {4,0x5F,0x40,0x00,0x40};
+static const unsigned char sensor_val18[] = {12,0x03,0x00,0x3E,0xC8,0x31,0x04,0x01,0xA4,0x04,0x0B,0x03,0x03};
+static const unsigned char sensor_val19[] = {9,0x03,0x10,0x0A,0x02,0x01,0x08,0x66,0x00,0x34};
+static const unsigned char sensor_val20[] = {4,0x03,0x20,0x02,0x03};
+static const unsigned char sensor_val21[] = {7,0x03,0x23,0x05,0x01,0xB8,0x4A,0x04};
+static const unsigned char sensor_val22[] = {9,0x03,0x29,0x00,0x05,0x00,0x00,0x00,0x02,0xA0};
+static const unsigned char sensor_val23[] = {3,0x03,0x50,0x00};
+static const unsigned char sensor_val24[] = {3,0x03,0x60,0x00};
+static const unsigned char sensor_val25[] = {5,0x12,0x16,0x60,0x5B,0x00};
+static const unsigned char sensor_val26[] = {3,0x12,0x20,0x24};
+static const unsigned char sensor_val27[] = {4,0x19,0x8A,0x00,0x01};
+static const unsigned char sensor_val28[] = {4,0x19,0x8E,0x00,0x01};
+static const unsigned char sensor_val29[] = {3,0x30,0x09,0x04};
+static const unsigned char sensor_val30[] = {3,0x30,0x12,0x41};
+static const unsigned char sensor_val31[] = {8,0x30,0x15,0x00,0xB0,0xB4,0xF0,0xD2,0xB0};
+static const unsigned char sensor_val32[] = {5,0x30,0x1C,0x81,0x02,0x88};
+static const unsigned char sensor_val33[] = {3,0x30,0x22,0x70};
+static const unsigned char sensor_val34[] = {3,0x30,0x25,0x89};
+static const unsigned char sensor_val35[] = {3,0x30,0x30,0x03};
+static const unsigned char sensor_val36[] = {3,0x30,0x44,0xC2};
+static const unsigned char sensor_val37[] = {12,0x30,0x50,0x35,0x60,0x25,0x01,0x04,0x02,0xFC,0x00,0xFC,0x00};
+static const unsigned char sensor_val38[] = {4,0x30,0x26,0x00,0x00};
+static const unsigned char sensor_val39[] = {3,0x31,0x07,0x86};
+static const unsigned char sensor_val40[] = {5,0x34,0x00,0x1C,0x80,0x0E};
+static const unsigned char sensor_val41[] = {5,0x34,0x19,0x06,0x55,0x30};
+static const unsigned char sensor_val42[] = {26,0x34,0x20,0x10,0x30,0x0A,0x10,0x2A,0x20,0x11,0x11,0x2F,0x55,0x55,0x06,0x0F,0x66,0x0F,0x11,0x11,0x11,0x11,0x11,0x22,0x22,0x22,0x22};
+static const unsigned char sensor_val43[] = {5,0x34,0x42,0x14,0x14,0x07};
+static const unsigned char sensor_val44[] = {9,0x34,0x50,0x00,0x00,0x18,0x18,0x00,0x80,0x08};
+static const unsigned char sensor_val45[] = {5,0x35,0x00,0x00,0x02,0x00};
+static const unsigned char sensor_val46[] = {3,0x35,0x04,0x4C};
+static const unsigned char sensor_val47[] = {9,0x35,0x06,0x30,0x00,0x01,0x00,0x01,0x00,0x00};
+static const unsigned char sensor_val48[] = {5,0x35,0x40,0x00,0x01,0x00};
+static const unsigned char sensor_val49[] = {3,0x35,0x44,0x4C};
+static const unsigned char sensor_val50[] = {9,0x35,0x46,0x30,0x00,0x01,0x00,0x01,0x00,0x00};
+static const unsigned char sensor_val51[] = {3,0x36,0x88,0x02};
+static const unsigned char sensor_val52[] = {3,0x36,0x8A,0x2E};
+static const unsigned char sensor_val53[] = {3,0x36,0x8E,0x71};
+static const unsigned char sensor_val54[] = {3,0x36,0x96,0xD1};
+static const unsigned char sensor_val55[] = {4,0x36,0x99,0x00,0x00};
+static const unsigned char sensor_val56[] = {3,0x36,0xA4,0x00};
+static const unsigned char sensor_val57[] = {3,0x36,0xA6,0x32};
+static const unsigned char sensor_val58[] = {6,0x37,0x11,0x00,0x50,0x00,0x21};
+static const unsigned char sensor_val59[] = {3,0x37,0x16,0x00};
+static const unsigned char sensor_val60[] = {3,0x37,0x18,0x07};
+static const unsigned char sensor_val61[] = {4,0x37,0x1A,0x1C,0x20};
+static const unsigned char sensor_val62[] = {3,0x37,0x20,0x08};
+static const unsigned char sensor_val63[] = {3,0x37,0x25,0x32};
+static const unsigned char sensor_val64[] = {3,0x37,0x27,0x05};
+static const unsigned char sensor_val65[] = {12,0x37,0x60,0x10,0x20,0x10,0x10,0x10,0x20,0x10,0x20,0x00,0x00};
+static const unsigned char sensor_val66[] = {3,0x37,0x6B,0x20};
+static const unsigned char sensor_val67[] = {3,0x37,0x6E,0x02};
+static const unsigned char sensor_val68[] = {10,0x37,0xB0,0x00,0xAB,0x01,0x82,0x00,0xE4,0x01,0xEE};
+static const unsigned char sensor_val69[] = {24,0x38,0x00,0x00,0x00,0x00,0x60,0x0F,0x1F,0x08,0xFF,0x00,0xF0,0x00,0x88,0x01,0x68,0x06,0x54,0x00,0x00,0x00,0x00,0x71,0x71};
+static const unsigned char sensor_val70[] = {6,0x38,0x20,0x03,0x9C,0x00,0x04};
+static const unsigned char sensor_val71[] = {3,0x38,0x28,0x0F};
+static const unsigned char sensor_val72[] = {3,0x38,0x2A,0x80};
+static const unsigned char sensor_val73[] = {3,0x38,0x2E,0x41};
+static const unsigned char sensor_val74[] = {3,0x38,0x37,0x08};
+static const unsigned char sensor_val75[] = {9,0x38,0x3A,0x00,0x81,0x11,0x11,0x00,0x38,0x00};
+static const unsigned char sensor_val76[] = {3,0x38,0x47,0x00};
+static const unsigned char sensor_val77[] = {3,0x38,0x4A,0x00};
+static const unsigned char sensor_val78[] = {4,0x38,0x4C,0x01,0x68};
+static const unsigned char sensor_val79[] = {6,0x38,0x56,0x50,0x30,0x80,0x40};
+static const unsigned char sensor_val80[] = {3,0x38,0x60,0x00};
+static const unsigned char sensor_val81[] = {10,0x38,0x88,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+static const unsigned char sensor_val82[] = {4,0x38,0x94,0x00,0x02};
+static const unsigned char sensor_val83[] = {3,0x3C,0x84,0x00};
+static const unsigned char sensor_val84[] = {3,0x3D,0x85,0x8B};
+static const unsigned char sensor_val85[] = {8,0x3D,0xAA,0x80,0x14,0x80,0xC8,0x81,0x7B};
+static const unsigned char sensor_val86[] = {4,0x3F,0x00,0x10,0x00};
+static const unsigned char sensor_val87[] = {9,0x3F,0x06,0x02,0x01,0x02,0x01,0x00,0x00,0x11};
+static const unsigned char sensor_val88[] = {3,0x40,0x01,0x07};
+static const unsigned char sensor_val89[] = {10,0x40,0x07,0x20,0x00,0x05,0x00,0x02,0x00,0x02,0x14};
+static const unsigned char sensor_val90[] = {5,0x40,0x10,0x34,0x43,0x15};
+static const unsigned char sensor_val91[] = {6,0x40,0x15,0x00,0x03,0x00,0x05};
+static const unsigned char sensor_val92[] = {7,0x40,0x1B,0x08,0x00,0x10,0x02,0x00};
+static const unsigned char sensor_val93[] = {18,0x40,0x50,0x06,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x7F,0x00,0x00,0x00,0x00,0x07,0xFF,0x07,0xFF};
+static const unsigned char sensor_val94[] = {6,0x40,0x80,0x78,0x78,0x78,0x78};
+static const unsigned char sensor_val95[] = {4,0x40,0x19,0x00,0x42};
+static const unsigned char sensor_val96[] = {10,0x40,0x20,0x04,0x00,0x04,0x00,0x04,0x00,0x04,0x00};
+static const unsigned char sensor_val97[] = {10,0x40,0x30,0x00,0x01,0x00,0x01,0x00,0x01,0x00,0x01};
+static const unsigned char sensor_val98[] = {10,0x40,0x40,0x00,0x08,0x00,0x08,0x00,0x08,0x00,0x08};
+static const unsigned char sensor_val99[] = {34,0x40,0x60,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+static const unsigned char sensor_val100[] = {20,0x40,0xE0,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x80,0x00,0x80,0x00,0x80,0x00,0x80,0x02,0x04};
+static const unsigned char sensor_val101[] = {17,0x43,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xFF,0xFF,0x00,0x00};
+static const unsigned char sensor_val102[] = {10,0x43,0x15,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+static const unsigned char sensor_val103[] = {7,0x45,0x00,0x07,0x00,0x00,0x0F,0x80};
+static const unsigned char sensor_val104[] = {3,0x45,0x06,0x01};
+static const unsigned char sensor_val105[] = {3,0x45,0x09,0x05};
+static const unsigned char sensor_val106[] = {7,0x45,0x0C,0x00,0x20,0x00,0x00,0x00};
+static const unsigned char sensor_val107[] = {3,0x45,0x23,0x00};
+static const unsigned char sensor_val108[] = {3,0x45,0x26,0x00};
+static const unsigned char sensor_val109[] = {8,0x45,0x42,0x00,0x00,0x00,0x00,0x00,0x10};
+static const unsigned char sensor_val110[] = {4,0x46,0x02,0x00,0x15};
+static const unsigned char sensor_val111[] = {3,0x46,0x0B,0x07};
+static const unsigned char sensor_val112[] = {3,0x46,0x80,0x11};
+static const unsigned char sensor_val113[] = {4,0x46,0x86,0x00,0x00};
+static const unsigned char sensor_val114[] = {3,0x47,0x00,0x00};
+static const unsigned char sensor_val115[] = {3,0x48,0x00,0x64};
+static const unsigned char sensor_val116[] = {3,0x48,0x06,0x44};
+static const unsigned char sensor_val117[] = {4,0x48,0x0B,0x10,0x80};
+static const unsigned char sensor_val118[] = {3,0x48,0x0F,0x32};
+static const unsigned char sensor_val119[] = {3,0x48,0x13,0xE4};
+static const unsigned char sensor_val120[] = {3,0x48,0x37,0x72};
+static const unsigned char sensor_val121[] = {3,0x48,0x50,0x42};
+static const unsigned char sensor_val122[] = {3,0x48,0x84,0x04};
+static const unsigned char sensor_val123[] = {4,0x4C,0x00,0xF8,0x44};
+static const unsigned char sensor_val124[] = {3,0x4C,0x03,0x00};
+static const unsigned char sensor_val125[] = {4,0x4D,0x00,0x08,0x16};
+static const unsigned char sensor_val126[] = {6,0x4D,0x04,0x10,0x00,0x0C,0x00};
+static const unsigned char sensor_val127[] = {3,0x3D,0x84,0x04};
+static const unsigned char sensor_val128[] = {3,0x36,0x80,0xA4};
+static const unsigned char sensor_val129[] = {3,0x36,0x82,0x80};
+static const unsigned char sensor_val130[] = {4,0x36,0x01,0x40,0x90};
+static const unsigned char sensor_val131[] = {3,0x36,0x08,0x0A};
+static const unsigned char sensor_val132[] = {3,0x39,0x38,0x09};
+static const unsigned char sensor_val133[] = {3,0x18,0x02,0x63};
+static const unsigned char sensor_val134[] = {4,0x18,0x04,0x9D,0x03};
+static const unsigned char sensor_val135[] = {4,0x18,0x07,0xB6,0x04};
+static const unsigned char sensor_val136[] = {4,0x18,0x0A,0xC4,0x17};
+static const unsigned char sensor_val137[] = {4,0x18,0x74,0xE4,0x82};
+static const unsigned char sensor_val138[] = {4,0x18,0xB9,0xAA,0xB5};
+static const unsigned char sensor_val139[] = {3,0x19,0x12,0x82};
+static const unsigned char sensor_val140[] = {3,0x19,0x14,0xBD};
+static const unsigned char sensor_val141[] = {3,0x39,0x39,0x6B};
+static const unsigned char sensor_val142[] = {10,0x39,0x02,0x16,0x16,0x16,0x16,0x04,0x0F,0x14,0x14};
+static const unsigned char sensor_val143[] = {5,0x36,0x09,0xC0,0xA0,0x20};
+static const unsigned char sensor_val144[] = {3,0x36,0x0B,0x20};
+static const unsigned char sensor_val145[] = {5,0x36,0x16,0x4D,0x44,0x30};
+static const unsigned char sensor_val146[] = {3,0x39,0x0F,0x00};
+static const unsigned char sensor_val147[] = {3,0x39,0x37,0x0C};
+static const unsigned char sensor_val148[] = {3,0x34,0x41,0x88};
+static const unsigned char sensor_val149[] = {4,0x19,0x0E,0xE4,0x96};
+static const unsigned char sensor_val150[] = {10,0x39,0x2C,0x17,0x0F,0x0B,0x05,0x05,0x01,0x02,0x02};
+static const unsigned char sensor_val151[] = {3,0x39,0x28,0x10};
+static const unsigned char sensor_val152[] = {3,0x36,0x09,0xC8};
+static const unsigned char sensor_val153[] = {3,0x39,0x21,0x0F};
+static const unsigned char sensor_val154[] = {6,0x39,0x28,0x10,0x20,0x40,0x80};
+static const unsigned char sensor_val155[] = {3,0x34,0x40,0x24};
+static const unsigned char sensor_val156[] = {3,0x18,0xE3,0x76};
+static const unsigned char sensor_val157[] = {3,0x19,0x03,0x77};
+static const unsigned char sensor_val158[] = {3,0x19,0x07,0x6F};
+static const unsigned char sensor_val159[] = {3,0x18,0xC7,0x70};
+static const unsigned char sensor_val160[] = {3,0x18,0xCB,0x70};
+static const unsigned char sensor_val161[] = {3,0x18,0xCF,0x72};
+static const unsigned char sensor_val162[] = {3,0x18,0xD3,0x73};
+static const unsigned char sensor_val163[] = {3,0x18,0xD7,0x74};
+static const unsigned char sensor_val164[] = {3,0x18,0xDB,0x75};
+static const unsigned char sensor_val165[] = {3,0x18,0xE7,0x70};
+static const unsigned char sensor_val166[] = {3,0x18,0xEB,0x71};
+static const unsigned char sensor_val167[] = {3,0x18,0xEF,0x73};
+static const unsigned char sensor_val168[] = {3,0x18,0xF3,0x74};
+static const unsigned char sensor_val169[] = {3,0x18,0xF7,0x75};
+static const unsigned char sensor_val170[] = {3,0x18,0xFB,0x76};
+static const unsigned char sensor_val171[] = {11,0x34,0x03,0x13,0x07,0x31,0x2A,0x05,0x31,0x24,0x02,0x13};
+static const unsigned char sensor_val172[] = {3,0x34,0x0D,0x11};
+static const unsigned char sensor_val173[] = {3,0x30,0x12,0x45};
+static const unsigned char sensor_val174[] = {3,0x30,0x16,0xB1};
+static const unsigned char sensor_val175[] = {3,0x30,0x18,0xF5};
+static const unsigned char sensor_val176[] = {3,0x01,0x00,0x01};
+static const unsigned char sensor_val177[] = {3,0x32,0x08,0x00};
+static const unsigned char sensor_val178[] = {3,0x30,0x12,0x41};
+static const unsigned char sensor_val179[] = {3,0x30,0x16,0xB0};
+static const unsigned char sensor_val180[] = {3,0x30,0x18,0xF0};
+static const unsigned char sensor_val181[] = {3,0x03,0x20,0x06};
+static const unsigned char sensor_val182[] = {3,0x32,0x08,0x10};
+static const unsigned char sensor_val183[] = {3,0x30,0x5A,0x38};
+static const unsigned char sensor_val184[] = {6,0x38,0x0C,0x01,0x68,0x06,0x53};
+static const unsigned char sensor_val185[] = {4,0x35,0x01,0x02,0x80};
+static const unsigned char sensor_val186[] = {4,0x35,0x08,0x04,0x00};
+static const unsigned char sensor_val187[] = {4,0x23,0x06,0x00,0x88};
+static const unsigned char sensor_val188[] = {4,0x23,0x0E,0x00,0xF0};
+static const unsigned char sensor_val189[] = {3,0x22,0x00,0x58};
+static const unsigned char sensor_val190[] = {4,0x22,0x02,0x06,0x54};
+static const unsigned char sensor_val191[] = {5,0x22,0x05,0x30,0x10,0x18};
+static const unsigned char sensor_val192[] = {4,0x22,0x18,0x00,0x7F};
+static const unsigned char sensor_val193[] = {3,0x35,0x03,0x20};
+// @@HTS/VTS 10fps
+static const unsigned char sensor_val194[] = {3,0x01,0x00,0x01};
+// @@HTS/VTS 3fps
+static const unsigned char sensor_val195[] = {6,0x38,0x0C,0x01,0x68,0x12,0xFD};
+// @@HTS/VTS 1fps
+static const unsigned char sensor_val196[] = {6,0x38,0x0C,0x01,0x68,0x3F,0x4B};
+// @@ BW
+static const unsigned char sensor_val197[] = {6,0x38,0x0C,0x01,0x68,0xBD,0xE3};
+static const unsigned char sensor_val198[] = {3,0x36,0xA6,0x30};
+static const unsigned char sensor_val199[] = {3,0x37,0x1B,0x00};
+static const unsigned char sensor_val200[] = {3,0x37,0x60,0x08};
+static const unsigned char sensor_val201[] = {8,0x37,0x62,0x08,0x08,0x08,0x28,0x08,0x28};
+static const unsigned char sensor_val202[] = {3,0x37,0x6E,0x03};
+static const unsigned char sensor_val203[] = {4,0x38,0x14,0x31,0x31};
+static const unsigned char sensor_val204[] = {3,0x38,0x3F,0x78};
+static const unsigned char sensor_val205[] = {3,0x38,0x60,0x40};
+static const unsigned char sensor_val206[] = {3,0x38,0x95,0x01};
+static const unsigned char sensor_val207[] = {3,0x40,0x18,0x03};
+static const unsigned char sensor_val208[] = {6,0x39,0x28,0x10,0x21,0x42,0x85};
+static const unsigned char sensor_val209[] = {3,0x18,0xE3,0x77};
+// @@ CF
+static const unsigned char sensor_val210[] = {3,0x19,0x03,0x78};
+static const unsigned char sensor_val211[] = {3,0x36,0xA6,0x32};
+static const unsigned char sensor_val212[] = {3,0x37,0x1B,0x20};
+static const unsigned char sensor_val213[] = {3,0x37,0x60,0x10};
+static const unsigned char sensor_val214[] = {8,0x37,0x62,0x10,0x10,0x10,0x20,0x10,0x20};
+static const unsigned char sensor_val215[] = {3,0x37,0x6E,0x02};
+static const unsigned char sensor_val216[] = {4,0x38,0x14,0x71,0x71};
+static const unsigned char sensor_val217[] = {3,0x38,0x3F,0x38};
+static const unsigned char sensor_val218[] = {3,0x38,0x60,0x00};
+static const unsigned char sensor_val219[] = {3,0x38,0x95,0x02};
+static const unsigned char sensor_val220[] = {3,0x40,0x18,0x05};
+static const unsigned char sensor_val221[] = {6,0x39,0x28,0x10,0x20,0x40,0x80};
+static const unsigned char sensor_val222[] = {3,0x18,0xE3,0x76};
+static const unsigned char sensor_val223[] = {3,0x19,0x03,0x77};
+static const unsigned char *i2c_data[] = {
+    sensor_val0,
+    sensor_val1,
+    sensor_val2,
+    sensor_val3,
+    sensor_val4,
+    sensor_val5,
+    sensor_val6,
+    sensor_val7,
+    sensor_val8,
+    sensor_val9,
+    sensor_val10,
+    sensor_val11,
+    sensor_val12,
+    sensor_val13,
+    sensor_val14,
+    sensor_val15,
+    sensor_val16,
+    sensor_val17,
+    sensor_val18,
+    sensor_val19,
+    sensor_val20,
+    sensor_val21,
+    sensor_val22,
+    sensor_val23,
+    sensor_val24,
+    sensor_val25,
+    sensor_val26,
+    sensor_val27,
+    sensor_val28,
+    sensor_val29,
+    sensor_val30,
+    sensor_val31,
+    sensor_val32,
+    sensor_val33,
+    sensor_val34,
+    sensor_val35,
+    sensor_val36,
+    sensor_val37,
+    sensor_val38,
+    sensor_val39,
+    sensor_val40,
+    sensor_val41,
+    sensor_val42,
+    sensor_val43,
+    sensor_val44,
+    sensor_val45,
+    sensor_val46,
+    sensor_val47,
+    sensor_val48,
+    sensor_val49,
+    sensor_val50,
+    sensor_val51,
+    sensor_val52,
+    sensor_val53,
+    sensor_val54,
+    sensor_val55,
+    sensor_val56,
+    sensor_val57,
+    sensor_val58,
+    sensor_val59,
+    sensor_val60,
+    sensor_val61,
+    sensor_val62,
+    sensor_val63,
+    sensor_val64,
+    sensor_val65,
+    sensor_val66,
+    sensor_val67,
+    sensor_val68,
+    sensor_val69,
+    sensor_val70,
+    sensor_val71,
+    sensor_val72,
+    sensor_val73,
+    sensor_val74,
+    sensor_val75,
+    sensor_val76,
+    sensor_val77,
+    sensor_val78,
+    sensor_val79,
+    sensor_val80,
+    sensor_val81,
+    sensor_val82,
+    sensor_val83,
+    sensor_val84,
+    sensor_val85,
+    sensor_val86,
+    sensor_val87,
+    sensor_val88,
+    sensor_val89,
+    sensor_val90,
+    sensor_val91,
+    sensor_val92,
+    sensor_val93,
+    sensor_val94,
+    sensor_val95,
+    sensor_val96,
+    sensor_val97,
+    sensor_val98,
+    sensor_val99,
+    sensor_val100,
+    sensor_val101,
+    sensor_val102,
+    sensor_val103,
+    sensor_val104,
+    sensor_val105,
+    sensor_val106,
+    sensor_val107,
+    sensor_val108,
+    sensor_val109,
+    sensor_val110,
+    sensor_val111,
+    sensor_val112,
+    sensor_val113,
+    sensor_val114,
+    sensor_val115,
+    sensor_val116,
+    sensor_val117,
+    sensor_val118,
+    sensor_val119,
+    sensor_val120,
+    sensor_val121,
+    sensor_val122,
+    sensor_val123,
+    sensor_val124,
+    sensor_val125,
+    sensor_val126,
+    sensor_val127,
+    sensor_val128,
+    sensor_val129,
+    sensor_val130,
+    sensor_val131,
+    sensor_val132,
+    sensor_val133,
+    sensor_val134,
+    sensor_val135,
+    sensor_val136,
+    sensor_val137,
+    sensor_val138,
+    sensor_val139,
+    sensor_val140,
+    sensor_val141,
+    sensor_val142,
+    sensor_val143,
+    sensor_val144,
+    sensor_val145,
+    sensor_val146,
+    sensor_val147,
+    sensor_val148,
+    sensor_val149,
+    sensor_val150,
+    sensor_val151,
+    sensor_val152,
+    sensor_val153,
+    sensor_val154,
+    sensor_val155,
+    sensor_val156,
+    sensor_val157,
+    sensor_val158,
+    sensor_val159,
+    sensor_val160,
+    sensor_val161,
+    sensor_val162,
+    sensor_val163,
+    sensor_val164,
+    sensor_val165,
+    sensor_val166,
+    sensor_val167,
+    sensor_val168,
+    sensor_val169,
+    sensor_val170,
+    sensor_val171,
+    sensor_val172,
+    sensor_val173,
+    sensor_val174,
+    sensor_val175,
+    sensor_val176,
+    sensor_val177,
+    sensor_val178,
+    sensor_val179,
+    sensor_val180,
+    sensor_val181,
+    sensor_val182,
+    sensor_val183,
+    sensor_val184,
+    sensor_val185,
+    sensor_val186,
+    sensor_val187,
+    sensor_val188,
+    sensor_val189,
+    sensor_val190,
+    sensor_val191,
+    sensor_val192,
+    sensor_val193,
+    sensor_val194,
+/* ****
+    sensor_val195,
+    sensor_val196,
+    sensor_val197,
+    sensor_val198,
+    sensor_val199,
+    sensor_val200,
+    sensor_val201,
+    sensor_val202,
+    sensor_val203,
+    sensor_val204,
+    sensor_val205,
+    sensor_val206,
+    sensor_val207,
+    sensor_val208,
+    sensor_val209,
+    sensor_val210,
+    sensor_val211,
+    sensor_val212,
+    sensor_val213,
+    sensor_val214,
+    sensor_val215,
+    sensor_val216,
+    sensor_val217,
+    sensor_val218,
+    sensor_val219,
+    sensor_val220,
+    sensor_val221,
+    sensor_val222,
+    sensor_val223,
+**** */
+    NULL
+};
+int ov08x_start(struct gpio_instance *gpio_inst, unsigned char ov08x_slave)
+{
+	int ret = 0;
+	int i;
+	uint16_t sz;
+	uint16_t offset;
+	uint8_t dev_id[2];
+	if(gpio_inst == NULL)
+	{
+		return -1;
+	}
+	i2c_init(gpio_inst, I2C_SYS_CLK_FREQ);
+
+	gpio_output_write(gpio_inst, GPIO_OSC_EN,        GPIO_LOW);
+	gpio_output_write(gpio_inst, GPIO_SENSOR_RESETN, GPIO_LOW);
+	gpio_set_direction(gpio_inst, GPIO_OSC_EN,        GPIO_OUTPUT);
+	gpio_set_direction(gpio_inst, GPIO_SENSOR_RESETN, GPIO_OUTPUT);
+	gpio_output_write(gpio_inst, GPIO_OSC_EN,        GPIO_HIGH);
+	//usleep(10000); // wait 10ms to stablize the OSC output
+	gpio_output_write(gpio_inst, GPIO_SENSOR_RESETN, GPIO_HIGH);
+	//usleep(5000); // wait 5ms to wait sensor to be reset properly
+
+	for( i=0; i2c_data[i] != NULL; i++ ){
+		sz = i2c_data[i][0];
+		offset = i2c_data[i][1];
+		offset = (offset<<8) | i2c_data[i][2];
+
+		ret = i2c_write(ov08x_slave, offset, sz, &i2c_data[i][3]);
+		if(ret < 0){
+			return ret;
+		}
+	}
+	return ret;
+}
+
+int ov08x_stop(struct gpio_instance *gpio_inst, unsigned char ov08x_slave)
+{
+	usleep(100); // wait 512 clock cycles, 100us is dummy
+	gpio_output_write(gpio_inst, GPIO_OSC_EN,        GPIO_LOW);
+	gpio_output_write(gpio_inst, GPIO_SENSOR_RESETN, GPIO_LOW);
+	gpio_set_direction(gpio_inst, GPIO_OSC_EN,        GPIO_OUTPUT);
+	gpio_set_direction(gpio_inst, GPIO_SENSOR_RESETN, GPIO_OUTPUT);
+	return 0;
+}
+
